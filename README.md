@@ -1,6 +1,6 @@
 # Flamedragon Tyrant — Kingshot Alliance Field Manual
 
-A fan-made planning site for **Flamedragon Tyrant**, the cross-kingdom battlefield event in the mobile game [Kingshot](https://www.centurygames.com/). Built for R4/R5 alliance leadership: event timeline, battlefield map, Aerie buffs, the crystal economy, and two full order-of-battle plans (single alliance and two-alliance bloc).
+A fan-made planning site for **Flamedragon Tyrant**, the cross-kingdom battlefield event in the mobile game [Kingshot](https://www.centurygames.com/). Built for R4/R5 alliance leadership: event timeline, battlefield map, Aerie buffs, the crystal economy, and a full order-of-battle plan for a single qualified alliance.
 
 **Live site:** enable GitHub Pages (see below) and it will be published at
 `https://nooxic.github.io/FlameDragonTyrant/`
@@ -10,7 +10,7 @@ A fan-made planning site for **Flamedragon Tyrant**, the cross-kingdom battlefie
 | File | What it is |
 |---|---|
 | [`index.html`](index.html) | Landing page — the five core rules, the battlefield at a glance, and links into the full manual. |
-| [`manual.html`](manual.html) | The full 17-section field manual: timeline, roster construction, the battlefield map, Aerie mechanics, crystal economy and skills, the battle clock, both battle plans, rewards, and the pre-battle checklist. |
+| [`manual.html`](manual.html) | The full 16-section field manual: timeline, roster construction, the battlefield map, Aerie mechanics, crystal economy and skills, the battle clock, the battle plan, rewards, and the pre-battle checklist. |
 | [`styles.css`](styles.css) | Shared design system for both pages. |
 | [`img/`](img) | Official in-game screenshots (map, Aerie descriptions, Crystal Skills panel, Champion's Eve) used as reference exhibits throughout the manual. |
 
