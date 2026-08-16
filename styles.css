@@ -236,7 +236,66 @@ footer a{color:var(--gold-soft)}
 .cta-band h2{font-size:clamp(26px,5vw,40px)}
 .cta-band p{color:var(--ash-dim);max-width:52ch;margin:12px auto 26px}
 
+/* ---------- table row emphasis (rally slot tables) ---------- */
+tr.row-dim td{color:var(--ash-dim);opacity:.6}
+tr.row-hl td{background:rgba(255,106,42,.09);color:var(--ash)}
+tr.row-hl td:first-child{color:var(--gold-soft);font-weight:600}
+
+/* ---------- owner / role tags in tables ---------- */
+.who{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim)}
+
+/* ---------- glossary ---------- */
+.glossary dt{font-family:"IBM Plex Mono",monospace;color:var(--gold-soft);font-weight:600;margin-top:14px}
+.glossary dd{margin:2px 0 0;color:var(--ash-dim)}
+
 @media print{
   body{background:#fff;color:#111}
   .plate{box-shadow:none}
 }
+
+/* ============================================================
+   roster.html — one-screen orders sheet
+   ============================================================ */
+.orders-wrap{max-width:680px;margin:0 auto;padding:26px 20px 80px}
+.orders-head{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+.orders-head .eyebrow{margin-bottom:10px}
+.orders-head h1{font-size:clamp(24px,6vw,32px);color:var(--ash)}
+.orders-head p{color:var(--ash-dim);font-size:14px;margin-top:8px}
+
+.orders-block{border-top:1px solid var(--line);padding:16px 0}
+.orders-block:first-of-type{border-top:none}
+.orders-block h2{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+
+.fill-row{display:flex;align-items:center;gap:14px;padding:9px 0;flex-wrap:wrap}
+.fill-row .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dim);flex:none;width:92px}
+.fill-in{
+  flex:1;min-width:180px;border:1px dashed var(--gold-dim);background:rgba(216,172,84,.06);
+  padding:9px 12px;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--gold-soft);
+}
+
+.orders-list{list-style:none;padding:0;margin:0}
+.orders-list li{
+  display:flex;gap:14px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px;
+}
+.orders-list li:last-child{border-bottom:none}
+.orders-list .call{font-family:"IBM Plex Mono",monospace;color:var(--gold-soft);flex:none;width:150px;font-size:12.5px}
+
+.formline{display:flex;gap:12px;align-items:baseline;padding:6px 0;font-size:13.5px;flex-wrap:wrap}
+.formline .fname{font-family:"IBM Plex Mono",monospace;color:var(--teal);width:130px;flex:none}
+.formline .fmix{color:var(--ash)}
+
+.timeline-mini{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:4px 0}
+.timeline-mini div{background:var(--char);padding:10px 12px;display:flex;justify-content:space-between;font-size:13px}
+.timeline-mini .tt{font-family:"IBM Plex Mono",monospace;color:var(--gold-dim);flex:none;margin-right:12px}
+
+.never-always{border-left:3px solid var(--ember-deep);background:linear-gradient(90deg,rgba(196,51,26,.12),rgba(196,51,26,.02));padding:12px 16px;margin:14px 0}
+.never-always.ok{border-left-color:var(--teal);background:linear-gradient(90deg,rgba(63,168,179,.12),rgba(63,168,179,.02))}
+.never-always h3{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.never-always.ok h3{color:var(--teal)}
+.never-always:not(.ok) h3{color:var(--ember)}
+.never-always ul{margin:0;padding-left:18px;font-size:13.5px}
+.never-always li{margin:5px 0}
+
+.orders-foot{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);text-align:center}
+.orders-foot a{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dim);text-decoration:none}
+.orders-foot a:hover{color:var(--gold-soft)}

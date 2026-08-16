@@ -10,8 +10,9 @@ A fan-made planning site for **Flamedragon Tyrant**, the cross-kingdom battlefie
 | File | What it is |
 |---|---|
 | [`index.html`](index.html) | Landing page — the five core rules, the battlefield at a glance, and links into the full manual. |
-| [`manual.html`](manual.html) | The full 16-section field manual: timeline, roster construction, the battlefield map, Aerie mechanics, crystal economy and skills, the battle clock, the battle plan, rewards, and the pre-battle checklist. |
-| [`styles.css`](styles.css) | Shared design system for both pages. |
+| [`manual.html`](manual.html) | The full 17-section field manual: timeline, who can join, a glossary, the battlefield map, Aerie mechanics, rally doctrine, crystal economy and skills, the battle clock, the order-of-battle plan, rewards, and the pre-battle checklist. |
+| [`roster.html`](roster.html) | One-screen orders sheet — the version a member actually reads on Sunday morning. |
+| [`styles.css`](styles.css) | Shared design system for all three pages. |
 | [`img/`](img) | Official in-game screenshots (map, Aerie descriptions, Crystal Skills panel, Champion's Eve) used as reference exhibits throughout the manual. |
 
 ## Running it locally
