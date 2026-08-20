@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flamedragon Tyrant — Alliance Field Manual | Kingshot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ash:#D8D3CA;
+  --ash-2:#C7C1B6;
+  --ash-3:#B6AFA2;
+  --ink:#14110F;
+  --basalt:#2A2522;
+  --magma:#B62F17;
+  --ember:#DE7A28;
+  --sulfur:#D9A82F;
+  --slate:#2C5966;
+  --line:rgba(20,17,15,.22);
+  --line-2:rgba(20,17,15,.10);
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ash);
+  background-image:
+    repeating-linear-gradient(0deg,rgba(20,17,15,.028) 0 1px,transparent 1px 3px),
+    radial-gradient(circle at 20% 8%,rgba(222,122,40,.10),transparent 45%),
+    radial-gradient(circle at 88% 72%,rgba(44,89,102,.10),transparent 45%);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px 100px}
+h1,h2,h3,h4{font-family:"Big Shoulders Display","IBM Plex Sans",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:.95;margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+/* ---------- masthead ---------- */
+header.plate{
+  border-bottom:3px solid var(--ink);
+  padding:34px 0 18px;margin-bottom:8px;
+}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--basalt);opacity:.75}
+h1{font-size:clamp(46px,12vw,104px);margin:10px 0 6px}
+h1 .fire{color:var(--magma)}
+.sub{font-size:clamp(15px,2.4vw,19px);max-width:56ch;margin:12px 0 0}
+.stamp{
+  display:inline-block;border:1.5px solid var(--magma);color:var(--magma);
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;
+  padding:5px 9px;text-transform:uppercase;margin-top:18px;transform:rotate(-1.2deg)
+}
+
+/* ---------- sections ---------- */
+section{padding:44px 0 8px;border-top:1px solid var(--line);margin-top:36px}
+section:first-of-type{border-top:none}
+.sec-head{display:flex;gap:14px;align-items:baseline;margin-bottom:8px;flex-wrap:wrap}
+.sec-num{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;color:var(--magma);padding-top:6px}
+h2{font-size:clamp(30px,6.4vw,52px)}
+h3{font-size:clamp(20px,4vw,27px);margin:34px 0 10px}
+h4{font-size:16px;letter-spacing:.06em;margin:22px 0 6px}
+p{margin:12px 0}
+.lede{font-size:17.5px}
+strong{font-weight:600}
+em.hl{font-style:normal;background:linear-gradient(transparent 62%,rgba(217,168,47,.55) 62%);padding:0 1px}
+a{color:var(--magma);text-decoration-thickness:1px;text-underline-offset:2px}
+
+/* ---------- cards / callouts ---------- */
+.card{background:rgba(255,253,249,.5);border:1px solid var(--line);padding:18px 20px;margin:18px 0}
+.rule{border-left:4px solid var(--magma);background:rgba(182,47,23,.07);padding:16px 18px;margin:20px 0}
+.rule .tag,.warn .tag,.tip .tag{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;display:block;margin-bottom:6px}
+.rule .tag{color:var(--magma)}
+.warn{border-left:4px solid var(--sulfur);background:rgba(217,168,47,.14);padding:16px 18px;margin:20px 0}
+.warn .tag{color:#8a6a10}
+.tip{border-left:4px solid var(--slate);background:rgba(44,89,102,.09);padding:16px 18px;margin:20px 0}
+.tip .tag{color:var(--slate)}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:20px 0;border:1px solid var(--line);background:rgba(255,253,249,.45)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line-2);vertical-align:top}
+thead th{background:var(--basalt);color:var(--ash);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+tbody tr:last-child td{border-bottom:none}
+td.mono,th.mono{font-family:"IBM Plex Mono",monospace}
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border:1px solid currentColor}
+.p-a{color:var(--magma)}.p-b{color:var(--slate)}.p-n{color:#6b6257}
+
+/* ---------- lists ---------- */
+ul,ol{padding-left:20px;margin:12px 0}
+li{margin:7px 0}
+ul.tick{list-style:none;padding-left:0}
+ul.tick li{padding-left:28px;position:relative}
+ul.tick li:before{content:"▢";position:absolute;left:4px;color:var(--magma);font-size:14px}
+
+/* ---------- figures ---------- */
+figure{margin:26px 0}
+figcaption{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;color:#5d564c;margin-top:10px;text-transform:uppercase}
+.svgbox{border:1px solid var(--ink);background:rgba(255,253,249,.55);padding:6px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+svg{display:block;max-width:100%;height:auto}
+.scroll svg{max-width:none}
+
+/* ---------- key numbers strip ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.kpi{background:rgba(255,253,249,.62);padding:16px 14px}
+.kpi b{display:block;font-family:"Big Shoulders Display",sans-serif;font-size:38px;line-height:1;color:var(--magma)}
+.kpi span{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#5d564c;display:block;margin-top:6px}
+
+/* ---------- two-col ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:20px 0}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.col-a{border-top:3px solid var(--magma);padding-top:12px}
+.col-b{border-top:3px solid var(--slate);padding-top:12px}
+
+/* ---------- toc ---------- */
+nav.toc{background:var(--basalt);color:var(--ash);padding:20px 22px;margin:26px 0 0}
+nav.toc h4{color:var(--ash);opacity:.65;font-size:12px;letter-spacing:.2em;margin:0 0 12px}
+nav.toc ol{columns:2;column-gap:28px;margin:0;padding-left:18px;font-family:"IBM Plex Mono",monospace;font-size:13px}
+nav.toc a{color:var(--ash);text-decoration:none;border-bottom:1px solid rgba(216,211,202,.28)}
+nav.toc a:hover{border-color:var(--ember);color:var(--ember)}
+@media(max-width:640px){nav.toc ol{columns:1}}
+
+footer{border-top:3px solid var(--ink);margin-top:56px;padding-top:22px;font-size:13.5px}
+footer .mono{font-size:12px;color:#5d564c}
+
+a:focus-visible,summary:focus-visible{outline:2px solid var(--magma);outline-offset:3px}
+@media (prefers-reduced-motion:no-preference){
+  section{animation:rise .5s ease both;animation-timeline:view();animation-range:entry 0% cover 18%}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+@media print{body{background:#fff}.svgbox{border-color:#000}nav.toc{background:#eee;color:#000}nav.toc a{color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="plate">
+  <div class="eyebrow">Kingshot · Cross-kingdom battlefield · Alliance operations document</div>
+  <h1>Flame<span class="fire">dragon</span><br>Tyrant</h1>
+  <p class="sub">A complete field manual for R4/R5 leadership: event structure, battlefield map, objective mechanics, crystal economy, and two full battle plans — one for a single qualified alliance, one for a two-alliance bloc.</p>
+  <div class="stamp">Rev. Aug 2026 · verify timers in-game before D-Day</div>
+</header>
+
+<nav class="toc">
+  <h4>Contents</h4>
+  <ol>
+    <li><a href="#s1">The five rules</a></li>
+    <li><a href="#s2">Event structure &amp; timeline</a></li>
+    <li><a href="#s3">Qualification &amp; roster</a></li>
+    <li><a href="#s4">Battlefield map</a></li>
+    <li><a href="#s5">The Palace</a></li>
+    <li><a href="#s6">The four Aeries</a></li>
+    <li><a href="#s7">Crystal economy</a></li>
+    <li><a href="#s8">Crystal skills</a></li>
+    <li><a href="#s9">The battle clock</a></li>
+    <li><a href="#s10">Plan A — 60-player deployment</a></li>
+    <li><a href="#s11">Plan B — two alliances</a></li>
+    <li><a href="#s12">Rally &amp; hero setups</a></li>
+    <li><a href="#s13">Troop loss &amp; infirmary</a></li>
+    <li><a href="#s14">Points &amp; rewards</a></li>
+    <li><a href="#s15">Pre-battle checklist</a></li>
+    <li><a href="#s16">Failure modes</a></li>
+    <li><a href="#s17">Screenshots &amp; sources</a></li>
+  </ol>
+</nav>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">01</span><h2>The five rules that decide the event</h2></div>
+  <p class="lede">Everything below is detail. These five points are the event.</p>
+
+  <div class="rule">
+    <span class="tag">Rule 01 — the captain rule</span>
+    <strong>Personal occupation time accrues only to the rally captain sitting in the Palace.</strong> Joiners get points, rewards and glory, but zero occupation seconds. If your kingdom wants a Tyrant, one named governor must lead the rallies, over and over, for hours. Everyone else is fuel.
+  </div>
+  <div class="rule">
+    <span class="tag">Rule 02 — buffs before bodies</span>
+    <strong>Aerie buffs are +50% to a single stat, alliance-wide, for 30 minutes.</strong> Two aeries held is a bigger swing than 40% more troops. Alliances that sprint at the Palace with no buffs feed the alliances that took the towers first.
+  </div>
+  <div class="rule">
+    <span class="tag">Rule 03 — buffs are alliance-scoped</span>
+    <strong>An aerie buff and a crystal skill only reach members of the alliance that earned it.</strong> This single fact reshapes every two-alliance plan: your partner alliance holding a tower does <em class="hl">not</em> buff your Palace garrison. Plan the split around that, not around goodwill.
+  </div>
+  <div class="rule">
+    <span class="tag">Rule 04 — where troops die</span>
+    <strong>Palace and Aerie fights only injure. Attacking another governor's town kills.</strong> The infirmary is unlimited <em class="hl">on the battlefield only</em>. City hits are a deliberate, costed decision — never a way to pass the time.
+  </div>
+  <div class="rule">
+    <span class="tag">Rule 05 — the exit trap</span>
+    <strong>The moment you leave the battlefield, infirmary capacity snaps back to normal and everything above the cap dies.</strong> More troops have been lost to logging off than to enemy rallies. Heal down before you leave, and use the +500% Rearmament healing window.
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">02</span><h2>Event structure &amp; timeline</h2></div>
+  <p>Flamedragon Tyrant is an alliance-based, cross-kingdom battlefield. Kingdoms of similar progress are grouped into a <strong>Zone</strong>; alliances from every kingdom in that Zone compete on one shared map for a single throne. The winner holds the Tyrant title for 30 days over the whole Zone.</p>
+
+  <div class="card">
+    <strong>Eligibility gates, before anything else.</strong> Your <strong>kingdom</strong> must have unlocked <strong>Hero Generation 6</strong> before the cycle begins, or it cannot compete — ineligible kingdoms can still spectate the battles. Your <strong>account</strong> needs a Town Centre at <strong>Truegold IV or above</strong> to register as a combatant. The event runs on roughly a <strong>two-month cycle</strong>, so a kingdom that just missed Gen 6 has a known next window to aim at.
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><b>~2mo</b><span>event cycle</span></div>
+    <div class="kpi"><b>60</b><span>combatants per alliance</span></div>
+    <div class="kpi"><b>6h</b><span>palace battle window</span></div>
+    <div class="kpi"><b>4</b><span>aeries, 30/30 cycle</span></div>
+    <div class="kpi"><b>30d</b><span>tyrant reign</span></div>
+  </div>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Phase</th><th class="mono">Days (UTC)</th><th>What actually happens</th><th>Leadership action</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Preview</strong></td><td class="mono">~1 week prior</td><td>An in-game scroll and dragon animation announce the cycle. Rules visible, not on the event calendar. Zone matchmaking already decided by kingdom progress.</td><td>Read the Zone list. Identify the two or three alliances that can actually win.</td></tr>
+      <tr><td><strong>1 · Alliance sign-up</strong></td><td class="mono">Mon – Tue</td><td>R4/R5 register the alliance. Only the top-ranking alliances in the Zone qualify. <strong>Members must already be in the alliance when sign-up closes.</strong></td><td>Lock the roster before Monday. No late transfers, no swaps.</td></tr>
+      <tr><td><strong>2 · Combatant dispatch</strong></td><td class="mono">Wed – Thu</td><td>Qualified alliances name up to 60 combatants. Championship predictions open.</td><td>Publish the 60 and the reserve list. Place predictions.</td></tr>
+      <tr><td><strong>3 · Eve of battle</strong></td><td class="mono">Fri – Sun</td><td>Prep, prediction, Champion's Eve preparation points, Searing Path missions, Dragon Caravan shop.</td><td>Burn Champion's Eve milestones for battlefield healing bonuses. Brief the roster.</td></tr>
+      <tr><td><strong>4a · Battlefield opens</strong></td><td class="mono">Sun 11:00</td><td>Combatants enter. <strong>5-minute prep lock</strong> — no teleport, attack, scout or garrison. Then one hour of free positioning.</td><td>Teleport by power tier. Stage the throne rally.</td></tr>
+      <tr><td><strong>4b · Palace battle</strong></td><td class="mono">Sun 12:00 – 18:00</td><td>Palace and all four Aeries open. Mines and escorts spawn on a 30-minute rhythm. Crystal skills live.</td><td>Run the battle clock (§09).</td></tr>
+      <tr><td><strong>4c · Cooldown</strong></td><td class="mono">Sun 18:00 – 19:00</td><td>No attacks allowed. You may stay on the map. <strong>Retreating means you cannot re-enter.</strong></td><td>Heal down below your real infirmary cap before exiting.</td></tr>
+      <tr><td><strong>5 · Rearmament</strong></td><td class="mono">Sun 18:00 – Tue 24:00</td><td><strong>+500% healing speed, −30% healing cost</strong> for participating kingdoms. Tyrant's Gift, Dragon Banquet, likes (5/day).</td><td>Schedule mass healing at a high-activity hour. Collect the free packs.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="warn">
+    <span class="tag">Version drift</span>
+    Official help text gives the Palace battle as <strong>12:00–18:00 UTC (6 hours)</strong>, while some in-game descriptions and wikis still say “vulnerable for 5 hours after a 1-hour delay.” Phase lengths have also shifted between rollouts (7 vs 8 hours for the battlefield phase). <strong>Trust the in-game countdown on the day</strong> and build your clock from it — the structure below holds either way, only the number of half-hour rounds changes.
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Qualification &amp; roster construction</h2></div>
+
+  <h3>How alliances qualify</h3>
+  <ul>
+    <li>Every alliance in the Zone may register. Only the <strong>top-ranking alliances by power</strong> get enlistment eligibility when sign-up closes.</li>
+    <li>The number of qualifying slots scales with how many kingdoms were merged into the Zone. Small Zones typically qualify around <strong>40 alliances</strong>; large ones scale to <strong>115 or more</strong>.</li>
+    <li>Ranking is measured <strong>across the whole Zone</strong>, not inside your kingdom. Being #1 at home means nothing if the Zone is stacked.</li>
+    <li>Individual governors need a minimum town-centre / Truegold tier set by the Zone grouping.</li>
+  </ul>
+
+  <div class="tip">
+    <span class="tag">Sign-up gamesmanship</span>
+    Alliances near the cutoff line sometimes park strong accounts temporarily, obscure alliance power, or register in the final minutes so rivals can't read the threshold. It works occasionally and locks you out permanently when it doesn't. <strong>If you are not comfortably above the historical cutoff, register early and stop being clever.</strong>
+  </div>
+
+  <h3>Choosing your 60</h3>
+  <p>Sixty slots is the hard ceiling, and it is smaller than it feels. A roster built purely from the power leaderboard loses to a roster built from availability.</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Filter</th><th>Rule</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Attendance</td><td>Confirmed present for the full 12:00–18:00 UTC block</td><td>A top-5 account that leaves at 14:00 is worth less than a mid account that stays six hours.</td></tr>
+      <tr><td>Speedups &amp; resources</td><td>Enough healing stock to reset twice</td><td>Injured troops sitting unhealed are troops out of the fight.</td></tr>
+      <tr><td>Rally capacity</td><td>At least 6–8 governors with high deployment for rally leading</td><td>You need rotating captains for the aeries while the throne captain never leaves the Palace queue.</td></tr>
+      <tr><td>Discipline</td><td>Will not hit cities without a call</td><td>One bored whale farming towns can burn a third of your healing budget.</td></tr>
+      <tr><td>March speed</td><td>3–5 fast accounts reserved for mines and escorts</td><td>Crystal contests are won by arrival time, not power.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Note: a combatant may leave the alliance after dispatch closes and still participate, <strong>provided they rejoin before the battle phase ends</strong>. Useful for emergency shuffles, dangerous as a plan.</p>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">04</span><h2>The battlefield map</h2></div>
+  <p>The map is one shared arena, concentric by design: an outer <strong>Border Region</strong> where cities land and shields still work, an inner <strong>Magma Sanctum</strong> where shields are stripped and cannot be re-applied, and the <strong>Palace</strong> at dead centre ringed by four Aeries.</p>
+
+  <figure>
+    <div class="svgbox">
+      <svg viewBox="0 0 760 760" role="img" aria-label="Schematic of the Flamedragon battlefield: concentric Border Region and Magma Sanctum with the Palace at centre and four Aeries at north, south, east and west.">
+        <defs>
+          <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="rgba(182,47,23,.16)" stroke-width="3"/>
+          </pattern>
+          <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+            <path d="M38 0 L0 0 0 38" fill="none" stroke="rgba(20,17,15,.09)" stroke-width="1"/>
+          </pattern>
+        </defs>
+
+        <rect x="0" y="0" width="760" height="760" fill="#CFC9BE"/>
+        <rect x="0" y="0" width="760" height="760" fill="url(#grid)"/>
+
+        <!-- border region -->
+        <rect x="26" y="26" width="708" height="708" fill="none" stroke="#D9A82F" stroke-width="3" stroke-dasharray="12 7"/>
+        <text x="40" y="52" font-family="IBM Plex Mono, monospace" font-size="13" fill="#8a6a10" letter-spacing="2">BORDER REGION — SHIELDS PERMITTED</text>
+
+        <!-- magma sanctum -->
+        <rect x="150" y="150" width="460" height="460" fill="url(#hatch)" stroke="#B62F17" stroke-width="3"/>
+        <text x="164" y="176" font-family="IBM Plex Mono, monospace" font-size="13" fill="#B62F17" letter-spacing="2">MAGMA SANCTUM — NO SHIELDS</text>
+
+        <!-- lava shelter ring -->
+        <circle cx="380" cy="380" r="118" fill="rgba(222,122,40,.14)" stroke="#DE7A28" stroke-width="2" stroke-dasharray="5 5"/>
+        <text x="380" y="278" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#a4551a" letter-spacing="1.6">LAVA SHELTER</text>
+
+        <!-- palace -->
+        <g>
+          <polygon points="380,326 434,380 380,434 326,380" fill="#B62F17" stroke="#14110F" stroke-width="2.5"/>
+          <text x="380" y="385" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="22" fill="#F2EEE7">PALACE</text>
+        </g>
+
+        <!-- aeries -->
+        <g font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="17" text-anchor="middle">
+          <!-- N -->
+          <rect x="343" y="196" width="74" height="52" fill="#2C5966" stroke="#14110F" stroke-width="2"/>
+          <text x="380" y="219" fill="#E4EEF0">LIFE</text><text x="380" y="238" fill="#9FC4CC" font-size="12" font-family="IBM Plex Mono, monospace">+50% HP</text>
+          <text x="380" y="188" fill="#14110F" font-size="12" font-family="IBM Plex Mono, monospace">N · DEFENSIVE</text>
+          <!-- S -->
+          <rect x="343" y="512" width="74" height="52" fill="#2C5966" stroke="#14110F" stroke-width="2"/>
+          <text x="380" y="535" fill="#E4EEF0">SHIELD</text><text x="380" y="554" fill="#9FC4CC" font-size="12" font-family="IBM Plex Mono, monospace">+50% DEF</text>
+          <text x="380" y="583" fill="#14110F" font-size="12" font-family="IBM Plex Mono, monospace">S · DEFENSIVE</text>
+          <!-- W -->
+          <rect x="186" y="354" width="74" height="52" fill="#B62F17" stroke="#14110F" stroke-width="2"/>
+          <text x="223" y="377" fill="#F7EDE7">BLADE</text><text x="223" y="396" fill="#F0BCA9" font-size="12" font-family="IBM Plex Mono, monospace">+50% ATK</text>
+          <text x="223" y="424" fill="#14110F" font-size="12" font-family="IBM Plex Mono, monospace">W · OFFENSIVE</text>
+          <!-- E -->
+          <rect x="500" y="354" width="74" height="52" fill="#B62F17" stroke="#14110F" stroke-width="2"/>
+          <text x="537" y="377" fill="#F7EDE7">DRAGON</text><text x="537" y="396" fill="#F0BCA9" font-size="12" font-family="IBM Plex Mono, monospace">+50% LTH</text>
+          <text x="537" y="424" fill="#14110F" font-size="12" font-family="IBM Plex Mono, monospace">E · OFFENSIVE</text>
+        </g>
+
+        <!-- L2 mines inside sanctum -->
+        <g fill="#8E2FB0" stroke="#14110F" stroke-width="1.5">
+          <polygon points="270,250 282,268 258,268"/><polygon points="500,250 512,268 488,268"/>
+          <polygon points="270,510 282,528 258,528"/><polygon points="500,510 512,528 488,528"/>
+          <polygon points="380,168 392,186 368,186"/><polygon points="180,470 192,488 168,488"/>
+        </g>
+        <!-- L1 mines in border -->
+        <g fill="#C58FD6" stroke="#14110F" stroke-width="1.2">
+          <polygon points="82,120 92,136 72,136"/><polygon points="660,110 670,126 650,126"/>
+          <polygon points="70,640 80,656 60,656"/><polygon points="672,646 682,662 662,662"/>
+          <polygon points="380,80 390,96 370,96"/><polygon points="380,676 390,692 370,692"/>
+          <polygon points="90,380 100,396 80,396"/><polygon points="668,380 678,396 658,396"/>
+        </g>
+        <!-- escorts -->
+        <g fill="#D9A82F" stroke="#14110F" stroke-width="1.2">
+          <circle cx="140" cy="216" r="8"/><circle cx="620" cy="200" r="8"/>
+          <circle cx="150" cy="560" r="8"/><circle cx="612" cy="572" r="8"/>
+          <circle cx="240" cy="662" r="8"/><circle cx="524" cy="106" r="8"/>
+        </g>
+        <!-- cities -->
+        <g fill="#5d564c" opacity=".85">
+          <rect x="60" y="200" width="11" height="11"/><rect x="118" y="90" width="11" height="11"/>
+          <rect x="216" y="66" width="11" height="11"/><rect x="596" y="66" width="11" height="11"/>
+          <rect x="690" y="230" width="11" height="11"/><rect x="700" y="470" width="11" height="11"/>
+          <rect x="606" y="690" width="11" height="11"/><rect x="300" y="700" width="11" height="11"/>
+          <rect x="120" y="686" width="11" height="11"/><rect x="52" y="470" width="11" height="11"/>
+          <rect x="466" y="640" width="11" height="11"/><rect x="98" y="316" width="11" height="11"/>
+        </g>
+
+        <!-- rally vectors -->
+        <g stroke="#14110F" stroke-width="2" fill="none" opacity=".55" stroke-dasharray="8 5">
+          <path d="M223 380 L326 380"/>
+          <path d="M537 380 L434 380"/>
+          <path d="M380 248 L380 326"/>
+          <path d="M380 512 L380 434"/>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Fig. 1 — Battlefield schematic. Own diagram, drawn from the official layout description; not an in-game capture.</figcaption>
+  </figure>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Zone</th><th>Rules</th><th>Who belongs there</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Border Region</strong><br><span class="mono" style="color:#8a6a10">yellow boundary</span></td><td>Cities are placed here at random when the battlefield opens. Shields can be activated. Defeated cities in the centre are teleported back here.</td><td>Low and mid-power accounts, gatherers, escort hunters. Anyone conserving troops.</td></tr>
+      <tr><td><strong>Magma Sanctum</strong><br><span class="mono" style="color:#B62F17">red boundary</span></td><td>Entering removes your shield and you cannot re-apply it. Full PvP. Everything that matters is inside.</td><td>Rally leaders, the throne candidate, aerie squads, garrison stacks.</td></tr>
+      <tr><td><strong>Lava Shelter</strong><br><span class="mono" style="color:#a4551a">inner ring</span></td><td>Restricted band immediately around the Palace; no protection of any kind.</td><td>Staging ground for the throne rally only. Do not park a city here casually.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="warn">
+    <span class="tag">Teleport discipline</span>
+    Teleport destination is gated by power: strong accounts can drop inside the Magma Sanctum, weaker ones are steered to the Border Region. <strong>Re-entering the battlefield after retreating puts you at a random location</strong> — you do not return to your old spot. Barricade burn speed is also greatly increased on this map; repair immediately or you will be locked out of re-entry.
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">05</span><h2>The Palace — and the captain rule</h2></div>
+  <p>The Palace sits at map centre, shielded for the first hour after the battlefield opens. When it unlocks, the first claimants must first clear the <strong>Old Guard</strong> NPC defenders before any governor can hold it.</p>
+
+  <div class="rule">
+    <span class="tag">Read this twice</span>
+    Occupation time is credited <strong>only to the rally captain</strong> who is holding the Palace. Joiners in that same rally accrue nothing. The Tyrant is the governor with the longest total occupation time at 18:00 — and if two governors tie, the one who reached that duration first wins.
+  </div>
+
+  <h3>What this changes</h3>
+  <ul>
+    <li><strong>You must name a single throne candidate before D-Day.</strong> Two candidates in one alliance splitting time is the most common way a strong alliance ends up with no Tyrant.</li>
+    <li>The candidate should be a high-deployment account that can hold a huge garrison, not necessarily your highest raw power.</li>
+    <li>The captain role can be <strong>transferred to another player inside the Palace without leaving the team</strong> — occupation time then starts accruing to the new captain. This is your relief valve if the candidate has to step away, and your tool for feeding time to a second player once the throne is safe.</li>
+    <li>The <strong>First Occupancy Reward</strong> goes to every member of the first alliance to occupy the Palace — not just the captain. This is worth an all-in opening rush even for alliances that cannot hold it.</li>
+    <li>The alliance leaderboard sums the occupation time of all your captains, so a second and third captain still build the alliance ranking after your Tyrant bid is settled.</li>
+  </ul>
+
+  <h3>Holding versus taking</h3>
+  <p>Holding is cheaper than taking, and the Palace favours the incumbent stacked with aerie buffs. The practical consequence: <strong>get in early, then convert to defence.</strong> An alliance that seizes the Palace at 12:20 with Life + Shield buffs running can survive rallies from opponents with two or three times its power.</p>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">06</span><h2>The four Aeries</h2></div>
+  <p>Four Aeries surround the Palace and open at the same moment it does. Each runs a <strong>30 minutes vulnerable / 30 minutes protected</strong> cycle, and each keeps its own occupation leaderboard. Whichever alliance dominates an Aerie longest during a vulnerable round receives that Aerie's bonus <strong>alliance-wide for 30 minutes</strong>.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Aerie</th><th class="mono">Position</th><th class="mono">Bonus</th><th>Character</th><th>Take it when…</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Life Aerie</strong></td><td class="mono">North</td><td class="mono">+50% Troop Health</td><td>Defensive</td><td>You already hold the Palace and expect to be rallied. The single best survival stat for a garrison.</td></tr>
+      <tr><td><strong>Shield Aerie</strong></td><td class="mono">South</td><td class="mono">+50% Troop Defense</td><td>Defensive</td><td>Same. Life + Shield together is the "unkillable garrison" pairing.</td></tr>
+      <tr><td><strong>Blade Aerie</strong></td><td class="mono">West</td><td class="mono">+50% Troop Attack</td><td>Offensive</td><td>You need to break someone off the Palace. Pair with Dragon for a kill window.</td></tr>
+      <tr><td><strong>Dragon Aerie</strong></td><td class="mono">East</td><td class="mono">+50% Lethality</td><td>Offensive</td><td>Same. Lethality converts enemy injuries into a broken garrison faster than raw attack alone.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="warn">
+    <span class="tag">Confirm the compass on the day</span>
+    Every source agrees the <strong>north and south Aeries are the defensive pair</strong> (Health, Defense) and the <strong>east and west Aeries are the offensive pair</strong> (Attack, Lethality). Which named tower sits on which side of that pair is <em class="hl">not</em> consistently reported, and some guides describe each pair as granting both of its stats. The table above uses the most common mapping. <strong>Open the Battlefield Overview during the first vulnerable round and confirm before you assign squads</strong> — what matters is which tower gives the stat you want, not what it is called.
+  </div>
+
+  <div class="rule">
+    <span class="tag">The rhythm most alliances miss</span>
+    You fight for an Aerie during its <strong>vulnerable</strong> half-hour, and you receive the buff during the <strong>protected</strong> half-hour that follows. So the Palace push is not simultaneous with the Aerie fight — it comes <em class="hl">immediately after</em> it, while the towers are locked and your buff is live. Alternate: even half-hour = take towers. Odd half-hour = hit the throne.
+  </div>
+
+  <figure>
+    <div class="svgbox scroll">
+      <svg viewBox="0 0 900 300" width="900" role="img" aria-label="Diagram of the aerie 30-minute vulnerable and protected cycle, showing that buffs land during the protected window and should be spent on the palace.">
+        <rect width="900" height="300" fill="#CFC9BE"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#14110F">
+          <text x="14" y="26" letter-spacing="2" fill="#5d564c">THE 30/30 LOOP — ONE HOUR</text>
+
+          <!-- lane 1 -->
+          <text x="14" y="74" fill="#5d564c">AERIE STATE</text>
+          <rect x="150" y="56" width="330" height="30" fill="#B62F17"/>
+          <text x="315" y="76" text-anchor="middle" fill="#F7EDE7" letter-spacing="1.5">VULNERABLE · 30 MIN</text>
+          <rect x="480" y="56" width="330" height="30" fill="#2C5966"/>
+          <text x="645" y="76" text-anchor="middle" fill="#E4EEF0" letter-spacing="1.5">PROTECTED · 30 MIN</text>
+
+          <!-- lane 2 -->
+          <text x="14" y="132" fill="#5d564c">YOUR ACTION</text>
+          <rect x="150" y="114" width="330" height="30" fill="none" stroke="#14110F" stroke-width="2"/>
+          <text x="315" y="134" text-anchor="middle">RALLY THE TOWERS</text>
+          <rect x="480" y="114" width="330" height="30" fill="none" stroke="#14110F" stroke-width="2"/>
+          <text x="645" y="134" text-anchor="middle">RALLY THE PALACE</text>
+
+          <!-- lane 3 -->
+          <text x="14" y="190" fill="#5d564c">BUFF STATE</text>
+          <rect x="150" y="172" width="330" height="30" fill="rgba(20,17,15,.08)"/>
+          <text x="315" y="192" text-anchor="middle" fill="#5d564c">no aerie buff — fight raw</text>
+          <rect x="480" y="172" width="330" height="30" fill="#D9A82F"/>
+          <text x="645" y="192" text-anchor="middle" fill="#3d2f06" letter-spacing="1">+50% × TOWERS HELD · 30 MIN</text>
+
+          <!-- lane 4 -->
+          <text x="14" y="248" fill="#5d564c">CRYSTALS</text>
+          <rect x="150" y="230" width="330" height="30" fill="none" stroke="#8E2FB0" stroke-width="2" stroke-dasharray="6 4"/>
+          <text x="315" y="250" text-anchor="middle" fill="#6b1f88">escorts :00 · mines :15</text>
+          <rect x="480" y="230" width="330" height="30" fill="none" stroke="#8E2FB0" stroke-width="2" stroke-dasharray="6 4"/>
+          <text x="645" y="250" text-anchor="middle" fill="#6b1f88">escorts :30 · mines :45</text>
+
+          <line x1="480" y1="46" x2="480" y2="272" stroke="#14110F" stroke-width="2"/>
+          <text x="150" y="286" fill="#5d564c">:00</text><text x="470" y="286" fill="#5d564c">:30</text><text x="790" y="286" fill="#5d564c">:60</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Fig. 2 — The half-hour loop. Take towers on the vulnerable window, spend the buff on the Palace during the protected window.</figcaption>
+  </figure>
+
+  <div class="tip">
+    <span class="tag">Choosing which towers to contest</span>
+    Contesting all four with 60 combatants means losing all four. Pick two and win them decisively. <strong>If you hold the Palace: Life + Shield.</strong> <strong>If you are trying to take it: Blade + Dragon.</strong> Switch the pair the moment your posture switches.
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">07</span><h2>The crystal economy</h2></div>
+  <p>Pyrocrystals are the alliance-level currency that powers Crystal Skills. They come from two sources, both on a 30-minute heartbeat, both contested.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Source</th><th class="mono">Spawn</th><th class="mono">Yield (approx.)</th><th>Mechanics</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dragonborn Escorts</strong></td><td class="mono">At palace open, then every 30 min</td><td class="mono">~300 crystals + ~30,000 personal points</td><td><strong>Solo attacks only — rallies are not permitted.</strong> Costs no stamina but occupies a march queue. Spawns in waves around the border zone. Won by arrival speed, not power.</td></tr>
+      <tr><td><strong>Pyrocrystal mines Lv.1</strong></td><td class="mono">15 min after palace open, then every 30 min</td><td class="mono">~600 crystals<br>~1.0 /sec</td><td>Gathering occupies a march queue and yields personal points as well. Sits mostly on the outer map.</td></tr>
+      <tr><td><strong>Pyrocrystal mines Lv.2</strong></td><td class="mono">Same cycle</td><td class="mono">~1,200 crystals<br>~1.5 /sec</td><td>Closer to the centre and heavily contested. Non-allied players can attack your gathering squad and steal the node.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="warn">
+    <span class="tag">The gatherer's trap</span>
+    <strong>Mine fights award no personal points</strong> — unlike Palace and Aerie combat, which is where all your points come from. Losing troops to defend a node is a pure loss. Gatherers should retreat rather than contest a stronger squad, take the next node, and stay out of the point-blind zone.
+  </div>
+
+  <h3>Budgeting the battle</h3>
+  <p>Crystal skills reportedly cost somewhere in the range of <strong>10,000 to 50,000 crystals</strong> each. That means your skill count is decided in the first two hours by how many people you assigned to farming — not by how hard you fight.</p>
+
+  <figure>
+    <div class="svgbox scroll">
+      <svg viewBox="0 0 900 330" width="900" role="img" aria-label="Bar chart estimating pyrocrystal income for different sizes of gathering detail across a six hour battle.">
+        <rect width="900" height="330" fill="#CFC9BE"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="12">
+          <text x="16" y="26" letter-spacing="2" fill="#5d564c">ESTIMATED 6-HOUR CRYSTAL INCOME BY SIZE OF FARMING DETAIL</text>
+          <text x="16" y="46" fill="#5d564c">assumes 11 spawn cycles · one Lv.2 node or one escort per member per cycle</text>
+
+          <!-- axis -->
+          <line x1="200" y1="70" x2="200" y2="272" stroke="#14110F" stroke-width="2"/>
+          <line x1="200" y1="272" x2="866" y2="272" stroke="#14110F" stroke-width="2"/>
+
+          <!-- bars: scale 200k -> 640px -->
+          <g>
+            <text x="190" y="98" text-anchor="end" fill="#14110F">4 gatherers</text>
+            <rect x="200" y="82" width="169" height="24" fill="#C58FD6" stroke="#14110F"/>
+            <text x="379" y="99" fill="#14110F">~52,800 · 1–3 skills</text>
+          </g>
+          <g>
+            <text x="190" y="146" text-anchor="end" fill="#14110F">8 gatherers</text>
+            <rect x="200" y="130" width="338" height="24" fill="#A860C4" stroke="#14110F"/>
+            <text x="548" y="147" fill="#14110F">~105,600 · 3–6 skills</text>
+          </g>
+          <g>
+            <text x="190" y="194" text-anchor="end" fill="#14110F">12 gatherers</text>
+            <rect x="200" y="178" width="507" height="24" fill="#8E2FB0" stroke="#14110F"/>
+            <text x="717" y="195" fill="#14110F">~158,400 · 5–9 skills</text>
+          </g>
+          <g>
+            <text x="190" y="242" text-anchor="end" fill="#14110F">16 gatherers</text>
+            <rect x="200" y="226" width="640" height="24" fill="#6B1F88" stroke="#14110F"/>
+            <text x="700" y="243" fill="#F3E6F7">~211,200 · 7–12 skills</text>
+          </g>
+
+          <text x="200" y="292" fill="#5d564c">0</text>
+          <text x="520" y="292" fill="#5d564c">100,000</text>
+          <text x="820" y="292" fill="#5d564c">200,000</text>
+          <text x="16" y="318" fill="#5d564c">Costs vary by skill and by build. Treat as a planning envelope, not a spec sheet.</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Fig. 3 — Crystal income planning envelope. Eight dedicated farmers is the practical floor for a competitive alliance.</figcaption>
+  </figure>
+
+  <div class="tip">
+    <span class="tag">Where low-power accounts win the event</span>
+    Whales ignore Lv.1 nodes on the outer map because they want to be in the centre. That leaves the entire outer ring to your smaller accounts, who can farm uncontested all afternoon, feed the alliance skill pool, and bank personal points from gathering — all with near-zero troop loss. This is the highest-value job on the roster for a low-power player, and almost nobody assigns it deliberately.
+  </div>
+</section>
+
+<!-- ================= 8 ================= -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">08</span><h2>Crystal skills — and when to fire them</h2></div>
+  <p>Only R4/R5 members standing on the battlefield can deploy Crystal Skills, via the Alliance Crystal Skills button. Skills buff <strong>every member of that alliance on the battlefield</strong>, stack with all other bonuses, run on individual cooldowns, and can be run concurrently. They cannot be deployed once the Palace battle ends, and the crystal pool does not carry over to the next event.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Skill</th><th class="mono">Duration</th><th>Effect</th><th>Fire it when</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dragonblood Healing</strong><br><span class="pill p-a">highest value</span></td><td class="mono">10 min</td><td>Roughly half of your members' severely injured soldiers from Palace/Aerie battles are instantly returned for the next fight, on battles you win.</td><td>Only while you are <strong>actively holding</strong> the Palace or an Aerie and absorbing rallies. Firing it while your captain is still marching is the single most common waste in the event.</td></tr>
+      <tr><td><strong>Dragonscale Armor</strong></td><td class="mono">30 min</td><td>+15% Attack and Defense for Palace and Aerie defenders.</td><td>The moment your throne rally lands and converts to garrison. Stack under Life + Shield aerie buffs.</td></tr>
+      <tr><td><strong>Dragonroar Rally</strong></td><td class="mono">30 min</td><td>+30% alliance rally capacity.</td><td><strong>Before</strong> the rally forms, not after — capacity is read at formation. Use it on your seize attempt and on your biggest defensive re-stack.</td></tr>
+      <tr><td><strong>Dragonbreath Fury</strong><br><span class="pill p-a">underrated</span></td><td class="mono">~10 min</td><td><strong>Clears enemy cities out of the Palace area.</strong> Not a stat buff — a map-control tool.</td><td>Before a re-take. Removing the enemy cities ringing the Palace lengthens every rival reinforcement march and strips their staging ground. This is the closest thing in the event to a disruption unit, and it comes out of the crystal pool rather than your roster.</td></tr>
+      <tr><td><strong>Dragonsoul Revival</strong></td><td class="mono">~10–30 min</td><td>Mitigates combat losses across the alliance.</td><td>Late battle, after your third or fourth reset, when healing stock rather than power is your limit.</td></tr>
+      <tr><td><strong>Firebreath Shield</strong></td><td class="mono">~30 min</td><td>Protects alliance cities on the battlefield.</td><td>Situational. Worth it if a rival bloc is systematically farming your members' towns — remember town hits are where troops actually die.</td></tr>
+      <tr><td><strong>Dragonborn Gathering</strong></td><td class="mono">~30 min</td><td>Gathering speed. Applies to squads already marching or gathering.</td><td>Early. Cheap tempo — a faster first two hours of farming pays for the expensive skills later.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="warn">
+    <span class="tag">Skill effects and the map edge</span>
+    A skill's effect disappears the moment you leave the battlefield, and resumes if you return before it expires. Do not fire a 30-minute skill onto a roster that is about to take a break.
+  </div>
+
+  <h3>The end-game hoard</h3>
+  <p>The strongest crystal play in the event is not spending early. Around the final 60–90 minutes, leading alliances have burned their healing, their activity drops, and their garrisons are thin. An alliance that has banked 60,000+ crystals and fires <strong>Dragonroar Rally → seize → Dragonscale Armor → Dragonblood Healing</strong> in sequence at that moment can take the throne from a stronger opponent and hold it to the buzzer. Occupation time is cumulative, but so is exhaustion.</p>
+</section>
+
+<!-- ================= 9 ================= -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">09</span><h2>The battle clock</h2></div>
+  <p>Print this. Everything in the battle phase runs off it.</p>
+
+  <figure>
+    <div class="svgbox scroll">
+      <svg viewBox="0 0 1180 470" width="1180" role="img" aria-label="Timeline of the six hour palace battle from 12:00 to 18:00 UTC showing aerie rounds, crystal spawns, and recommended actions in each half hour.">
+        <rect width="1180" height="470" fill="#CFC9BE"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#14110F">
+          <text x="16" y="26" letter-spacing="2.4" fill="#5d564c">SUNDAY · UTC · PALACE BATTLE</text>
+
+          <!-- hour labels -->
+          <g fill="#5d564c" font-size="12">
+            <text x="150" y="60">11:00</text><text x="248" y="60">12:00</text><text x="404" y="60">13:00</text>
+            <text x="560" y="60">14:00</text><text x="716" y="60">15:00</text><text x="872" y="60">16:00</text>
+            <text x="1028" y="60">17:00</text><text x="1120" y="60">18:00</text>
+          </g>
+          <line x1="150" y1="68" x2="1150" y2="68" stroke="#14110F" stroke-width="2"/>
+          <g stroke="rgba(20,17,15,.22)" stroke-width="1">
+            <line x1="248" y1="68" x2="248" y2="420"/><line x1="326" y1="68" x2="326" y2="420"/>
+            <line x1="404" y1="68" x2="404" y2="420"/><line x1="482" y1="68" x2="482" y2="420"/>
+            <line x1="560" y1="68" x2="560" y2="420"/><line x1="638" y1="68" x2="638" y2="420"/>
+            <line x1="716" y1="68" x2="716" y2="420"/><line x1="794" y1="68" x2="794" y2="420"/>
+            <line x1="872" y1="68" x2="872" y2="420"/><line x1="950" y1="68" x2="950" y2="420"/>
+            <line x1="1028" y1="68" x2="1028" y2="420"/><line x1="1106" y1="68" x2="1106" y2="420"/>
+          </g>
+
+          <!-- phase lane -->
+          <text x="16" y="100" fill="#5d564c">PHASE</text>
+          <rect x="150" y="82" width="98" height="26" fill="#5d564c"/><text x="199" y="100" text-anchor="middle" fill="#E8E3DA">ENTRY</text>
+          <rect x="248" y="82" width="906" height="26" fill="#B62F17"/><text x="700" y="100" text-anchor="middle" fill="#F7EDE7" letter-spacing="2">PALACE VULNERABLE</text>
+
+          <!-- aerie lane -->
+          <text x="16" y="140" fill="#5d564c">AERIES</text>
+          <g>
+            <rect x="248" y="122" width="78" height="26" fill="#B62F17"/><rect x="326" y="122" width="78" height="26" fill="#2C5966"/>
+            <rect x="404" y="122" width="78" height="26" fill="#B62F17"/><rect x="482" y="122" width="78" height="26" fill="#2C5966"/>
+            <rect x="560" y="122" width="78" height="26" fill="#B62F17"/><rect x="638" y="122" width="78" height="26" fill="#2C5966"/>
+            <rect x="716" y="122" width="78" height="26" fill="#B62F17"/><rect x="794" y="122" width="78" height="26" fill="#2C5966"/>
+            <rect x="872" y="122" width="78" height="26" fill="#B62F17"/><rect x="950" y="122" width="78" height="26" fill="#2C5966"/>
+            <rect x="1028" y="122" width="78" height="26" fill="#B62F17"/><rect x="1106" y="122" width="48" height="26" fill="#2C5966"/>
+          </g>
+          <text x="1160" y="140" fill="#5d564c" text-anchor="end" font-size="10" opacity="0"> </text>
+
+          <!-- crystal lane -->
+          <text x="16" y="180" fill="#5d564c">CRYSTALS</text>
+          <g fill="#8E2FB0">
+            <g font-size="14">
+              <text x="248" y="180">▲</text><text x="287" y="180">◆</text><text x="326" y="180">▲</text><text x="365" y="180">◆</text>
+              <text x="404" y="180">▲</text><text x="443" y="180">◆</text><text x="482" y="180">▲</text><text x="521" y="180">◆</text>
+              <text x="560" y="180">▲</text><text x="599" y="180">◆</text><text x="638" y="180">▲</text><text x="677" y="180">◆</text>
+              <text x="716" y="180">▲</text><text x="755" y="180">◆</text><text x="794" y="180">▲</text><text x="833" y="180">◆</text>
+              <text x="872" y="180">▲</text><text x="911" y="180">◆</text><text x="950" y="180">▲</text><text x="989" y="180">◆</text>
+              <text x="1028" y="180">▲</text><text x="1067" y="180">◆</text><text x="1106" y="180">▲</text>
+            </g>
+          </g>
+          <text x="150" y="200" fill="#6b1f88" font-size="10.5">▲ escort wave (:00/:30)   ◆ mine refresh (:15/:45)</text>
+
+          <!-- action lane -->
+          <text x="16" y="240" fill="#5d564c">CALL</text>
+          <g font-size="10.5">
+            <rect x="150" y="222" width="98" height="30" fill="none" stroke="#14110F"/><text x="199" y="242" text-anchor="middle">teleport + stage</text>
+            <rect x="248" y="222" width="156" height="30" fill="#D9A82F" stroke="#14110F"/><text x="326" y="242" text-anchor="middle" fill="#3d2f06">SEIZE — all rallies</text>
+            <rect x="404" y="222" width="312" height="30" fill="none" stroke="#14110F"/><text x="560" y="242" text-anchor="middle">tower pairs + entrench + farm</text>
+            <rect x="716" y="222" width="312" height="30" fill="none" stroke="#14110F"/><text x="872" y="242" text-anchor="middle">grind occupation · rotate healing · hoard</text>
+            <rect x="1028" y="222" width="126" height="30" fill="#D9A82F" stroke="#14110F"/><text x="1091" y="242" text-anchor="middle" fill="#3d2f06">BURN EVERYTHING</text>
+          </g>
+
+          <!-- captain lane -->
+          <text x="16" y="292" fill="#5d564c">CAPTAIN</text>
+          <rect x="248" y="274" width="906" height="26" fill="none" stroke="#B62F17" stroke-width="2.5" stroke-dasharray="7 4"/>
+          <text x="700" y="292" text-anchor="middle" fill="#B62F17" letter-spacing="1.6">ONE NAMED GOVERNOR — CONTINUOUS RALLY CAPTAIN, NEVER SUBSTITUTED WITHOUT A CALL</text>
+
+          <!-- notes lane -->
+          <text x="16" y="336" fill="#5d564c">NOTES</text>
+          <g font-size="10.5" fill="#14110F">
+            <text x="152" y="330">5-min lock</text><text x="152" y="346">at 11:00</text>
+            <text x="250" y="330">Old Guard must</text><text x="250" y="346">fall first · first</text><text x="250" y="362">occupancy reward</text>
+            <text x="410" y="330">switch tower pair</text><text x="410" y="346">to match posture</text>
+            <text x="722" y="330">heal in waves — never</text><text x="722" y="346">all captains at once</text>
+            <text x="1032" y="330">skills · last</text><text x="1032" y="346">reserves</text>
+          </g>
+
+          <!-- after -->
+          <rect x="150" y="386" width="1004" height="34" fill="#2A2522"/>
+          <text x="652" y="408" text-anchor="middle" fill="#E8E3DA" letter-spacing="2">18:00–19:00 · NO ATTACKS · HEAL BELOW YOUR REAL INFIRMARY CAP BEFORE YOU EXIT · RETREAT = NO RE-ENTRY</text>
+          <text x="16" y="446" fill="#5d564c">Aerie lane: red = vulnerable round, blue = protected round (your buff is live). Verify the real timers in-game — round count shifts between versions.</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Fig. 4 — Six-hour battle clock with aerie rounds, crystal spawns and command calls.</figcaption>
+  </figure>
+</section>
+
+<!-- ================= 10 ================= -->
+<section id="s10">
+  <div class="sec-head"><span class="sec-num">10</span><h2>Plan A — the 60-player deployment</h2></div>
+  <p class="lede">A fixed four-group order of battle: <strong>20 in the centre, 10 on Life, 10 on Dragon, 20 farming from four posts.</strong> Every position, every rotation, every call.</p>
+
+  <div class="rule">
+    <span class="tag">What this build is</span>
+    <strong>Seize early, entrench, grind.</strong> It commits to a defensive tower pair and spends nothing on disruption. That makes it very hard to remove from the Palace — and it means you must take the Palace in the first thirty minutes, because you are not built to take it back from an entrenched enemy later.
+  </div>
+
+  <h3>Why HP + Lethality is the right pair here</h3>
+  <p>The obvious defensive pair is Life + Shield. <strong>Life + Dragon is better for this build</strong>, and it is worth knowing why before someone argues with you about it.</p>
+  <ul>
+    <li><strong>Life Aerie (+50% Health, North)</strong> deepens the pool your garrison has to lose before it breaks. It is the single best survival stat because it scales with everything else you stack on top.</li>
+    <li><strong>Dragon Aerie (+50% Lethality, East)</strong> works on defence, not only attack. Lethality is what converts your garrison's hits into <em class="hl">severe injuries in the attacking rally</em>. Held under Life, every failed enemy rally costs the attacker a real army, not a scratch.</li>
+    <li>Shield (+50% Defense) reduces incoming damage but does nothing to punish the attacker. Against a field of 40+ alliances taking turns at you, <strong>making each attempt expensive is worth more than surviving each attempt slightly better</strong> — attackers who lose 400k troops on one attempt do not come back a third time.</li>
+  </ul>
+  <div class="tip">
+    <span class="tag">Contingency</span>
+    If you lose the Palace and have to take it back, the correct pair flips to <strong>Blade (W) + Dragon (E)</strong> — Dragon stays, Scale abandons Life and swings west. Rehearse that call: <span class="mono">"SCALE WEST"</span>.
+  </div>
+
+  <h3>Order of battle</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Group</th><th class="mono">Size</th><th>Station</th><th>Job</th><th>Needs</th></tr></thead>
+    <tbody>
+      <tr><td><strong>VANGUARD</strong><br><span class="pill p-a">centre</span></td><td class="mono">20</td><td>Four clusters of 5 inside the Lava Shelter ring, on the diagonals — NE, SE, SW, NW of the Palace</td><td>Seize and hold the Flamedragon Palace. Continuous rally refill.</td><td>Highest deployment capacity, deepest healing stock, 2× R4/R5</td></tr>
+      <tr><td><strong>SCALE</strong><br><span class="pill p-b">north</span></td><td class="mono">10</td><td>Staged on the <em>Palace side</em> of the Life Aerie, ~1 short march from both</td><td>Take and hold Life Aerie (+50% HP) on every vulnerable round</td><td>1 strong rally lead + 1 backup, 1× R4/R5</td></tr>
+      <tr><td><strong>TALON</strong><br><span class="pill p-b">east</span></td><td class="mono">10</td><td>Staged on the <em>Palace side</em> of the Dragon Aerie</td><td>Take and hold Dragon Aerie (+50% Lethality) on every vulnerable round</td><td>1 strong rally lead + 1 backup, 1× R4/R5</td></tr>
+      <tr><td><strong>EMBER</strong><br><span class="pill p-n">4 posts</span></td><td class="mono">20</td><td>Four posts of 5 in the Border Region: EMBER-N, EMBER-E, EMBER-S, EMBER-W</td><td>Pyrocrystal mines and Dragonborn escorts. Feed the alliance skill pool.</td><td>March speed over power. Shields up between runs.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <figure>
+    <div class="svgbox">
+      <svg viewBox="0 0 760 800" role="img" aria-label="Deployment map showing twenty Vanguard players in four clusters around the Palace, ten Scale players north at the Life Aerie, ten Talon players east at the Dragon Aerie, and twenty Ember farmers in four posts of five around the Border Region.">
+        <defs>
+          <pattern id="hatch2" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="0" x2="0" y2="7" stroke="rgba(182,47,23,.13)" stroke-width="3"/>
+          </pattern>
+          <pattern id="grid2" width="38" height="38" patternUnits="userSpaceOnUse">
+            <path d="M38 0 L0 0 0 38" fill="none" stroke="rgba(20,17,15,.08)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="760" height="800" fill="#CFC9BE"/>
+        <rect x="0" y="0" width="760" height="760" fill="url(#grid2)"/>
+
+        <rect x="26" y="26" width="708" height="708" fill="none" stroke="#D9A82F" stroke-width="3" stroke-dasharray="12 7"/>
+        <text x="40" y="50" font-family="IBM Plex Mono, monospace" font-size="12" fill="#8a6a10" letter-spacing="1.8">BORDER REGION — EMBER POSTS, SHIELDS UP</text>
+
+        <rect x="150" y="150" width="460" height="460" fill="url(#hatch2)" stroke="#B62F17" stroke-width="3"/>
+        <text x="164" y="174" font-family="IBM Plex Mono, monospace" font-size="12" fill="#B62F17" letter-spacing="1.8">MAGMA SANCTUM — NO SHIELDS</text>
+
+        <circle cx="380" cy="380" r="118" fill="rgba(222,122,40,.13)" stroke="#DE7A28" stroke-width="2" stroke-dasharray="5 5"/>
+
+        <!-- contested aeries -->
+        <rect x="343" y="196" width="74" height="50" fill="#2C5966" stroke="#14110F" stroke-width="2"/>
+        <text x="380" y="218" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="16" fill="#E4EEF0">LIFE</text>
+        <text x="380" y="236" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9FC4CC">+50% HP</text>
+
+        <rect x="500" y="355" width="74" height="50" fill="#2C5966" stroke="#14110F" stroke-width="2"/>
+        <text x="537" y="377" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="16" fill="#E4EEF0">DRAGON</text>
+        <text x="537" y="395" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9FC4CC">+50% LTH</text>
+
+        <!-- uncontested aeries -->
+        <rect x="186" y="355" width="74" height="50" fill="none" stroke="#8b8377" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="223" y="377" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="15" fill="#8b8377">BLADE</text>
+        <text x="223" y="394" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8b8377">not contested</text>
+
+        <rect x="343" y="514" width="74" height="50" fill="none" stroke="#8b8377" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="380" y="536" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="15" fill="#8b8377">SHIELD</text>
+        <text x="380" y="553" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8b8377">not contested</text>
+
+        <!-- palace -->
+        <polygon points="380,332 428,380 380,428 332,380" fill="#B62F17" stroke="#14110F" stroke-width="2.5"/>
+        <text x="380" y="385" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="19" fill="#F2EEE7">PALACE</text>
+
+        <!-- VANGUARD 4 clusters of 5 -->
+        <g stroke="#14110F" stroke-width="1.2" fill="#B62F17">
+          <!-- NW -->
+          <circle cx="300" cy="300" r="9"/><circle cx="322" cy="288" r="9"/><circle cx="288" cy="322" r="9"/><circle cx="308" cy="326" r="9"/><circle cx="326" cy="310" r="9"/>
+          <!-- NE -->
+          <circle cx="460" cy="300" r="9"/><circle cx="438" cy="288" r="9"/><circle cx="472" cy="322" r="9"/><circle cx="452" cy="326" r="9"/><circle cx="434" cy="310" r="9"/>
+          <!-- SW -->
+          <circle cx="300" cy="460" r="9"/><circle cx="322" cy="472" r="9"/><circle cx="288" cy="438" r="9"/><circle cx="308" cy="434" r="9"/><circle cx="326" cy="450" r="9"/>
+          <!-- SE -->
+          <circle cx="460" cy="460" r="9"/><circle cx="438" cy="472" r="9"/><circle cx="472" cy="438" r="9"/><circle cx="452" cy="434" r="9"/><circle cx="434" cy="450" r="9"/>
+        </g>
+        <!-- captain marker -->
+        <circle cx="322" cy="288" r="12" fill="#D9A82F" stroke="#14110F" stroke-width="2.5"/>
+        <text x="322" y="270" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#8a6a10">CAPTAIN</text>
+        <text x="262" y="352" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="15" fill="#B62F17" transform="rotate(-90 262 352)">VANGUARD 20</text>
+
+        <!-- SCALE 10 -->
+        <g stroke="#14110F" stroke-width="1.2" fill="#2C5966">
+          <circle cx="322" cy="268" r="8"/><circle cx="348" cy="262" r="8"/><circle cx="374" cy="258" r="8"/><circle cx="400" cy="258" r="8"/><circle cx="426" cy="262" r="8"/>
+          <circle cx="335" cy="286" r="8"/><circle cx="361" cy="278" r="8"/><circle cx="387" cy="276" r="8"/><circle cx="413" cy="278" r="8"/><circle cx="439" cy="284" r="8"/>
+        </g>
+        <text x="474" y="266" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="15" fill="#2C5966">SCALE 10</text>
+
+        <!-- TALON 10 -->
+        <g stroke="#14110F" stroke-width="1.2" fill="#2C5966">
+          <circle cx="478" cy="352" r="8"/><circle cx="484" cy="374" r="8"/><circle cx="486" cy="396" r="8"/><circle cx="482" cy="418" r="8"/><circle cx="474" cy="438" r="8"/>
+          <circle cx="498" cy="336" r="8"/><circle cx="504" cy="424" r="8"/><circle cx="496" cy="444" r="8"/><circle cx="516" cy="330" r="8"/><circle cx="522" cy="440" r="8"/>
+        </g>
+        <text x="470" y="474" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="15" fill="#2C5966">TALON 10</text>
+
+        <!-- EMBER posts -->
+        <g stroke="#14110F" stroke-width="1.2" fill="#8E2FB0">
+          <circle cx="320" cy="90" r="9"/><circle cx="350" cy="90" r="9"/><circle cx="380" cy="90" r="9"/><circle cx="410" cy="90" r="9"/><circle cx="440" cy="90" r="9"/>
+          <circle cx="670" cy="320" r="9"/><circle cx="670" cy="350" r="9"/><circle cx="670" cy="380" r="9"/><circle cx="670" cy="410" r="9"/><circle cx="670" cy="440" r="9"/>
+          <circle cx="320" cy="670" r="9"/><circle cx="350" cy="670" r="9"/><circle cx="380" cy="670" r="9"/><circle cx="410" cy="670" r="9"/><circle cx="440" cy="670" r="9"/>
+          <circle cx="90" cy="320" r="9"/><circle cx="90" cy="350" r="9"/><circle cx="90" cy="380" r="9"/><circle cx="90" cy="410" r="9"/><circle cx="90" cy="440" r="9"/>
+        </g>
+        <g font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="15" fill="#6B1F88">
+          <text x="380" y="72" text-anchor="middle">EMBER-N · 5</text>
+          <text x="670" y="300" text-anchor="middle">EMBER-E · 5</text>
+          <text x="380" y="700" text-anchor="middle">EMBER-S · 5</text>
+          <text x="90" y="300" text-anchor="middle">EMBER-W · 5</text>
+        </g>
+
+        <!-- arrows -->
+        <g stroke="#14110F" stroke-width="2" fill="none" opacity=".45" stroke-dasharray="7 5">
+          <path d="M380 296 L380 332"/><path d="M470 380 L428 380"/>
+        </g>
+
+        <!-- legend -->
+        <g font-family="IBM Plex Mono, monospace" font-size="12">
+          <circle cx="40" cy="760" r="8" fill="#B62F17" stroke="#14110F"/><text x="56" y="765" fill="#14110F">VANGUARD 20 — palace</text>
+          <circle cx="256" cy="760" r="8" fill="#2C5966" stroke="#14110F"/><text x="272" y="765" fill="#14110F">SCALE / TALON 10+10 — aeries</text>
+          <circle cx="536" cy="760" r="8" fill="#8E2FB0" stroke="#14110F"/><text x="552" y="765" fill="#14110F">EMBER 20 — 4 posts</text>
+          <circle cx="40" cy="786" r="9" fill="#D9A82F" stroke="#14110F" stroke-width="2"/><text x="56" y="791" fill="#14110F">throne candidate — the only account accruing occupation time</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Fig. 5 — Deployment. Aerie squads stage on the Palace side of their tower so they can reinforce the centre in one short march.</figcaption>
+  </figure>
+
+  <h3>VANGUARD · 20 · the centre</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Slot</th><th class="mono">Count</th><th>Standing order</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Throne candidate</strong></td><td class="mono">1</td><td>Rally captain from 12:00 to 18:00. Never joins someone else's rally. Never leaves the map. This account and only this account accrues occupation time.</td></tr>
+      <tr><td><strong>Relief captains</strong></td><td class="mono">3</td><td>High-deployment accounts standing by. If the candidate must step away, the captaincy is <strong>transferred inside the Palace without leaving the team</strong> — time then accrues to them. They also lead the re-take rally if the Palace is lost.</td></tr>
+      <tr><td><strong>Joiners — Shift A</strong></td><td class="mono">8</td><td>Fill the captain's rally on every reform. Heal on the odd half-hours.</td></tr>
+      <tr><td><strong>Joiners — Shift B</strong></td><td class="mono">8</td><td>Same, healing on the even half-hours. <strong>Shifts never heal simultaneously.</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <ul>
+    <li><strong>Positioning:</strong> four clusters of five on the diagonals, inside the Lava Shelter ring. Diagonals, not cardinals — the cardinal lanes are the approach paths from the Aeries and you do not want your own bodies clogging them. Spreading across four clusters also means one enemy sweep cannot catch the whole group.</li>
+    <li><strong>March distance is the whole point.</strong> Everyone should be at the shortest possible march to the Palace tile. A rally that reforms 40 seconds faster than the enemy's is worth more over six hours than any single buff.</li>
+    <li><strong>Rally cadence:</strong> use the shortest rally gather timer available. With march times this short, a long timer is dead occupation seconds.</li>
+    <li><strong>Reform instantly.</strong> The moment the garrison breaks, the captain reforms. An empty Palace second is a lost second and it can never be recovered.</li>
+    <li><strong>At least two R4/R5 sit in this group</strong> so a Crystal Skill can always be fired from the centre, where the fight is.</li>
+  </ul>
+
+  <h3>SCALE · 10 · Life Aerie (North) &nbsp;·&nbsp; TALON · 10 · Dragon Aerie (East)</h3>
+  <p>Identical structure, different tower: <strong>1 rally lead, 1 backup lead, 8 joiners, 1 R4/R5 among them.</strong> Ten players is roughly one full rally — which is exactly what an Aerie needs, and exactly why you contest two towers and not four.</p>
+
+  <div class="rule">
+    <span class="tag">The rule that makes this build work</span>
+    Aerie squads are <strong>not</strong> idle during protected half-hours. On the vulnerable round they fight for their tower; the moment the tower locks, <strong>all 20 of them join the VANGUARD's Palace rally.</strong> Your Palace manpower alternates between 20 and 40 — and the 40-strong window lands on exactly the half-hour when your aerie buffs are live. That is the entire engine of this deployment.
+  </div>
+
+  <figure>
+    <div class="svgbox scroll">
+      <svg viewBox="0 0 900 260" width="900" role="img" aria-label="Chart showing palace manpower alternating between twenty and forty players as aerie squads switch between tower fights and palace rallies each half hour.">
+        <rect width="900" height="260" fill="#CFC9BE"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="12">
+          <text x="16" y="26" letter-spacing="2" fill="#5d564c">PALACE MANPOWER — THE ALTERNATING ENGINE</text>
+
+          <text x="16" y="72" fill="#5d564c">AERIES</text>
+          <rect x="150" y="54" width="180" height="28" fill="#B62F17"/><text x="240" y="73" text-anchor="middle" fill="#F7EDE7">VULNERABLE</text>
+          <rect x="330" y="54" width="180" height="28" fill="#2C5966"/><text x="420" y="73" text-anchor="middle" fill="#E4EEF0">PROTECTED</text>
+          <rect x="510" y="54" width="180" height="28" fill="#B62F17"/><text x="600" y="73" text-anchor="middle" fill="#F7EDE7">VULNERABLE</text>
+          <rect x="690" y="54" width="180" height="28" fill="#2C5966"/><text x="780" y="73" text-anchor="middle" fill="#E4EEF0">PROTECTED</text>
+
+          <text x="16" y="128" fill="#5d564c">SCALE+TALON</text>
+          <rect x="150" y="110" width="180" height="28" fill="none" stroke="#2C5966" stroke-width="2"/><text x="240" y="129" text-anchor="middle" fill="#2C5966">on the towers</text>
+          <rect x="330" y="110" width="180" height="28" fill="#2C5966" opacity=".22" stroke="#2C5966" stroke-width="2"/><text x="420" y="129" text-anchor="middle" fill="#1d3f49">into the palace rally</text>
+          <rect x="510" y="110" width="180" height="28" fill="none" stroke="#2C5966" stroke-width="2"/><text x="600" y="129" text-anchor="middle" fill="#2C5966">on the towers</text>
+          <rect x="690" y="110" width="180" height="28" fill="#2C5966" opacity=".22" stroke="#2C5966" stroke-width="2"/><text x="780" y="129" text-anchor="middle" fill="#1d3f49">into the palace rally</text>
+
+          <text x="16" y="196" fill="#5d564c">PALACE</text>
+          <rect x="150" y="166" width="180" height="34" fill="#DE7A28" stroke="#14110F"/><text x="240" y="189" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="20" fill="#3d2205">20 PLAYERS</text>
+          <rect x="330" y="152" width="180" height="48" fill="#B62F17" stroke="#14110F"/><text x="420" y="183" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="24" fill="#F7EDE7">40 PLAYERS</text>
+          <rect x="510" y="166" width="180" height="34" fill="#DE7A28" stroke="#14110F"/><text x="600" y="189" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="20" fill="#3d2205">20 PLAYERS</text>
+          <rect x="690" y="152" width="180" height="48" fill="#B62F17" stroke="#14110F"/><text x="780" y="183" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="800" font-size="24" fill="#F7EDE7">40 PLAYERS</text>
+
+          <text x="16" y="230" fill="#5d564c">BUFFS</text>
+          <rect x="150" y="214" width="180" height="24" fill="rgba(20,17,15,.08)"/><text x="240" y="231" text-anchor="middle" fill="#5d564c">raw</text>
+          <rect x="330" y="214" width="180" height="24" fill="#D9A82F"/><text x="420" y="231" text-anchor="middle" fill="#3d2f06">+50% HP · +50% LTH</text>
+          <rect x="510" y="214" width="180" height="24" fill="rgba(20,17,15,.08)"/><text x="600" y="231" text-anchor="middle" fill="#5d564c">raw</text>
+          <rect x="690" y="214" width="180" height="24" fill="#D9A82F"/><text x="780" y="231" text-anchor="middle" fill="#3d2f06">+50% HP · +50% LTH</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Fig. 6 — Peak manpower and peak buffs land in the same half-hour. Fire Dragonscale Armor and Dragonblood Healing into that window.</figcaption>
+  </figure>
+
+  <ul>
+    <li><strong>Staging:</strong> both squads sit on the Palace side of their tower. One short march to the Aerie, one short march to the Palace, no wasted travel either way.</li>
+    <li><strong>Concede fast.</strong> If a stronger bloc commits to your tower, take the loss and pull back rather than feeding a losing rally for 25 minutes. Round-based ownership means the next window is only 30 minutes away.</li>
+    <li><strong>Only one squad needs to hold for the buff to matter.</strong> If SCALE wins Life but TALON loses Dragon, the Palace still gets +50% HP for the round. Never treat a split round as a failure.</li>
+    <li><strong>The R4/R5 in each squad</strong> can fire skills from the tower if the centre's leaders are mid-march.</li>
+  </ul>
+
+  <h3>EMBER · 20 · four farming posts</h3>
+  <p>Five players per side of the map, stationed in the Border Region with shields up. Twenty farmers is a large detail — deliberately. It is what converts the last hour from a grind into a decision.</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Post</th><th class="mono">Composition</th><th>Standing order</th></tr></thead>
+    <tbody>
+      <tr><td><strong>EMBER-N / E / S / W</strong></td><td class="mono">1 post lead<br>3 gatherers<br>1 escort hunter</td><td>Post lead claims nodes in text so two members never march on the same one. Gatherers work the nearest Lv.2 node, falling back to Lv.1. The escort hunter runs solo attacks only — <strong>escorts cannot be rallied.</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <ul>
+    <li><strong>Never contest a node.</strong> Node fights award no personal points, so a lost squad there is a pure loss. Concede, take the next one. This is a standing order, not a suggestion.</li>
+    <li><strong>Post assignment matters</strong> because it stops twenty people racing the same spawns. Each post owns its quadrant, reports its haul at the top of the hour, and stays out of the other three.</li>
+    <li><strong>Escort hunters are chosen on march speed</strong>, not power. Escorts are won by arrival time.</li>
+    <li><strong>Expected yield:</strong> roughly 200,000+ crystals across the battle — comfortably 5 to 10 Crystal Skills. Report the running total hourly so leadership knows whether it can afford the endgame sequence.</li>
+    <li><strong>16:30 — relocate.</strong> Posts move to the inner edge of the Border Region so the final-hour march into the Palace rally is short. Note that teleport destination is power-gated; low-power accounts may not be able to drop into the Sanctum, so move early and march in rather than relying on a teleport at 17:15.</li>
+    <li><strong>17:15 — stop farming.</strong> Everyone joins Palace rallies as bodies. Crystals collected after 17:15 will not be spent.</li>
+  </ul>
+
+  <h3>Hour by hour, by group</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th class="mono">UTC</th><th>VANGUARD 20</th><th>SCALE 10 · TALON 10</th><th>EMBER 20</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">11:00–11:05</td><td colspan="3">Prep lock — nothing is possible. Post the call order and the shift split in alliance chat now.</td></tr>
+      <tr><td class="mono">11:05–11:50</td><td>Teleport into the Lava Shelter ring, four diagonal clusters of five. Confirm every member's march time to the Palace tile.</td><td>Teleport to the Palace side of Life (N) and Dragon (E). Confirm march times to both tower and Palace.</td><td>Take up the four posts in the Border Region, shields up. Scout node and escort spawn points in your own quadrant.</td></tr>
+      <tr><td class="mono">11:50–12:00</td><td><strong>Pre-fill the throne rally.</strong> Fire Dragonroar Rally before it forms so the extra capacity counts. Everyone in VANGUARD holds a <strong>50% Rally March Speedup</strong> (event packs) ready for the seize.</td><td>Pre-fill both tower rallies.</td><td>Hold. Escorts spawn at 12:00.</td></tr>
+      <tr><td class="mono">12:00–12:30</td><td><strong>Seize.</strong> Clear the Old Guard, land the candidate, convert to garrison. Dragonscale Armor on landing.</td><td>Round 1 — take both towers. This round is raw, with no buff yet.</td><td>Escorts at 12:00, first mines at 12:15. Full cycle.</td></tr>
+      <tr><td class="mono">12:30–13:00</td><td>Hold under +50% HP and +50% Lethality. <strong>40 players in the rally.</strong> Dragonblood Healing once you are visibly taking hits.</td><td>Towers locked — <strong>everyone into the Palace rally.</strong></td><td>Mines at 12:45, escorts at 12:30. Report the crystal total.</td></tr>
+      <tr><td class="mono">13:00–16:00</td><td>Grind. Reform on every break. Shifts A and B heal on alternating half-hours, never together.</td><td>Alternate: towers on the vulnerable round, Palace on the protected round. Concede a tower immediately if outmatched.</td><td>Continuous cycles. Concede contested nodes. Hourly totals to leadership.</td></tr>
+      <tr><td class="mono">16:00–17:00</td><td>Audit healing stock across all 20. If joiners are dry, run a smaller rally that refills every time rather than a big one that breaks.</td><td>Same rhythm. If the Palace is under real pressure, skip a tower round and stay in the centre — <strong>the Palace outranks both towers.</strong></td><td>Last two full cycles, then <strong>relocate to the inner border edge at 16:30.</strong></td></tr>
+      <tr><td class="mono">17:00–18:00</td><td><strong>Burn everything.</strong> All reserves, all speedups, the full crystal bank. A second at 17:50 is worth exactly as much as a second at 12:00.</td><td>All-in on the Palace unless a tower is free to take uncontested.</td><td><strong>17:15 — stop farming.</strong> March in and join Palace rallies as bulk.</td></tr>
+      <tr><td class="mono">18:00–19:00</td><td colspan="3">No attacks. <strong>Every one of the 60 heals down below their real infirmary cap before exiting.</strong> Nobody retreats without a call — retreat is permanent removal from the map.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Comms</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Call</th><th class="mono">Format</th><th>Means</th></tr></thead>
+    <tbody>
+      <tr><td>Seize</td><td class="mono">VANGUARD GO — 12:00</td><td>Throne rally launches. Everything else is secondary.</td></tr>
+      <tr><td>Collapse</td><td class="mono">SCALE IN / TALON IN</td><td>Tower locked, squad joins the Palace rally now.</td></tr>
+      <tr><td>Concede</td><td class="mono">TALON BREAK</td><td>Abandon the tower this round. No argument, no follow-up rally.</td></tr>
+      <tr><td>Flip</td><td class="mono">SCALE WEST</td><td>Palace lost. Scale abandons Life, takes Blade. Posture switches to offence.</td></tr>
+      <tr><td>Skill</td><td class="mono">ARMOR UP / BLOOD NOW</td><td>Dragonscale Armor / Dragonblood Healing firing this second. Nobody else spends crystals.</td></tr>
+      <tr><td>Endgame</td><td class="mono">EMBER IN — 17:15</td><td>Farming ends. All four posts march to the centre.</td></tr>
+      <tr><td>Heal</td><td class="mono">SHIFT A HEAL</td><td>Only that shift heals. The other shift holds the rally.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="mono" style="font-size:12.5px;color:#5d564c">All calls in UTC. One voice, one channel. The battle commander sits in VANGUARD.</p>
+
+  <h3>What this build gives up — read before committing</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Gap</th><th>Consequence</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr><td><strong>No disruption unit.</strong> Nobody is assigned to counter-rally, intercept enemy captains or clear cities.</td><td>Rivals stage next to the Palace unmolested and rally you at their own tempo.</td><td><strong>Buy it with crystals instead of bodies.</strong> Dragonbreath Fury clears enemy cities out of the Palace area for ~10 minutes — that is your disruption unit, and EMBER pays for it. Do not improvise a raid party out of VANGUARD; that is how the rally lapses.</td></tr>
+      <tr><td><strong>No offensive tower pair.</strong> Blade and Shield are ceded to whoever wants them.</td><td>If you lose the Palace after ~14:00 you have no Attack buff to prise an entrenched enemy off it.</td><td>This is why the 12:00 seize is non-negotiable, and why the crystal bank exists. Re-take package: <span class="mono">SCALE WEST</span> → <strong>Dragonbreath Fury</strong> (clear their cities) → Dragonroar Rally → mass push. Rehearse the sequence and the order.</td></tr>
+      <tr><td><strong>20 in the centre is thin for six hours.</strong> Healing downtime bites.</td><td>Between 13:00 and 16:00 your effective rally can dip well below 20 on the vulnerable half-hours.</td><td>The A/B shift split is what holds this together — it is the single most important discipline in the plan. The 40-player protected windows cover the rest.</td></tr>
+      <tr><td><strong>20 farmers is a third of the roster off the objective.</strong></td><td>Fewer bodies in the fight all afternoon.</td><td>Justified only if the crystals are actually spent. If leadership will not fire skills, cut EMBER to 12 and move 8 into VANGUARD.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Recalibrate what "winning" costs</h3>
+  <div class="rule">
+    <span class="tag">The number that changes the whole plan</span>
+    In a competitive Zone the Palace changes hands constantly, and the <strong>winning Tyrant's total cumulative hold is frequently under one hour</strong> — with the longest single unbroken hold often under 30 minutes. You are not being asked to hold for six hours. <strong>You are being asked to accumulate roughly 45–60 minutes of captain time in bursts, and to be holding more often than anyone else.</strong> That is a far more achievable target than it sounds, and it makes the reform-instantly discipline the single highest-value habit in the plan.
+  </div>
+  <ul>
+    <li><strong>Every second counts equally.</strong> A 4-minute hold at 13:12 is worth the same as a 4-minute hold at 17:50. Never write off a round because the Palace looks contested.</li>
+    <li><strong>Do not expect to be first.</strong> First occupancy is decided by march speedups and connection latency, not power — and the first occupier almost never becomes Tyrant. Take the First Occupancy Reward if you get it, then settle into the grind.</li>
+    <li><strong>Share the captaincy once the bid is safe.</strong> Strong alliances rotate the captain role inside the Palace late in the battle so several members land in the top-100 occupation ranking. Your 3 relief captains are the beneficiaries — call it around 17:00 once the candidate's lead is comfortable.</li>
+  </ul>
+  <div class="tip">
+    <span class="tag">Realistic targets for this deployment</span>
+    <strong>First Occupancy Reward</strong> if the rush lands, roughly 45–60 minutes of cumulative captain time for the candidate, a recorded occupation ranking for the candidate plus 1–3 relief captains, an alliance occupation-leaderboard placing, and full personal-point milestones across all 60. On those numbers the Tyrant title is a live contest, not a fantasy.
+  </div>
+</section>
+
+
+<!-- ================= 11 ================= -->
+<section id="s11">
+  <div class="sec-head"><span class="sec-num">11</span><h2>Plan B — a two-alliance bloc</h2></div>
+  <p class="lede">120 combatants, but <strong>two separate buff economies</strong>. Handled well this is far more than double. Handled naively it is worse than one alliance, because half your buffs land on people who aren't in the fight.</p>
+
+  <div class="rule">
+    <span class="tag">The constraint that governs everything</span>
+    Aerie bonuses and Crystal Skills apply to <strong>the earning alliance's own members only</strong>. Alliance B holding the Life Aerie does nothing for Alliance A's Palace garrison. Alliance B's Dragonblood Healing does not heal Alliance A. Any plan that treats the two alliances as one army is wrong at the mechanical level.
+  </div>
+
+  <h3>First: settle who wears the crown</h3>
+  <p>Occupation time is per-governor. Two alliances each pushing their own candidate means the Palace changes hands between friends all afternoon and <strong>both candidates finish with half the time a rival needed</strong>. Before D-Day, in writing:</p>
+  <ul>
+    <li>One named throne candidate for the whole bloc, in <strong>Alliance A</strong>.</li>
+    <li>Alliance B's leadership agrees in advance to a compensation package: title appointments from the Tyrant (Bloodwyrm Warlord, Wyrmbreath Overlord, Dragonscale Guard, Dragontooth General — each +20% to a stat plus 2,000 deployment), commendation chests, and priority on the Dragon Banquet.</li>
+    <li>Alliance B feeds a <strong>secondary captain</strong> occupation time for the occupation ranking once the throne is mathematically safe — usually after 16:30. That's a real, valuable consolation: the top 100–200 occupation slots pay Mythril and gems.</li>
+  </ul>
+
+  <h3>Division of labour</h3>
+  <div class="cols">
+    <div class="col-a">
+      <h4><span class="pill p-a">Alliance A</span> — the Throne</h4>
+      <ul>
+        <li>Holds the Palace, continuously, with the bloc's single candidate as captain.</li>
+        <li>Contests and holds <strong>Life (N) + Shield (S)</strong> — the defensive pair — because A is the one that has to survive rallies.</li>
+        <li>Its crystal skills are the <strong>defensive suite</strong>: Dragonscale Armor, Dragonblood Healing, Dragonroar Rally.</li>
+        <li>Runs a smaller farming detail (6–8) because its members must be available as rally bodies.</li>
+      </ul>
+    </div>
+    <div class="col-b">
+      <h4><span class="pill p-b">Alliance B</span> — the Hammer</h4>
+      <ul>
+        <li>Contests and holds <strong>Blade (W) + Dragon (E)</strong> — the offensive pair — because B's job is breaking things.</li>
+        <li>Counter-rallies: hits enemy garrisons the moment a rival takes the Palace, so A can re-seize a weakened throne.</li>
+        <li>Denies crystal nodes to the strongest rival bloc, and runs the bloc's large farming detail (14–18).</li>
+        <li>Its crystal skills are the <strong>offensive suite</strong>: Dragonbreath Fury, Dragonroar Rally, Dragonborn Gathering.</li>
+        <li>Selectively clears enemy <strong>cities</strong> near the Sanctum to lengthen rival reinforcement marches — the one place city hits are justified, and only with a named call, since these kill troops.</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure>
+    <div class="svgbox scroll">
+      <svg viewBox="0 0 900 340" width="900" role="img" aria-label="Diagram of the two-alliance split showing Alliance A holding the palace and defensive aeries while Alliance B holds the offensive aeries and runs counter-rallies and farming.">
+        <rect width="900" height="340" fill="#CFC9BE"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="12">
+          <text x="16" y="26" letter-spacing="2.2" fill="#5d564c">TWO-ALLIANCE BLOC — 120 COMBATANTS, TWO BUFF ECONOMIES</text>
+
+          <!-- A column -->
+          <rect x="30" y="46" width="390" height="264" fill="rgba(182,47,23,.10)" stroke="#B62F17" stroke-width="2"/>
+          <text x="46" y="72" font-family="Big Shoulders Display, sans-serif" font-size="26" font-weight="800" fill="#B62F17">ALLIANCE A · THRONE</text>
+          <g fill="#14110F" font-size="12.5">
+            <text x="46" y="102">36 · throne rally pool + candidate</text>
+            <text x="46" y="126">12 · Life Aerie squad (N)</text>
+            <text x="46" y="150">12 · Shield Aerie squad (S)</text>
+            <text x="46" y="174">·</text>
+          </g>
+          <rect x="46" y="188" width="358" height="30" fill="#B62F17"/>
+          <text x="225" y="208" text-anchor="middle" fill="#F7EDE7" letter-spacing="1.4">DEFENSIVE BUFFS STAY WITH THE GARRISON</text>
+          <g fill="#5d564c" font-size="11">
+            <text x="46" y="240">skills: Dragonscale Armor · Dragonblood</text>
+            <text x="46" y="258">Healing · Dragonroar Rally</text>
+            <text x="46" y="282">posture: never leaves the Palace tile</text>
+          </g>
+
+          <!-- B column -->
+          <rect x="480" y="46" width="390" height="264" fill="rgba(44,89,102,.10)" stroke="#2C5966" stroke-width="2"/>
+          <text x="496" y="72" font-family="Big Shoulders Display, sans-serif" font-size="26" font-weight="800" fill="#2C5966">ALLIANCE B · HAMMER</text>
+          <g fill="#14110F" font-size="12.5">
+            <text x="496" y="102">16 · farming detail (mines + escorts)</text>
+            <text x="496" y="126">12 · Blade Aerie squad (W)</text>
+            <text x="496" y="150">12 · Dragon Aerie squad (E)</text>
+            <text x="496" y="174">20 · counter-rally + city clearance</text>
+          </g>
+          <rect x="496" y="188" width="358" height="30" fill="#2C5966"/>
+          <text x="675" y="208" text-anchor="middle" fill="#E4EEF0" letter-spacing="1.4">OFFENSIVE BUFFS STAY WITH THE BREAKERS</text>
+          <g fill="#5d564c" font-size="11">
+            <text x="496" y="240">skills: Dragonbreath Fury · Dragonroar</text>
+            <text x="496" y="258">Rally · Dragonborn Gathering</text>
+            <text x="496" y="282">posture: mobile, never garrisons the Palace</text>
+          </g>
+
+          <!-- link -->
+          <g stroke="#14110F" stroke-width="2" fill="none">
+            <path d="M420 150 L480 150" stroke-dasharray="6 4"/>
+          </g>
+          <text x="450" y="140" text-anchor="middle" font-size="11" fill="#5d564c">no</text>
+          <text x="450" y="176" text-anchor="middle" font-size="11" fill="#5d564c">shared</text>
+          <text x="450" y="192" text-anchor="middle" font-size="11" fill="#5d564c">buffs</text>
+          <text x="16" y="330" fill="#5d564c" font-size="11">The dashed link is coordination only. Nothing mechanical crosses it — buffs, skills and aerie bonuses stop at the alliance boundary.</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Fig. 7 — The two-alliance split, built around the fact that buffs do not cross alliance lines.</figcaption>
+  </figure>
+
+  <h3>Why B never garrisons the Palace</h3>
+  <p>If Alliance B members join A's throne rally they are simply bodies without A's aerie buffs — and worse, B loses those members from its own tower and counter-rally jobs. <strong>B contributes by removing threats, not by adding bodies.</strong> The one exception is the final push at 17:00, when maximising raw troop count in the Palace outweighs everything else and B's members can pile into A's rallies as bulk.</p>
+
+  <h3>Command protocol</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Element</th><th>Standard</th></tr></thead>
+    <tbody>
+      <tr><td>Command</td><td><strong>One battle commander for the bloc</strong>, sitting in A. B's leader is deputy and owns tower/counter-rally decisions autonomously. Never two voices on the same objective.</td></tr>
+      <tr><td>Comms</td><td>One voice channel, two text channels (A-ops, B-ops), one shared "calls" channel that only the commander and deputy post in.</td></tr>
+      <tr><td>Call format</td><td>Everything in UTC, everything with a verb: <span class="mono">"13:28 — A hold, B break E-tower, 8 marches, go on 13:30."</span></td></tr>
+      <tr><td>Crystal reporting</td><td>Both alliances post pool totals at the top of every hour. The commander decides whether B fires early tempo skills or banks for A's 17:00 push.</td></tr>
+      <tr><td>Diplomacy</td><td>Non-aggression pacts with other kingdoms in the Zone are worth more than any single skill. B owns diplomacy — A is too busy holding.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="warn">
+    <span class="tag">If both alliances genuinely want the title</span>
+    Then you do not have a bloc, you have two competitors — and the honest plan is to split the day: one alliance takes the throne from 12:00 to 15:00, the other from 15:00 to 18:00, and whoever is ahead at 17:00 gets the bloc's full support for the last hour. It is worse than committing to one candidate, but it is far better than trading the Palace back and forth for six hours while a third alliance walks off with the crown.
+  </div>
+</section>
+
+<!-- ================= 12 ================= -->
+<section id="s12">
+  <div class="sec-head"><span class="sec-num">12</span><h2>Rally construction &amp; hero setups</h2></div>
+  <p>The event's mechanics are unusual; the rally maths is not. Use your kingdom's standard KvK setups, with two adjustments: rallies must be <strong>refilled continuously</strong> rather than run as set-pieces, and joiner discipline matters more than usual because a half-filled captain rally still burns your one occupation seat.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Posture</th><th>Lead setup</th><th>Joiners</th><th>Notes for this event</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Palace seize / tower break</strong><br><span class="pill p-a">offence</span></td><td class="mono">Triton / Thrud / Yang<br>50 / 10 / 40</td><td class="mono">2× Chenko + 2× Amane stacks</td><td>Run under Blade + Dragon aerie buffs and Dragonbreath Rage. Fire Dragonroar Rally <em>before</em> the rally forms so the extra capacity is counted.</td></tr>
+      <tr><td><strong>Palace hold</strong><br><span class="pill p-b">defence</span></td><td class="mono">Triton / Margot or Sophia / Saul<br>60 / 40 / 0</td><td class="mono">Hilde- and Saul-based stacks</td><td>Run under Life + Shield and Dragonscale Armor. This is where your candidate spends five of the six hours.</td></tr>
+      <tr><td><strong>Escorts</strong></td><td class="mono">Any fast solo march</td><td class="mono">—</td><td>Rallies are not allowed on escorts. March speed decides everything; assign your quickest accounts, not your strongest.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="mono" style="font-size:12.5px;color:#5d564c">Setups above are your Gen-6 baselines — re-check against your kingdom's current hero generation before publishing them to the roster.</p>
+
+  <div class="tip">
+    <span class="tag">Joiner discipline</span>
+    Publish exact troop ratios per generation before D-Day and pin them. In a six-hour grind with dozens of rally refills, a roster that joins correctly by reflex is worth more than a roster with better heroes that has to be told each time.
+  </div>
+</section>
+
+<!-- ================= 13 ================= -->
+<section id="s13">
+  <div class="sec-head"><span class="sec-num">13</span><h2>Troop loss, infirmary &amp; the exit trap</h2></div>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Action</th><th>Outcome</th><th>Points?</th></tr></thead>
+    <tbody>
+      <tr><td>Attacking / defending the <strong>Palace</strong> or an <strong>Aerie</strong></td><td>Severely injured only — <strong>no deaths</strong></td><td>Yes — this is the only real point source</td></tr>
+      <tr><td>Attacking another governor's <strong>town</strong></td><td><strong>Deaths possible.</strong> Real, permanent losses</td><td>No</td></tr>
+      <tr><td>Fighting over a <strong>crystal node</strong></td><td>Losses</td><td>No</td></tr>
+      <tr><td>Gathering / killing escorts</td><td>Minimal risk</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="rule">
+    <span class="tag">The most expensive mistake in the event</span>
+    Infirmary capacity is unlimited <strong>only while you are on the battlefield</strong>. On exit it reverts to your real capacity, and severely injured soldiers above that cap <strong>die immediately</strong>, with some reserves pushed to the Enlistment Office. Before you leave: heal down, or accept the loss knowingly. Set an alarm for 18:10 if you have to.
+  </div>
+
+  <ul>
+    <li>Alliance members <strong>not</strong> dispatched to the battlefield can still send healing help to those who are. Put your bench on healing duty for the whole six hours.</li>
+    <li>Champion's Eve alliance preparation milestones grant up to <strong>+200% battlefield healing speed and −30% healing cost</strong> for your alliance, in six 50,000-point steps. These apply during the battle, unlike the Rearmament bonus.</li>
+    <li>Rearmament (+500% speed, −30% cost) runs from Sunday 18:00 to Tuesday 24:00 UTC. Schedule the alliance's mass heal at a peak-activity hour so healing helps flow fast — <strong>stacking it onto an existing rally point like Bear Trap works well</strong>, because everyone is already online and tapping.</li>
+    <li>Healing still costs resources. A six-hour grind can drain more than a full KvK — stockpile in the Eve of Battle phase, not on the Monday after.</li>
+  </ul>
+</section>
+
+<!-- ================= 14 ================= -->
+<section id="s14">
+  <div class="sec-head"><span class="sec-num">14</span><h2>Points, rankings &amp; rewards</h2></div>
+
+  <h3>Where personal points come from</h3>
+  <p>Personal points are earned <strong>only</strong> by attacking governors or NPCs garrisoned in the Palace and the Aeries, plus gathering crystals and killing escorts. Occupation by itself pays nothing directly, and neither do town raids or node scraps. In practice a disciplined player who never sees the Palace can still hit high milestones through escorts and gathering alone.</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th>Track</th><th>Who wins it</th><th>Typical payout</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Flamedragon Tyrant</strong></td><td>Longest total Palace occupation as rally captain. Ties go to whoever hit the duration first.</td><td>30-day title: +10% Attack / Defense / Lethality / Health, +5,000 deployment capacity (stacks with King titles). Exclusive city, march and teleport skins, avatar frames, free pack, four appointable Zone titles, commendation chests, Dragon Banquet.</td></tr>
+      <tr><td><strong>Occupation ranking</strong></td><td>Any captain with recorded occupation time (under one second does not register).</td><td>Roughly the top 100–200 receive Mythril, gems, Honor Points and an <strong>exclusive island decoration</strong>. Reachable for a mid-tier alliance that seizes the Palace even briefly — but read the ranking caveat below before promising it to your roster.</td></tr>
+      <tr><td><strong>First Occupancy</strong></td><td><strong>Every member</strong> of the first alliance to occupy the Palace.</td><td>One-off reward — worth an all-in opening rush regardless of whether you can hold.</td></tr>
+      <tr><td><strong>Personal point milestones</strong></td><td>Anyone. Fixed thresholds, not competitive.</td><td>Around 2 Mythril across the track, plus speedups and resources. The reliable F2P payload.</td></tr>
+      <tr><td><strong>Personal point ranking</strong></td><td>Competitive leaderboard.</td><td>Charm designs, Mythril, gems, orange shards, Truegold, honour points, cosmetics.</td></tr>
+      <tr><td><strong>Alliance occupation leaderboard</strong></td><td>Sum of all your captains' Palace occupation time. Only battle participants receive it.</td><td>Mailed after the battle by final rank.</td></tr>
+      <tr><td><strong>Predictions</strong></td><td>Anyone. 1,000 Dragonclaw Marks per pick, up to three alliances.</td><td>10:1 payout — 10,000 marks for a correct call; losers refund 500. Free trivia predictions pay 1,000 per correct answer. <strong>See the wager loop below: your first bet is effectively free.</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Two F2P routes</h3>
+  <p>There are two low-risk ways to farm this event, and they suit different accounts. Run whichever fits, or alternate.</p>
+  <div class="cols">
+    <div class="col-a">
+      <h4><span class="pill p-a">Route 1</span> — the small structures</h4>
+      <p>Sit near the centre and <strong>hit the small buildings ringing the Palace on repeat</strong>. Because Palace and Aerie combat only injures and the battlefield infirmary is unlimited, you can grind points here almost indefinitely without losing a soldier permanently. This is the highest point-per-hour route available to a low-power account.</p>
+      <p class="mono" style="font-size:12px;color:#5d564c">Risk: you are inside the Magma Sanctum with no shield. Expect to get farmed by whales between rounds. Accept it — the injuries are recoverable.</p>
+    </div>
+    <div class="col-b">
+      <h4><span class="pill p-b">Route 2</span> — the outer ring</h4>
+      <p>Stay in the Border Region with a shield up. Farm Lv.1 nodes and escorts all afternoon, join the Palace rally only on a called full push. Fewer points than Route 1, near-zero exposure, and it is the route that feeds your alliance's crystal pool.</p>
+      <p class="mono" style="font-size:12px;color:#5d564c">Risk: almost none, provided you concede contested nodes instead of fighting for them.</p>
+    </div>
+  </div>
+  <div class="tip">
+    <span class="tag">Either route, same closing sequence</span>
+    Hit every personal-point milestone. Place all three predictions plus the free trivia. Heal down before leaving the map. You finish with Mythril, gems, speedups and an intact army.
+  </div>
+
+  <div class="warn">
+    <span class="tag">Set your ranking expectations honestly</span>
+    Community guides disagree here. Some report the top 100–200 occupation slots as easy to sneak into; the official wiki's own F2P note is blunter — <strong>outside top-tier servers, climbing past roughly rank 1000 on the personal ranking is hard without real investment.</strong> Both can be true, because the occupation ranking and the personal-point ranking are different tables with different competition. <strong>Plan around the fixed milestones, which are guaranteed; treat every leaderboard placing as a bonus.</strong>
+  </div>
+
+  <h3>Tyrant appointments</h3>
+  <p>If your candidate wins, the four Zone titles are a strategic asset, not a courtesy. Each grants <strong>+20% to one stat and +2,000 deployment capacity</strong>, stacks with King and High King bonuses, and carries a one-hour cooldown between appointments:</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Title</th><th class="mono">Bonus</th><th>Give it to</th></tr></thead>
+    <tbody>
+      <tr><td>Bloodwyrm Warlord</td><td class="mono">+20% Troop Health</td><td>Your best garrison holder for the next month of KvK.</td></tr>
+      <tr><td>Wyrmbreath Overlord</td><td class="mono">+20% Troop Lethality</td><td>Your primary attack rally lead.</td></tr>
+      <tr><td>Dragonscale Guard</td><td class="mono">+20% Troop Defense</td><td>Your defence rally lead.</td></tr>
+      <tr><td>Dragontooth General</td><td class="mono">+20% Troop Attack</td><td>Your second attack lead — or Alliance B's leader, as agreed payment for the bloc deal.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>The prediction market — free money, played correctly</h3>
+  <p>Predictions are the highest return-per-minute activity in the whole event, and most players either skip them or treat them as a loyalty vote. They are neither.</p>
+  <div class="rule">
+    <span class="tag">The wager loop</span>
+    Placing a single 1,000-mark wager <strong>completes a Searing Path mission that pays back 500 Dragonclaw Marks and 15 Dragon Essence.</strong> A losing bet also refunds 500 marks. So your first wager costs you nothing at all and hands you Dragon Essence on top. <strong>There is no version of this where not betting is correct.</strong>
+  </div>
+  <ul>
+    <li>Back up to three alliances at 1,000 marks each. A correct call returns 10,000.</li>
+    <li>You are not obliged to back your own alliance, and there is no gameplay benefit to loyalty. Bet on who will win.</li>
+    <li>If you don't know the power structures in the other kingdoms in your Zone, <strong>read the public voting percentages</strong> before committing.</li>
+    <li>Trivia predictions are free. Answer all of them; each correct answer is 1,000 marks.</li>
+    <li>Spend leftover marks in the Prediction Shop before the event closes — they do not carry over.</li>
+  </ul>
+
+  <h4>Trivia question cheat sheet</h4>
+  <p>The trivia set recurs between cycles. These are the picks an experienced guide creator recommends, with the reasoning — check the wording in your own event before copying them, since answer bands shift.</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Question</th><th class="mono">Pick</th><th>Reasoning</th></tr></thead>
+    <tbody>
+      <tr><td>Total Palace hold time of the Tyrant in your Zone?</td><td class="mono">&lt; 1 hour</td><td>Zones with 100+ alliances flip the Palace constantly. Cumulative winning time is usually short.</td></tr>
+      <tr><td>Will the first occupier become the Tyrant?</td><td class="mono">No</td><td>First occupancy is won by march speedups and latency, not power. Historically well under 1%.</td></tr>
+      <tr><td>Squads defeated by the deadliest governor?</td><td class="mono">&gt; 70 million</td><td>Combat density around the Palace guarantees extreme kill counts.</td></tr>
+      <tr><td>Longest continuous Palace hold across all Zones?</td><td class="mono">&lt; 30 minutes</td><td>Holding uninterrupted against dozens of simultaneous rallies is close to impossible.</td></tr>
+      <tr><td>Shortest Tyrant hold across all Zones?</td><td class="mono">&lt; 1 hour</td><td>Winning alliances swap rally captains late to share top-10 leaderboard rewards, which shortens any single governor's total.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tip">
+    <span class="tag">Read these as intelligence, not just answers</span>
+    Two of these picks are strategy in disguise. <strong>"Longest continuous hold &lt; 30 minutes"</strong> tells you that entrenchment is temporary for everyone, including the alliance sitting on the throne when you look at it. <strong>"Shortest Tyrant hold &lt; 1 hour"</strong> tells you the bar for winning is far lower than six hours of dominance. Both should make you more aggressive, not less.
+  </div>
+
+  <h3>The Dragon Banquet</h3>
+  <ul>
+    <li>One banquet per reign, kingdom-wide, hosted in the Tyrant's own kingdom. <strong>It cannot be cancelled once started</strong> and runs for exactly one hour.</li>
+    <li>Governors need <strong>Town Centre Lv.13 or above</strong> to join, and have <strong>3 dining squads</strong> to dispatch.</li>
+    <li>Likes are given during Rearmament — <strong>5 per governor per day</strong>, each granting a gift, and only to your own Zone's Tyrant.</li>
+    <li>The Tyrant may edit the Tyrant Declaration once per day; each edit fires a ticker broadcast.</li>
+  </ul>
+  <p class="mono" style="font-size:12.5px;color:#5d564c">Schedule the banquet at your kingdom's peak hour. One non-cancellable hour, and everyone below TC13 is locked out — announce it in advance.</p>
+
+  <h3>The side events running alongside</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Event</th><th class="mono">Runs</th><th>Currency</th><th>What to do with it</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Searing Path</strong> (Blazing Trail missions)</td><td class="mono">Day 1 – 6</td><td>Dragon Essence, Dragonclaw Marks</td><td>Daily missions reset at 00:00 UTC; season missions do not. Clear the dailies — they are the free source of both currencies.</td></tr>
+      <tr><td><strong>Dragon Caravan</strong></td><td class="mono">Day 1 – 7</td><td>Dragon Essence</td><td>Daily sign-in for an Ashen Bounty Pack. <strong>Tap the “+” in the store menu for a free daily allotment of Dragon Essence</strong> — easy to miss. Stock does not reset daily except the free pack. F2P priorities: Mythril, charm designs, artisan's visions, Truegold. The store carries up to 25 Mythril in total.</td></tr>
+      <tr><td><strong>Championship Prediction</strong></td><td class="mono">Day 1 – 9</td><td>Dragonclaw Marks</td><td>Battle predictions from D3. Outcomes and payouts mailed on D9. Spend leftover marks in the Prediction Shop before the event closes.</td></tr>
+      <tr><td><strong>Champion's Eve</strong></td><td class="mono">Eve of Battle</td><td>Preparation Points</td><td>Six 50,000-point alliance milestones → up to +200% battlefield healing speed and −30% healing cost. This is the only prep that helps <em>during</em> the battle. Milestones also drop Governor Chests (1h speedups, gear materials, 5 Truegold); a full batch of T10 troops trained is worth roughly 1.5 chests.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="warn">
+    <span class="tag">Don't overspend here</span>
+    Champion's Eve overlaps with Strongest Governor prep. Hitting all six milestones is realistic for an active alliance, but it is not worth draining your saved speedups before the battle — those speedups are your healing budget on Sunday.
+  </div>
+</section>
+
+<!-- ================= 15 ================= -->
+<section id="s15">
+  <div class="sec-head"><span class="sec-num">15</span><h2>Pre-battle checklist</h2></div>
+
+  <h4>T−7 days · preview</h4>
+  <ul class="tick">
+    <li>Read the Zone list. Identify the two or three alliances that can realistically win it.</li>
+    <li>Decide: are you bidding for the throne, or maximising guaranteed rewards? Tell the roster which.</li>
+    <li>If bidding, name the throne candidate. In writing. No second candidate.</li>
+  </ul>
+
+  <h4>Mon–Tue · sign-up</h4>
+  <ul class="tick">
+    <li>Roster locked before registration closes — anyone joining after is disqualified.</li>
+    <li>Alliance registered by R4/R5. Do not leave it to the last hour unless you are deliberately hiding power.</li>
+  </ul>
+
+  <h4>Wed–Thu · dispatch</h4>
+  <ul class="tick">
+    <li>Publish the 60 and the reserve list.</li>
+    <li>Confirm every combatant is available for the full 12:00–18:00 UTC block.</li>
+    <li>Place all three championship predictions. Answer the free trivia predictions.</li>
+    <li>If running a two-alliance bloc: sign the throne agreement and the title-compensation package now.</li>
+  </ul>
+
+  <h4>Fri–Sun · eve of battle</h4>
+  <ul class="tick">
+    <li>Push Champion's Eve alliance preparation points toward all six healing milestones.</li>
+    <li>Stockpile healing resources and speedups. Assume two full army resets.</li>
+    <li>Publish rally ratios by hero generation and pin them.</li>
+    <li>Assign roles by name: throne pool, aerie squads (which two towers), farming detail, relief captains.</li>
+    <li>Set up comms. One voice channel, one calls channel, UTC only.</li>
+    <li>Agree non-aggression pacts with rival kingdoms where possible.</li>
+    <li>Bench members briefed on healing-help duty.</li>
+  </ul>
+
+  <h4>Sunday · D-Day</h4>
+  <ul class="tick">
+    <li>10:45 — everyone online. No squads scouting or marching, barricade not burning, or you cannot enter.</li>
+    <li>11:00 — enter. Five-minute lock. Post the call order.</li>
+    <li>11:05 — teleport by power tier. Candidate and throne pool into the Lava Shelter band.</li>
+    <li>11:52 — pre-fill the throne rally.</li>
+    <li>12:00 — seize.</li>
+    <li>17:00 — burn everything.</li>
+    <li>18:00 — <strong>heal down below your real infirmary cap.</strong> Nobody retreats without a call.</li>
+    <li>18:00 Sun – 24:00 Tue — mass heal under Rearmament. Claim Tyrant's Gift, likes, banquet.</li>
+  </ul>
+</section>
+
+<!-- ================= 16 ================= -->
+<section id="s16">
+  <div class="sec-head"><span class="sec-num">16</span><h2>Failure modes</h2></div>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Mistake</th><th>Cost</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr><td>Two throne candidates in one alliance or bloc</td><td>Neither wins. Both finish outside the Tyrant contest.</td><td>Name one, in writing, before sign-up closes.</td></tr>
+      <tr><td>Rushing the Palace with no aerie buffs</td><td>You feed the alliance that took the towers.</td><td>Round 1 is towers. The Palace push comes on the protected half-hour.</td></tr>
+      <tr><td>Contesting all four aeries</td><td>You lose all four and the crystals you spent doing it.</td><td>Two towers, chosen to match your posture.</td></tr>
+      <tr><td>Firing Dragonblood Healing during a march</td><td>The best skill in the event, wasted on an empty ten minutes.</td><td>Skills fire on contact, not on hope.</td></tr>
+      <tr><td>Assuming buffs cross alliance lines</td><td>Your partner's towers do nothing for your garrison; half the bloc's economy is misallocated.</td><td>Defensive pair to whoever holds the Palace; offensive pair to whoever breaks things.</td></tr>
+      <tr><td>Farming towns because there's nothing to do</td><td>Real, permanent troop deaths. No points.</td><td>City hits require a named call, and only to clear reinforcement paths.</td></tr>
+      <tr><td>Contesting crystal nodes against stronger squads</td><td>Losses with no points attached.</td><td>Concede the node, take the next one.</td></tr>
+      <tr><td>Nobody assigned to farming</td><td>No crystal pool means no skills, and skills are the swing factor in the last hour.</td><td>Eight minimum, twelve to sixteen preferred. Give it to low-power accounts.</td></tr>
+      <tr><td>Logging off after the battle without healing</td><td>Every injured soldier above your real infirmary cap dies.</td><td>Heal down first. Set an alarm.</td></tr>
+      <tr><td>Retreating from the map mid-battle</td><td>You cannot re-enter, and re-entry after a defeat places you randomly anyway.</td><td>Nobody leaves the battlefield without a call.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ================= 17 ================= -->
+<section id="s17">
+  <div class="sec-head"><span class="sec-num">17</span><h2>Screenshots &amp; sources</h2></div>
+  <p>Every diagram in this manual is drawn from scratch rather than captured from the game — in-game art, reward tables and UI screens are Century Games' copyrighted material, so they aren't reproduced here. If you want the actual screens (reward tables, the crystal skill panel, the official map plate, banquet and pack contents) for your alliance briefing, they are published here:</p>
+  <ul>
+    <li><a href="https://kingshotwiki.com/events/flamedragon-tyrant/#more">kingshotwiki.com — Flamedragon Tyrant, screenshot gallery</a> — the official wiki, re-checked against this manual (page last revised 30 Jul 2026). Seventeen full-size captures: the official <span class="mono">FDP_Map</span> plate and the FDT strategy map, the <strong>crystal skill table with exact pyrocrystal costs and cooldowns</strong>, occupation and personal-point reward tiers, Tyrant title rewards, battle packs, Searing Path, Dragon Caravan, Champion's Eve chests and the banquet tables. <strong>Pull the skill-cost figures from that image and replace the planning envelope in §07–08 with real numbers before you brief your roster.</strong></li>
+    <li><a href="https://centurygames.helpshift.com/hc/en/140-kingshot/section/1609-flamedragon-tyrant/">Century Games help centre — Flamedragon Tyrant</a> — the authoritative rules FAQ. Phase times, crystal refresh rules, infirmary behaviour, captain-transfer mechanics.</li>
+    <li><a href="https://www.kingshot.wiki/events/flamedragon-tyrant">kingshot.wiki — Flamedragon Tyrant</a> — community wiki with the phase breakdown and tips.</li>
+    <li><a href="https://www.kingshotguide.org/guide/kingshot-flamedragon-tyrant-guide">kingshotguide.org</a> and <a href="https://clashiverse.com/kingshot-flamedragon-tyrant-guide-rewards-tips/">clashiverse.com</a> — community strategy write-ups covering aerie buffs, crystal yields and skill costs.</li>
+    <li><a href="https://www.youtube.com/watch?v=Y4EyNsDaj6c">Strat Game Sloth — Ultimate Flamedragon Tyrant Guide</a> (video) — source for the eligibility gates, the prediction wager loop and trivia picks, Dragonbreath Fury's city-clearance effect, and the observation that winning Tyrant hold times are typically under an hour.</li>
+  </ul>
+
+  <div class="warn">
+    <span class="tag">Figures to verify on the day</span>
+    Community-sourced numbers — crystal skill costs, node yields, escort rewards, exact round counts — vary between event versions and Zone tiers. The mechanics in this manual are stable; the numbers are a planning envelope. Check the in-game panels during the Eve of Battle phase and correct your briefing before you publish it to the roster.
+  </div>
+</section>
+
+<footer>
+  <p><strong>Flamedragon Tyrant — Alliance Field Manual.</strong> Built for R4/R5 leadership planning. Diagrams original; mechanics compiled from the Century Games help centre and community wikis, August 2026.</p>
+  <p class="mono">Unofficial. Not affiliated with Century Games. Verify all timers and figures in-game before D-Day.</p>
+</footer>
+
+</div>
+</body>
+</html>

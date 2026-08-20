@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <div class="wrap">
 
   <div class="topbar">
@@ -24,6 +25,24 @@
     <h1 style="font-size:clamp(34px,6vw,58px);margin-top:14px">Flame<span style="color:var(--ember)">dragon</span> Tyrant</h1>
     <p class="sub" style="max-width:64ch;font-size:16.5px;color:var(--ash-dim);margin-top:14px">A complete field manual for R4/R5 leadership: event structure, battlefield map, objective mechanics, crystal economy, rally doctrine, and a full battle plan for a single qualified alliance.</p>
     <div class="stamp">Rev. Aug 2026 · Server 745 · verify timers in-game before D-Day</div>
+
+    <div class="start-here">
+      <h4>Start here — you do not have to read all of this</h4>
+      <div class="paths">
+        <a class="path" href="roster.html">
+          <span class="t">5 minutes</span>
+          <span class="d"><strong>Your Orders.</strong> Your team, your troops, when to tap join. Every combatant reads this one.</span>
+        </a>
+        <a class="path" href="#s1">
+          <span class="t">20 minutes</span>
+          <span class="d"><strong>The Five Rules</strong>, then the Map (§05) and the Battle Clock (§11). Enough to fight correctly and understand why.</span>
+        </a>
+        <a class="path" href="#s15">
+          <span class="t">You are R4/R5</span>
+          <span class="d"><strong>All of it</strong>, then the pre-battle checklist. Budget about 40 minutes.</span>
+        </a>
+      </div>
+    </div>
   </header>
 
   <div class="manual-layout">
@@ -158,17 +177,17 @@
       </div>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Phase</th><th class="mono">Days (UTC)</th><th>What happens</th><th>What you do</th></tr></thead>
         <tbody>
-          <tr><td><strong>Preview</strong></td><td class="mono">~1 week before</td><td>The game announces the event. Zone matchups are already set.</td><td>Check the Zone list. Find the 2 or 3 alliances that can actually win.</td></tr>
-          <tr><td><strong>1 · Sign-up</strong></td><td class="mono">Mon – Tue</td><td>R4/R5 register the alliance. Only top alliances qualify. You must already be a member when sign-up closes.</td><td>Lock your roster now. No late joins, no swaps.</td></tr>
-          <tr><td><strong>2 · Dispatch</strong></td><td class="mono">Wed – Thu</td><td>Name up to 60 fighters. Predictions open.</td><td>Publish the 60 and the reserve list. Place your predictions.</td></tr>
-          <tr><td><strong>3 · Eve of Battle</strong></td><td class="mono">Fri – Sun</td><td>Prep time: Champion's Eve, Searing Path missions, the Dragon Caravan shop.</td><td>Push Champion's Eve milestones. Brief the roster.</td></tr>
-          <tr><td><strong>4a · Battlefield opens</strong></td><td class="mono">Sun 11:00</td><td>You enter. A 5-minute lock stops teleport, attack, scout and garrison. Then 1 hour to get in position — no combat.</td><td>Teleport in by power tier. Stage both Castle rallies.</td></tr>
-          <tr><td><strong>4b · Palace battle</strong></td><td class="mono">Sun 12:00 – 18:00</td><td>The Palace and all four Aeries are open. Mines and escorts spawn every 30 minutes. Crystal skills are live.</td><td>Run the battle clock (§11).</td></tr>
-          <tr><td><strong>4c · Cooldown</strong></td><td class="mono">Sun 18:00 – 19:00</td><td>No attacks. You can stay on the map. If you leave, you cannot come back.</td><td>Heal down before you exit.</td></tr>
-          <tr><td><strong>5 · Rearmament</strong></td><td class="mono">Sun 18:00 – Tue 24:00</td><td>Healing speed +500%, healing cost −30%.</td><td>Schedule a mass heal at a busy hour. Collect your free packs.</td></tr>
+          <tr><td data-l="Phase"><strong>Preview</strong></td><td class="mono" data-l="Days (UTC)">~1 week before</td><td data-l="What happens">The game announces the event. Zone matchups are already set.</td><td data-l="What you do">Check the Zone list. Find the 2 or 3 alliances that can actually win.</td></tr>
+          <tr><td data-l="Phase"><strong>1 · Sign-up</strong></td><td class="mono" data-l="Days (UTC)">Mon – Tue</td><td data-l="What happens">R4/R5 register the alliance. Only top alliances qualify. You must already be a member when sign-up closes.</td><td data-l="What you do">Lock your roster now. No late joins, no swaps.</td></tr>
+          <tr><td data-l="Phase"><strong>2 · Dispatch</strong></td><td class="mono" data-l="Days (UTC)">Wed – Thu</td><td data-l="What happens">Name up to 60 fighters. Predictions open.</td><td data-l="What you do">Publish the 60 and the reserve list. Place your predictions.</td></tr>
+          <tr><td data-l="Phase"><strong>3 · Eve of Battle</strong></td><td class="mono" data-l="Days (UTC)">Fri – Sun</td><td data-l="What happens">Prep time: Champion's Eve, Searing Path missions, the Dragon Caravan shop.</td><td data-l="What you do">Push Champion's Eve milestones. Brief the roster.</td></tr>
+          <tr><td data-l="Phase"><strong>4a · Battlefield opens</strong></td><td class="mono" data-l="Days (UTC)">Sun 11:00</td><td data-l="What happens">You enter. A 5-minute lock stops teleport, attack, scout and garrison. Then 1 hour to get in position — no combat.</td><td data-l="What you do">Teleport in by power tier. Stage both Castle rallies.</td></tr>
+          <tr><td data-l="Phase"><strong>4b · Palace battle</strong></td><td class="mono" data-l="Days (UTC)">Sun 12:00 – 18:00</td><td data-l="What happens">The Palace and all four Aeries are open. Mines and escorts spawn every 30 minutes. Crystal skills are live.</td><td data-l="What you do">Run the battle clock (§11).</td></tr>
+          <tr><td data-l="Phase"><strong>4c · Cooldown</strong></td><td class="mono" data-l="Days (UTC)">Sun 18:00 – 19:00</td><td data-l="What happens">No attacks. You can stay on the map. If you leave, you cannot come back.</td><td data-l="What you do">Heal down before you exit.</td></tr>
+          <tr><td data-l="Phase"><strong>5 · Rearmament</strong></td><td class="mono" data-l="Days (UTC)">Sun 18:00 – Tue 24:00</td><td data-l="What happens">Healing speed +500%, healing cost −30%.</td><td data-l="What you do">Schedule a mass heal at a busy hour. Collect your free packs.</td></tr>
         </tbody>
       </table>
       </div>
@@ -180,13 +199,13 @@
       <p class="lede"><strong>Kingdoms of similar progress are grouped into a Zone, and you only ever fight inside your own Zone.</strong> Zone size decides how many alliances qualify, so it decides how hard the door is.</p>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Event</th><th class="mono">Servers</th><th class="mono">Zones</th><th>Split</th></tr></thead>
         <tbody>
-          <tr><td><strong>1st</strong></td><td class="mono">78</td><td class="mono">1</td><td class="mono">1–78</td></tr>
-          <tr><td><strong>2nd</strong></td><td class="mono">235</td><td class="mono">3</td><td class="mono">~78 per Zone</td></tr>
-          <tr><td><strong>3rd</strong></td><td class="mono">587</td><td class="mono">8</td><td class="mono">1–57 · 58–115 · 116–193 · 194–271 · 272–349 · 350–427 · 428–505 · 506–587</td></tr>
-          <tr><td><strong>4th — now</strong></td><td class="mono">1–929</td><td class="mono">not announced</td><td class="mono">not announced</td></tr>
+          <tr><td data-l="Event"><strong>1st</strong></td><td class="mono" data-l="Servers">78</td><td class="mono" data-l="Zones">1</td><td class="mono" data-l="Split">1–78</td></tr>
+          <tr><td data-l="Event"><strong>2nd</strong></td><td class="mono" data-l="Servers">235</td><td class="mono" data-l="Zones">3</td><td class="mono" data-l="Split">~78 per Zone</td></tr>
+          <tr><td data-l="Event"><strong>3rd</strong></td><td class="mono" data-l="Servers">587</td><td class="mono" data-l="Zones">8</td><td class="mono" data-l="Split">1–57 · 58–115 · 116–193 · 194–271 · 272–349 · 350–427 · 428–505 · 506–587</td></tr>
+          <tr><td data-l="Event"><strong>4th — now</strong></td><td class="mono" data-l="Servers">1–929</td><td class="mono" data-l="Zones">not announced</td><td class="mono" data-l="Split">not announced</td></tr>
         </tbody>
       </table>
       </div>
@@ -196,10 +215,7 @@
         <li><strong>If the ~78 step holds, 929 servers is roughly 12 Zones</strong>, which would put Server 745 in a band somewhere around <strong>680–790</strong>.</li>
       </ul>
 
-      <div class="warn">
-        <span class="tag">All of the above is an estimate</span>
-        The 4th event's Zone split has <strong>not been announced</strong>. The 12-Zone figure and the 680–790 band are extrapolated from the first three events. Confirm the real split in-game before you plan around it.
-      </div>
+      <p><strong>All of the above is an estimate.</strong> The 4th event's Zone split has <strong>not been announced</strong>. The 12-Zone figure and the 680–790 band are extrapolated from the first three events. Confirm the real split in-game before you plan around it.</p>
     </section>
 
     <!-- ================= 3 ================= -->
@@ -208,12 +224,12 @@
       <p class="lede"><strong>Two rules decide if you fight. One is the game's rule. One is ours.</strong></p>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th></th><th>Requirement</th></tr></thead>
         <tbody>
-          <tr><td>Game minimum — account</td><td>Town Center <strong>Truegold IV</strong></td></tr>
-          <tr><td>Game minimum — kingdom</td><td>Hero Generation 6 — <strong>Server 745 has this</strong></td></tr>
-          <tr><td><strong>Our guideline</strong></td><td><strong>TG8 + T11 preferred for the Palace.</strong> Aeries and gathering: any level.</td></tr>
+          <tr><td data-l="">Game minimum — account</td><td data-l="Requirement">Town Center <strong>Truegold IV</strong></td></tr>
+          <tr><td data-l="">Game minimum — kingdom</td><td data-l="Requirement">Hero Generation 6 — <strong>Server 745 has this</strong></td></tr>
+          <tr><td data-l=""><strong>Our guideline</strong></td><td data-l="Requirement"><strong>TG8 + T11 preferred for the Palace.</strong> Aeries and gathering: any level.</td></tr>
         </tbody>
       </table>
       </div>
@@ -239,21 +255,25 @@
         Some alliances hide their power near the cutoff, or register at the last second so rivals cannot see the threshold. It sometimes works. It also sometimes locks you out for good. If you are not clearly above the historical cutoff, <strong>register early.</strong>
       </div>
 
-      <h3>Choosing your 60</h3>
+      <details class="more">
+        <summary>Choosing your 60 <span class="why">— pick for attendance and discipline, not power</span></summary>
+        <div class="inner">
       <p><strong>60 is the maximum. Picking the right 60 is harder than it sounds.</strong> A roster built only from the power leaderboard loses to a roster built from who actually shows up.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Filter</th><th>Rule</th><th>Why</th></tr></thead>
         <tbody>
-          <tr><td>Attendance</td><td>Confirmed present for the full 12:00–18:00 block</td><td>A strong player who leaves early helps less than an average player who stays.</td></tr>
-          <tr><td>Healing stock</td><td>Enough to heal your army twice</td><td>Injured troops that stay unhealed are troops out of the fight.</td></tr>
-          <tr><td>Rally capacity</td><td>6–8 players who can lead a rally</td><td>You need backup captains for the Aeries. The throne captain never leaves the queue.</td></tr>
-          <tr><td>Discipline</td><td>Will not hit towns without a call</td><td>One undisciplined player can burn a third of your healing budget.</td></tr>
-          <tr><td>March speed</td><td>3–5 fast accounts for mines and escorts</td><td>Crystals go to whoever arrives first, not whoever is strongest.</td></tr>
+          <tr><td data-l="Filter">Attendance</td><td data-l="Rule">Confirmed present for the full 12:00–18:00 block</td><td data-l="Why">A strong player who leaves early helps less than an average player who stays.</td></tr>
+          <tr><td data-l="Filter">Healing stock</td><td data-l="Rule">Enough to heal your army twice</td><td data-l="Why">Injured troops that stay unhealed are troops out of the fight.</td></tr>
+          <tr><td data-l="Filter">Rally capacity</td><td data-l="Rule">6–8 players who can lead a rally</td><td data-l="Why">You need backup captains for the Aeries. The Garrison Leader never leaves the tile.</td></tr>
+          <tr><td data-l="Filter">Discipline</td><td data-l="Rule">Will not hit towns without a call</td><td data-l="Why">One undisciplined player can burn a third of your healing budget.</td></tr>
+          <tr><td data-l="Filter">March speed</td><td data-l="Rule">3–5 fast accounts for mines and escorts</td><td data-l="Why">Crystals go to whoever arrives first, not whoever is strongest.</td></tr>
         </tbody>
       </table>
       </div>
       <p>Note: a player may leave the alliance after dispatch closes and still take part, <strong>as long as they rejoin before the battle phase ends.</strong> Useful for an emergency fix. Risky as a plan.</p>
+        </div>
+      </details>
     </section>
 
     <!-- ================= 4 — GLOSSARY ================= -->
@@ -262,28 +282,28 @@
       <p class="lede"><strong>These words appear everywhere in this manual. Learn them once.</strong></p>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Term</th><th>What it means</th></tr></thead>
         <tbody>
-          <tr id="g-rally"><td><strong>Rally</strong></td><td>An attack group. One captain plus up to 9 joiners. Holds 10 players.</td></tr>
-          <tr id="g-captain"><td><strong>Captain</strong></td><td>The player who starts the rally.</td></tr>
-          <tr id="g-garrison-leader"><td><strong>Defence Garrison Leader</strong></td><td>The player whose rally took the Palace tile and now holds it. <strong>Only his occupation time counts.</strong> This is the Tyrant bid.</td></tr>
-          <tr id="g-joiner"><td><strong>Joiner</strong></td><td>A player who adds troops to someone else's rally.</td></tr>
-          <tr id="g-core"><td><strong>Core joiner</strong></td><td>A named hero carrier. The rally takes the <strong>4 highest-level first skills</strong> among all joiners — join order is only the tie-break.</td></tr>
-          <tr id="g-filler"><td><strong>Filler</strong></td><td>A joiner sent for troops, not heroes. Waits 2 seconds so a carrier is not displaced on the tie-break.</td></tr>
-          <tr id="g-garrison"><td><strong>Garrison</strong></td><td>Troops defending a place you already hold. Not a rally.</td></tr>
-          <tr id="g-reinforce"><td><strong>Reinforce</strong></td><td>Send troops to a place your alliance already holds.</td></tr>
-          <tr id="g-vulnerable"><td><strong>Vulnerable</strong></td><td>Can be attacked right now.</td></tr>
-          <tr id="g-protected"><td><strong>Protected</strong></td><td>Cannot be attacked right now.</td></tr>
-          <tr id="g-aerie"><td><strong>Aerie</strong></td><td>One of the 4 towers around the Palace.</td></tr>
-          <tr id="g-buff"><td><strong>Buff</strong></td><td>A temporary bonus to your stats.</td></tr>
-          <tr id="g-oldguard"><td><strong>Old Guard</strong></td><td>The NPC defenders holding the Palace at 12:00.</td></tr>
-          <tr id="g-occupation"><td><strong>Occupation time</strong></td><td>How long you held the Palace as Defence Garrison Leader. This decides the Tyrant.</td></tr>
-          <tr id="g-load"><td><strong>Load</strong></td><td>How many troops you send.</td></tr>
-          <tr id="g-formation"><td><strong>Formation</strong></td><td>The mix of infantry, cavalry and archers in a rally.</td></tr>
-          <tr id="g-sanctum"><td><strong>Magma Sanctum</strong></td><td>The inner area. No shields allowed.</td></tr>
-          <tr id="g-border"><td><strong>Border Region</strong></td><td>The outer area. Shields work here.</td></tr>
-          <tr id="g-shelter"><td><strong>Lava Shelter</strong></td><td>The ring right next to the Palace.</td></tr>
+          <tr id="g-rally"><td data-l="Term"><strong>Rally</strong></td><td data-l="What it means">An attack group. One captain plus up to 9 joiners. Holds 10 players.</td></tr>
+          <tr id="g-captain"><td data-l="Term"><strong>Captain</strong></td><td data-l="What it means">The player who starts the rally.</td></tr>
+          <tr id="g-garrison-leader"><td data-l="Term"><strong>Defence Garrison Leader</strong></td><td data-l="What it means">The player whose rally took the Palace tile and now holds it. <strong>Only his occupation time counts.</strong> This is the Tyrant bid.</td></tr>
+          <tr id="g-joiner"><td data-l="Term"><strong>Joiner</strong></td><td data-l="What it means">A player who adds troops to someone else's rally.</td></tr>
+          <tr id="g-core"><td data-l="Term"><strong>Core joiner</strong></td><td data-l="What it means">A named hero carrier. The rally takes the <strong>4 highest-level first skills</strong> among all joiners — join order is only the tie-break.</td></tr>
+          <tr id="g-filler"><td data-l="Term"><strong>Filler</strong></td><td data-l="What it means">A joiner sent for troops, not heroes. Waits 2 seconds so a carrier is not displaced on the tie-break.</td></tr>
+          <tr id="g-garrison"><td data-l="Term"><strong>Garrison</strong></td><td data-l="What it means">Troops defending a place you already hold. Not a rally.</td></tr>
+          <tr id="g-reinforce"><td data-l="Term"><strong>Reinforce</strong></td><td data-l="What it means">Send troops to a place your alliance already holds.</td></tr>
+          <tr id="g-vulnerable"><td data-l="Term"><strong>Vulnerable</strong></td><td data-l="What it means">Can be attacked right now.</td></tr>
+          <tr id="g-protected"><td data-l="Term"><strong>Protected</strong></td><td data-l="What it means">Cannot be attacked right now.</td></tr>
+          <tr id="g-aerie"><td data-l="Term"><strong>Aerie</strong></td><td data-l="What it means">One of the 4 towers around the Palace.</td></tr>
+          <tr id="g-buff"><td data-l="Term"><strong>Buff</strong></td><td data-l="What it means">A temporary bonus to your stats.</td></tr>
+          <tr id="g-oldguard"><td data-l="Term"><strong>Old Guard</strong></td><td data-l="What it means">The NPC defenders holding the Palace at 12:00.</td></tr>
+          <tr id="g-occupation"><td data-l="Term"><strong>Occupation time</strong></td><td data-l="What it means">How long you held the Palace as Defence Garrison Leader. This decides the Tyrant.</td></tr>
+          <tr id="g-load"><td data-l="Term"><strong>Load</strong></td><td data-l="What it means">How many troops you send.</td></tr>
+          <tr id="g-formation"><td data-l="Term"><strong>Formation</strong></td><td data-l="What it means">The mix of infantry, cavalry and archers in a rally.</td></tr>
+          <tr id="g-sanctum"><td data-l="Term"><strong>Magma Sanctum</strong></td><td data-l="What it means">The inner area. No shields allowed.</td></tr>
+          <tr id="g-border"><td data-l="Term"><strong>Border Region</strong></td><td data-l="What it means">The outer area. Shields work here.</td></tr>
+          <tr id="g-shelter"><td data-l="Term"><strong>Lava Shelter</strong></td><td data-l="What it means">The ring right next to the Palace.</td></tr>
         </tbody>
       </table>
       </div>
@@ -390,12 +410,12 @@
       </figure>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Zone</th><th>Rules</th><th>Who belongs there</th></tr></thead>
         <tbody>
-          <tr><td><strong>Border Region</strong><br><span class="mono" style="color:var(--gold)">yellow boundary</span></td><td>Cities spawn here at random when the battlefield opens. Shields work. Defeated cities in the center are sent back here.</td><td>Low and mid-power accounts, gatherers, escort hunters. Anyone conserving troops.</td></tr>
-          <tr><td><strong>Magma Sanctum</strong><br><span class="mono" style="color:var(--ember)">red boundary</span></td><td>Entering removes your shield for good. Full PvP. Everything that matters is inside.</td><td>Rally leaders, the throne candidate, Aerie squads, garrison stacks.</td></tr>
-          <tr><td><strong>Lava Shelter</strong><br><span class="mono" style="color:var(--ember)">inner ring</span></td><td>The band right around the Palace. No protection of any kind.</td><td>Staging ground for the Castle Team rally only. Do not park a city here.</td></tr>
+          <tr><td data-l="Zone"><strong>Border Region</strong><br><span class="mono" style="color:var(--gold)">yellow boundary</span></td><td data-l="Rules">Cities spawn here at random when the battlefield opens. Shields work. Defeated cities in the center are sent back here.</td><td data-l="Who belongs there">Low and mid-power accounts, gatherers, escort hunters. Anyone conserving troops.</td></tr>
+          <tr><td data-l="Zone"><strong>Magma Sanctum</strong><br><span class="mono" style="color:var(--ember)">red boundary</span></td><td data-l="Rules">Entering removes your shield for good. Full PvP. Everything that matters is inside.</td><td data-l="Who belongs there">Rally leaders, the Garrison Leader, Aerie squads, garrison stacks.</td></tr>
+          <tr><td data-l="Zone"><strong>Lava Shelter</strong><br><span class="mono" style="color:var(--ember)">inner ring</span></td><td data-l="Rules">The band right around the Palace. No protection of any kind.</td><td data-l="Who belongs there">Staging ground for the Castle Team rally only. Do not park a city here.</td></tr>
         </tbody>
       </table>
       </div>
@@ -415,7 +435,7 @@
 
     <!-- ================= 6 ================= -->
     <section id="s6">
-      <div class="sec-head"><span class="sec-num">06</span><h2>The Palace — and the captain rule</h2></div>
+      <div class="sec-head"><span class="sec-num">06</span><h2>The Palace — and the Garrison Leader rule</h2></div>
       <p class="lede"><strong>The Palace sits at the center, shielded for the first hour. When it opens, you must clear the <a href="#g-oldguard">Old Guard</a> before anyone can hold it.</strong></p>
 
       <div class="rule">
@@ -426,7 +446,7 @@
 
       <h3>What this changes</h3>
       <ul>
-        <li><strong>Name one throne candidate before D-Day.</strong> Two candidates splitting time is the most common way a strong alliance ends up with no Tyrant.</li>
+        <li><strong>Name one Tyrant candidate before D-Day.</strong> He is the player who will lead CASTLE-2 and become the <a href="#g-garrison-leader">Garrison Leader</a>. Two candidates splitting time is the most common way a strong alliance ends up with no Tyrant.</li>
         <li>Pick a high-deployment account that can hold a big garrison. It does not need to be your strongest account.</li>
         <li>You can <strong>hand the captain role to another player inside the Palace without leaving the team</strong> — occupation time then goes to the new captain. This is your backup plan if the candidate has to step away.</li>
         <li>The <strong>First Occupancy Reward</strong> goes to every member of the first alliance to hold the Palace, not just the captain. Worth a full commitment to the opening rush, even if you cannot hold it.</li>
@@ -443,13 +463,13 @@
       <p class="lede"><strong>Four Aeries surround the Palace and open at the same moment it does.</strong> Each runs a <strong>30 minutes <a href="#g-vulnerable">vulnerable</a> / 30 minutes <a href="#g-protected">protected</a></strong> cycle. Whichever alliance holds an Aerie longest during a vulnerable round gets that Aerie's bonus, alliance-wide, for the next 30 minutes.</p>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Aerie</th><th class="mono">Position</th><th class="mono">Bonus</th><th>Type</th><th>Take it when…</th></tr></thead>
         <tbody>
-          <tr><td><strong>Shield Aerie</strong></td><td class="mono">North</td><td class="mono">+50% Troop Defense</td><td>Defensive</td><td><strong>Not contested by this build.</strong> It reduces incoming damage but never punishes the attacker — see <a href="#s12">§12</a>.</td></tr>
-          <tr><td><strong>Life Aerie</strong></td><td class="mono">South</td><td class="mono">+50% Troop Health</td><td>Defensive</td><td><strong>One of our two.</strong> The single best survival stat — it deepens the pool your troops lose before they break.</td></tr>
-          <tr><td><strong>Blade Aerie</strong></td><td class="mono">West</td><td class="mono">+50% Troop Attack</td><td>Offensive</td><td><strong>Not contested by this build</strong> — except on the <span class="mono">HP WEST</span> re-take call, when the Palace is already lost.</td></tr>
-          <tr><td><strong>Dragon Aerie</strong></td><td class="mono">East</td><td class="mono">+50% Lethality</td><td>Offensive</td><td><strong>One of our two.</strong> Lethality works on defense too — it turns a failed enemy rally into real losses for the attacker.</td></tr>
+          <tr><td data-l="Aerie"><strong>Shield Aerie</strong></td><td class="mono" data-l="Position">North</td><td class="mono" data-l="Bonus">+50% Troop Defense</td><td data-l="Type">Defensive</td><td data-l="Take it when…"><strong>Not contested by this build.</strong> It reduces incoming damage but never punishes the attacker — see <a href="#s12">§12</a>.</td></tr>
+          <tr><td data-l="Aerie"><strong>Life Aerie</strong></td><td class="mono" data-l="Position">South</td><td class="mono" data-l="Bonus">+50% Troop Health</td><td data-l="Type">Defensive</td><td data-l="Take it when…"><strong>One of our two.</strong> The single best survival stat — it deepens the pool your troops lose before they break.</td></tr>
+          <tr><td data-l="Aerie"><strong>Blade Aerie</strong></td><td class="mono" data-l="Position">West</td><td class="mono" data-l="Bonus">+50% Troop Attack</td><td data-l="Type">Offensive</td><td data-l="Take it when…"><strong>Not contested by this build</strong> — except on the <span class="mono">HP WEST</span> re-take call, when the Palace is already lost.</td></tr>
+          <tr><td data-l="Aerie"><strong>Dragon Aerie</strong></td><td class="mono" data-l="Position">East</td><td class="mono" data-l="Bonus">+50% Lethality</td><td data-l="Type">Offensive</td><td data-l="Take it when…"><strong>One of our two.</strong> Lethality works on defense too — it turns a failed enemy rally into real losses for the attacker.</td></tr>
         </tbody>
       </table>
       </div>
@@ -461,15 +481,14 @@
         <figcaption><span class="stamp-tag">Exhibit B</span>Aerie bonus text, in-game panel — confirms the table above.</figcaption>
       </figure>
 
-      <div class="tip">
-        <span class="tag">Compass confirmed</span>
-        The official map art (Exhibit A, §05) confirms the layout: <strong>north and south are the defensive pair (Shield, Life)</strong>, <strong>east and west are the offensive pair (Dragon, Blade)</strong>. Some older community write-ups swap Life and Shield's compass points — trust the table above, but glance at the in-game Battlefield Overview on the day in case a rollout changes it.
-      </div>
+      <details class="more">
+        <summary>Compass confirmed <span class="why">— some older guides swap Life and Shield</span></summary>
+        <div class="inner">
+          <p>The official map art (Exhibit A, §05) confirms the layout: <strong>north and south are the defensive pair (Shield, Life)</strong>, <strong>east and west are the offensive pair (Dragon, Blade)</strong>. Some older community write-ups swap Life and Shield's compass points — trust the table above, but glance at the in-game Battlefield Overview on the day in case a rollout changes it.</p>
+        </div>
+      </details>
 
-      <div class="rule">
-        <span class="tag">The timing most alliances miss</span>
-        You fight for an Aerie during its <strong>vulnerable</strong> half hour. You get the buff during the <strong>protected</strong> half hour after it. So: <strong>even half hour = take towers. Odd half hour = hit the Palace.</strong> The Palace push is not at the same time as the Aerie fight — it comes right after, while the towers are locked and your buff is live.
-      </div>
+      <p><strong>This is the timing most alliances miss.</strong> You fight for an Aerie during its <strong>vulnerable</strong> half hour. You get the buff during the <strong>protected</strong> half hour after it. So: <strong>even half hour = take towers. Odd half hour = hit the Palace.</strong> The Palace push is not at the same time as the Aerie fight — it comes right after, while the towers are locked and your buff is live.</p>
 
       <figure>
         <div class="plate scroll">
@@ -552,18 +571,18 @@
       </div>
       <div class="warn">
         <span class="tag">The mistake this causes</span>
-        Alliances name four carriers, drill the join order, and still lose the buffs — because one carrier never leveled his first skill and a filler quietly outranked him. <strong>Check the skill levels, not the tap order.</strong>
+        Alliances name four carriers, drill the join order, and still lose the buffs — because one carrier never leveled his first skill and a filler quietly beat him. <strong>Check the skill levels, not the tap order.</strong>
       </div>
 
       <h3>The joiner core — same for every formation</h3>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Slot</th><th>Hero</th></tr></thead>
         <tbody>
-          <tr><td><a href="#g-core">J1</a></td><td><strong>Hilda</strong></td></tr>
-          <tr><td>J2</td><td><strong>Hilda</strong></td></tr>
-          <tr><td>J3</td><td><strong>Saul</strong></td></tr>
-          <tr><td>J4</td><td><strong>Chenko</strong></td></tr>
+          <tr><td data-l="Slot"><a href="#g-core">J1</a></td><td data-l="Hero"><strong>Hilda</strong></td></tr>
+          <tr><td data-l="Slot">J2</td><td data-l="Hero"><strong>Hilda</strong></td></tr>
+          <tr><td data-l="Slot">J3</td><td data-l="Hero"><strong>Saul</strong></td></tr>
+          <tr><td data-l="Slot">J4</td><td data-l="Hero"><strong>Chenko</strong></td></tr>
         </tbody>
       </table>
       </div>
@@ -572,63 +591,63 @@
 
       <h3>Join order</h3>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Slot</th><th>Who</th><th>When to tap</th></tr></thead>
         <tbody>
-          <tr><td>C</td><td>Captain</td><td>Opens the rally</td></tr>
-          <tr><td>J1–J4</td><td>Core</td><td><strong>Now.</strong> They are already watching the screen.</td></tr>
-          <tr><td>J5–J9</td><td><a href="#g-filler">Fillers</a></td><td><strong>2 seconds later.</strong></td></tr>
+          <tr><td data-l="Slot">C</td><td data-l="Who">Captain</td><td data-l="When to tap">Opens the rally</td></tr>
+          <tr><td data-l="Slot">J1–J4</td><td data-l="Who">Core</td><td data-l="When to tap"><strong>Now.</strong> They are already watching the screen.</td></tr>
+          <tr><td data-l="Slot">J5–J9</td><td data-l="Who"><a href="#g-filler">Fillers</a></td><td data-l="When to tap"><strong>2 seconds later.</strong></td></tr>
         </tbody>
       </table>
       </div>
-      <p>The rally fills in 3 to 4 seconds and every march leaves together. <strong>This order is the tie-break, not the mechanic</strong> — the game takes the 4 highest-level first skills, and only sorts by join time when levels are equal. The 2-second delay stops a filler from winning a tie against a named carrier.</p>
+      <p>The rally fills in 3 to 4 seconds and every march leaves together. <strong>This order is the tie-break, not the mechanic.</strong> The game takes the 4 highest-level first skills. It only sorts by join time when levels are equal. The 2-second delay stops a filler from winning a tie against a named carrier.</p>
 
       <h3>The three formations</h3>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Type</th><th class="mono">Ratio</th><th>10 players</th></tr></thead>
         <tbody>
-          <tr><td>Attack</td><td class="mono">50 / 20 / 30</td><td><strong>5 INF · 2 CAV · 3 ARC</strong></td></tr>
-          <tr><td>Attack</td><td class="mono">50 / 10 / 40</td><td><strong>5 INF · 1 CAV · 4 ARC</strong></td></tr>
-          <tr><td>Defense</td><td class="mono">60 / 40 / 0</td><td><strong>6 INF · 4 CAV · 0 ARC</strong></td></tr>
+          <tr><td data-l="Type">Attack</td><td class="mono" data-l="Ratio">50 / 20 / 30</td><td data-l="10 players"><strong>5 INF · 2 CAV · 3 ARC</strong></td></tr>
+          <tr><td data-l="Type">Attack</td><td class="mono" data-l="Ratio">50 / 10 / 40</td><td data-l="10 players"><strong>5 INF · 1 CAV · 4 ARC</strong></td></tr>
+          <tr><td data-l="Type">Defense</td><td class="mono" data-l="Ratio">60 / 40 / 0</td><td data-l="10 players"><strong>6 INF · 4 CAV · 0 ARC</strong></td></tr>
         </tbody>
       </table>
       </div>
 
       <h4>Attack 50/20/30 — balanced. Use for tower fights.</h4>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Slot</th><th>Hero</th><th>Type</th></tr></thead>
         <tbody>
-          <tr><td>C</td><td>Lead set</td><td>Infantry</td></tr>
-          <tr><td>J1</td><td>Hilda</td><td>Infantry</td></tr>
-          <tr><td>J2</td><td>Hilda</td><td>Infantry</td></tr>
-          <tr><td>J3</td><td>Saul</td><td>Infantry</td></tr>
-          <tr><td>J4</td><td>Chenko</td><td><strong>Cavalry</strong></td></tr>
-          <tr><td>J5</td><td>—</td><td>Infantry</td></tr>
-          <tr><td>J6</td><td>—</td><td><strong>Cavalry</strong></td></tr>
-          <tr><td>J7</td><td>—</td><td><strong>Archers</strong></td></tr>
-          <tr><td>J8</td><td>—</td><td><strong>Archers</strong></td></tr>
-          <tr><td>J9</td><td>—</td><td><strong>Archers</strong></td></tr>
+          <tr><td data-l="Slot">C</td><td data-l="Hero">Lead set</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J1</td><td data-l="Hero">Hilda</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J2</td><td data-l="Hero">Hilda</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J3</td><td data-l="Hero">Saul</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J4</td><td data-l="Hero">Chenko</td><td data-l="Type"><strong>Cavalry</strong></td></tr>
+          <tr><td data-l="Slot">J5</td><td data-l="Hero">—</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J6</td><td data-l="Hero">—</td><td data-l="Type"><strong>Cavalry</strong></td></tr>
+          <tr><td data-l="Slot">J7</td><td data-l="Hero">—</td><td data-l="Type"><strong>Archers</strong></td></tr>
+          <tr><td data-l="Slot">J8</td><td data-l="Hero">—</td><td data-l="Type"><strong>Archers</strong></td></tr>
+          <tr><td data-l="Slot">J9</td><td data-l="Hero">—</td><td data-l="Type"><strong>Archers</strong></td></tr>
         </tbody>
       </table>
       </div>
 
       <h4>Attack 50/10/40 — maximum damage. Use for the seize and re-takes.</h4>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Slot</th><th>Hero</th><th>Type</th></tr></thead>
         <tbody>
-          <tr><td>C</td><td>Lead set</td><td>Infantry</td></tr>
-          <tr><td>J1</td><td>Hilda</td><td>Infantry</td></tr>
-          <tr><td>J2</td><td>Hilda</td><td>Infantry</td></tr>
-          <tr><td>J3</td><td>Saul</td><td>Infantry</td></tr>
-          <tr><td>J4</td><td>Chenko</td><td><strong>Cavalry</strong></td></tr>
-          <tr><td>J5</td><td>—</td><td>Infantry</td></tr>
-          <tr><td>J6</td><td>—</td><td><strong>Archers</strong></td></tr>
-          <tr><td>J7</td><td>—</td><td><strong>Archers</strong></td></tr>
-          <tr><td>J8</td><td>—</td><td><strong>Archers</strong></td></tr>
-          <tr><td>J9</td><td>—</td><td><strong>Archers</strong></td></tr>
+          <tr><td data-l="Slot">C</td><td data-l="Hero">Lead set</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J1</td><td data-l="Hero">Hilda</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J2</td><td data-l="Hero">Hilda</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J3</td><td data-l="Hero">Saul</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J4</td><td data-l="Hero">Chenko</td><td data-l="Type"><strong>Cavalry</strong></td></tr>
+          <tr><td data-l="Slot">J5</td><td data-l="Hero">—</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J6</td><td data-l="Hero">—</td><td data-l="Type"><strong>Archers</strong></td></tr>
+          <tr><td data-l="Slot">J7</td><td data-l="Hero">—</td><td data-l="Type"><strong>Archers</strong></td></tr>
+          <tr><td data-l="Slot">J8</td><td data-l="Hero">—</td><td data-l="Type"><strong>Archers</strong></td></tr>
+          <tr><td data-l="Slot">J9</td><td data-l="Hero">—</td><td data-l="Type"><strong>Archers</strong></td></tr>
         </tbody>
       </table>
       </div>
@@ -636,19 +655,19 @@
 
       <h4>Defense 60/40/0 — hold the Palace.</h4>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Slot</th><th>Hero</th><th>Type</th></tr></thead>
         <tbody>
-          <tr><td>C</td><td>Lead set</td><td>Infantry</td></tr>
-          <tr><td>J1</td><td>Hilda</td><td>Infantry</td></tr>
-          <tr><td>J2</td><td>Hilda</td><td>Infantry</td></tr>
-          <tr><td>J3</td><td>Saul</td><td>Infantry</td></tr>
-          <tr><td>J4</td><td>Chenko</td><td><strong>Cavalry</strong></td></tr>
-          <tr><td>J5</td><td>—</td><td>Infantry</td></tr>
-          <tr><td>J6</td><td>—</td><td>Infantry</td></tr>
-          <tr><td>J7</td><td>—</td><td><strong>Cavalry</strong></td></tr>
-          <tr><td>J8</td><td>—</td><td><strong>Cavalry</strong></td></tr>
-          <tr><td>J9</td><td>—</td><td><strong>Cavalry</strong></td></tr>
+          <tr><td data-l="Slot">C</td><td data-l="Hero">Lead set</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J1</td><td data-l="Hero">Hilda</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J2</td><td data-l="Hero">Hilda</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J3</td><td data-l="Hero">Saul</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J4</td><td data-l="Hero">Chenko</td><td data-l="Type"><strong>Cavalry</strong></td></tr>
+          <tr><td data-l="Slot">J5</td><td data-l="Hero">—</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J6</td><td data-l="Hero">—</td><td data-l="Type">Infantry</td></tr>
+          <tr><td data-l="Slot">J7</td><td data-l="Hero">—</td><td data-l="Type"><strong>Cavalry</strong></td></tr>
+          <tr><td data-l="Slot">J8</td><td data-l="Hero">—</td><td data-l="Type"><strong>Cavalry</strong></td></tr>
+          <tr><td data-l="Slot">J9</td><td data-l="Hero">—</td><td data-l="Type"><strong>Cavalry</strong></td></tr>
         </tbody>
       </table>
       </div>
@@ -656,19 +675,19 @@
 
       <h4>Only slots J6–J9 ever change</h4>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Slot</th><th>50/20/30</th><th>50/10/40</th><th>60/40/0</th></tr></thead>
         <tbody>
-          <tr class="row-dim"><td>C</td><td>INF</td><td>INF</td><td>INF</td></tr>
-          <tr class="row-dim"><td>J1</td><td>INF</td><td>INF</td><td>INF</td></tr>
-          <tr class="row-dim"><td>J2</td><td>INF</td><td>INF</td><td>INF</td></tr>
-          <tr class="row-dim"><td>J3</td><td>INF</td><td>INF</td><td>INF</td></tr>
-          <tr class="row-dim"><td>J4</td><td>CAV</td><td>CAV</td><td>CAV</td></tr>
-          <tr class="row-dim"><td>J5</td><td>INF</td><td>INF</td><td>INF</td></tr>
-          <tr class="row-hl"><td><strong>J6</strong></td><td><strong>CAV</strong></td><td><strong>ARC</strong></td><td><strong>INF</strong></td></tr>
-          <tr class="row-hl"><td><strong>J7</strong></td><td><strong>ARC</strong></td><td><strong>ARC</strong></td><td><strong>CAV</strong></td></tr>
-          <tr class="row-hl"><td><strong>J8</strong></td><td><strong>ARC</strong></td><td><strong>ARC</strong></td><td><strong>CAV</strong></td></tr>
-          <tr class="row-hl"><td><strong>J9</strong></td><td><strong>ARC</strong></td><td><strong>ARC</strong></td><td><strong>CAV</strong></td></tr>
+          <tr class="row-dim"><td data-l="Slot">C</td><td data-l="50/20/30">INF</td><td data-l="50/10/40">INF</td><td data-l="60/40/0">INF</td></tr>
+          <tr class="row-dim"><td data-l="Slot">J1</td><td data-l="50/20/30">INF</td><td data-l="50/10/40">INF</td><td data-l="60/40/0">INF</td></tr>
+          <tr class="row-dim"><td data-l="Slot">J2</td><td data-l="50/20/30">INF</td><td data-l="50/10/40">INF</td><td data-l="60/40/0">INF</td></tr>
+          <tr class="row-dim"><td data-l="Slot">J3</td><td data-l="50/20/30">INF</td><td data-l="50/10/40">INF</td><td data-l="60/40/0">INF</td></tr>
+          <tr class="row-dim"><td data-l="Slot">J4</td><td data-l="50/20/30">CAV</td><td data-l="50/10/40">CAV</td><td data-l="60/40/0">CAV</td></tr>
+          <tr class="row-dim"><td data-l="Slot">J5</td><td data-l="50/20/30">INF</td><td data-l="50/10/40">INF</td><td data-l="60/40/0">INF</td></tr>
+          <tr class="row-hl"><td data-l="Slot"><strong>J6</strong></td><td data-l="50/20/30"><strong>CAV</strong></td><td data-l="50/10/40"><strong>ARC</strong></td><td data-l="60/40/0"><strong>INF</strong></td></tr>
+          <tr class="row-hl"><td data-l="Slot"><strong>J7</strong></td><td data-l="50/20/30"><strong>ARC</strong></td><td data-l="50/10/40"><strong>ARC</strong></td><td data-l="60/40/0"><strong>CAV</strong></td></tr>
+          <tr class="row-hl"><td data-l="Slot"><strong>J8</strong></td><td data-l="50/20/30"><strong>ARC</strong></td><td data-l="50/10/40"><strong>ARC</strong></td><td data-l="60/40/0"><strong>CAV</strong></td></tr>
+          <tr class="row-hl"><td data-l="Slot"><strong>J9</strong></td><td data-l="50/20/30"><strong>ARC</strong></td><td data-l="50/10/40"><strong>ARC</strong></td><td data-l="60/40/0"><strong>CAV</strong></td></tr>
         </tbody>
       </table>
       </div>
@@ -677,12 +696,12 @@
       <h4>Fewer than 10 players</h4>
       <p>Keep the ratio. Cut fillers. Slots C to J4 are always filled first.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Slots</th><th>50/20/30</th><th>50/10/40</th><th>60/40/0</th></tr></thead>
         <tbody>
-          <tr><td>10</td><td>5 / 2 / 3</td><td>5 / 1 / 4</td><td>6 / 4 / 0</td></tr>
-          <tr><td>9</td><td>5 / 2 / 2</td><td>5 / 1 / 3</td><td>5 / 4 / 0</td></tr>
-          <tr><td>8</td><td>4 / 2 / 2</td><td>4 / 1 / 3</td><td>5 / 3 / 0</td></tr>
+          <tr><td data-l="Slots">10</td><td data-l="50/20/30">5 / 2 / 3</td><td data-l="50/10/40">5 / 1 / 4</td><td data-l="60/40/0">6 / 4 / 0</td></tr>
+          <tr><td data-l="Slots">9</td><td data-l="50/20/30">5 / 2 / 2</td><td data-l="50/10/40">5 / 1 / 3</td><td data-l="60/40/0">5 / 4 / 0</td></tr>
+          <tr><td data-l="Slots">8</td><td data-l="50/20/30">4 / 2 / 2</td><td data-l="50/10/40">4 / 1 / 3</td><td data-l="60/40/0">5 / 3 / 0</td></tr>
         </tbody>
       </table>
       </div>
@@ -690,11 +709,11 @@
       <h3>Rally march speedups</h3>
       <p><strong>These are what replaces crystal skills in the first half hour</strong>, when the crystal pool is still zero. They are bought with gems, not crystals, so they are the one form of tempo you can bring to 12:00.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Item</th><th class="mono">Gem price</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td><strong>25% Rally March Speedup</strong></td><td class="mono">5,000 gems</td><td>Also sold inside event packs, which are usually better value than raw gems.</td></tr>
-          <tr><td><strong>50% Rally March Speedup</strong></td><td class="mono">10,000 gems</td><td>The one to hold for the seize and for re-takes.</td></tr>
+          <tr><td data-l="Item"><strong>25% Rally March Speedup</strong></td><td class="mono" data-l="Gem price">5,000 gems</td><td data-l="Notes">Also sold inside event packs, which are usually better value than raw gems.</td></tr>
+          <tr><td data-l="Item"><strong>50% Rally March Speedup</strong></td><td class="mono" data-l="Gem price">10,000 gems</td><td data-l="Notes">The one to hold for the seize and for re-takes.</td></tr>
         </tbody>
       </table>
       </div>
@@ -704,10 +723,7 @@
         <li><strong>Everyone in Castle Team holds a 50% ready before the seize.</strong></li>
       </ul>
 
-      <div class="tip">
-        <span class="tag">Escorts are not rallies</span>
-        Dragonborn escorts are solo attacks only. None of this section applies to them. March speed decides, not troop mix.
-      </div>
+      <p><strong>Escorts are not rallies.</strong> Dragonborn escorts are solo attacks only. None of this section applies to them. March speed decides, not troop mix.</p>
     </section>
 
     <!-- ================= 9 ================= -->
@@ -727,24 +743,21 @@
       </div>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Source</th><th class="mono">Spawn</th><th class="mono">Yield (approx.)</th><th>Rule</th></tr></thead>
         <tbody>
-          <tr><td><strong>Dragonborn Escorts</strong></td><td class="mono">At battle open, then every 30 min</td><td class="mono">~300 crystals + ~30,000 points</td><td><strong>Solo attacks only — no rallies.</strong> Costs no stamina, but takes a march queue slot. Won by arrival speed, not power.</td></tr>
-          <tr><td><strong>Pyrocrystal mines Lv.1</strong></td><td class="mono">15 min after open, then every 30 min</td><td class="mono">~600 crystals<br>~1.0/sec</td><td>Gathering also earns personal points. Mostly on the outer map.</td></tr>
-          <tr><td><strong>Pyrocrystal mines Lv.2</strong></td><td class="mono">Same cycle</td><td class="mono">~1,200 crystals<br>~1.5/sec</td><td>Closer to the center and heavily contested. Other players can attack your squad and steal the node.</td></tr>
+          <tr><td data-l="Source"><strong>Dragonborn Escorts</strong></td><td class="mono" data-l="Spawn">At battle open, then every 30 min</td><td class="mono" data-l="Yield (approx.)">~300 crystals + ~30,000 points</td><td data-l="Rule"><strong>Solo attacks only — no rallies.</strong> Costs no stamina, but takes a march queue slot. Won by arrival speed, not power.</td></tr>
+          <tr><td data-l="Source"><strong>Pyrocrystal mines Lv.1</strong></td><td class="mono" data-l="Spawn">15 min after open, then every 30 min</td><td class="mono" data-l="Yield (approx.)">~600 crystals<br>~1.0/sec</td><td data-l="Rule">Gathering also earns personal points. Mostly on the outer map.</td></tr>
+          <tr><td data-l="Source"><strong>Pyrocrystal mines Lv.2</strong></td><td class="mono" data-l="Spawn">Same cycle</td><td class="mono" data-l="Yield (approx.)">~1,200 crystals<br>~1.5/sec</td><td data-l="Rule">Closer to the center and heavily contested. Other players can attack your squad and steal the node.</td></tr>
         </tbody>
       </table>
       </div>
 
-      <div class="rule">
-        <span class="tag">Fight for a mine you can win</span>
-        <strong>Every crystal counts, and crystals pay for every skill we fire.</strong> If you can win the fight, take it.
-        <ul>
-          <li>Mine fights give no personal points, so do not throw troops at a fight you will lose — walk away and take the next node.</li>
-          <li>But do not give up a node you can hold. The old "never contest a node" order costs more in skills than it saves in troops.</li>
-        </ul>
-      </div>
+      <p><strong>Fight for a mine you can win.</strong> Every crystal counts, and crystals pay for every skill we fire. If you can win the fight, take it.</p>
+      <ul>
+        <li>Mine fights give no personal points, so do not throw troops at a fight you will lose — walk away and take the next node.</li>
+        <li>But do not give up a node you can hold. The old "never contest a node" order costs more in skills than it saves in troops.</li>
+      </ul>
 
       <h3>Budget the battle</h3>
       <p><strong>Firing all 8 skills once costs 245,000 pyrocrystals.</strong> That number is the budget the whole farming plan is measured against — see the exact per-skill costs in <a href="#s10">§10</a>.</p>
@@ -804,7 +817,7 @@
     <!-- ================= 10 ================= -->
     <section id="s10">
       <div class="sec-head"><span class="sec-num">10</span><h2>Crystal skills — and when to fire them</h2></div>
-      <p class="lede"><strong>Only R4/R5 members standing on the battlefield can fire Crystal Skills.</strong> Skills buff every member of your alliance on the battlefield, stack with all other bonuses, run on their own cooldowns, and can run at the same time. They stop working once the Palace battle ends. The crystal pool does not carry over to the next event.</p>
+      <p class="lede"><strong>Only R4/R5 members standing on the battlefield can fire Crystal Skills.</strong> Skills buff every alliance member on the battlefield. They stack with all other bonuses. Each has its own cooldown, and several can run at once. They stop working once the Palace battle ends. The crystal pool does not carry over to the next event.</p>
 
       <figure>
         <div class="plate photo right" style="max-width:220px">
@@ -813,6 +826,24 @@
         <figcaption><span class="stamp-tag">Exhibit C</span>In-game skill panel — the source for the costs and cooldowns below.</figcaption>
       </figure>
 
+      <details class="more">
+        <summary>All 8 skill panels, in game <span class="why">— every cost and cooldown below is read off these</span></summary>
+        <div class="inner">
+          <div class="shots">
+            <figure class="shot"><img src="img/crystal-skills/swiftwing-express.jpg" alt="Swiftwing Express skill panel: for 10 minutes, increases Alliance Members' March Speed by 100%. Only applies to troops deployed while the skill is active. Cooldown 30 minutes, cost 20,000."><figcaption>Swiftwing Express<br><span class="cost">20,000 · 10 min · CD 30 min</span></figcaption></figure>
+            <figure class="shot"><img src="img/crystal-skills/dragonborn-gathering.jpg" alt="Dragonborn Gathering skill panel: for 10 minutes, increases Pyrocrystal Gathering Speed by 50%. Applies to soldiers already marching or gathering. Cooldown 30 minutes, cost 20,000."><figcaption>Dragonborn Gathering<br><span class="cost">20,000 · 10 min · CD 30 min</span></figcaption></figure>
+            <figure class="shot"><img src="img/crystal-skills/firebreath-shield.jpg" alt="Firebreath Shield skill panel: for 10 minutes, defending Alliance Members' soldiers in a Town inflict 50% more deaths and suffer 50% fewer severely injured soldiers. Cooldown 30 minutes, cost 20,000."><figcaption>Firebreath Shield<br><span class="cost">20,000 · 10 min · CD 30 min</span></figcaption></figure>
+            <figure class="shot"><img src="img/crystal-skills/dragonsoul-revival.jpg" alt="Dragonsoul Revival skill panel: for 10 minutes, 50% of Alliance Members' casualties versus another Governor's Town will survive and be sent to the infirmary as severely injured. Cooldown 30 minutes, cost 10,000."><figcaption>Dragonsoul Revival<br><span class="cost">10,000 · 10 min · CD 30 min</span></figcaption></figure>
+            <figure class="shot"><img src="img/crystal-skills/dragonbreath-fury.jpg" alt="Dragonbreath Fury skill panel: for 10 minutes, any Alliance Members' victory against another Governor's Town force-teleports it to the Border Region and blocks teleporting for 10 minutes. Cooldown 20 minutes, cost 35,000."><figcaption>Dragonbreath Fury<br><span class="cost">35,000 · 10 min · CD 20 min</span></figcaption></figure>
+            <figure class="shot"><img src="img/crystal-skills/dragonblood-healing.jpg" alt="Dragonblood Healing skill panel: for 10 minutes, 50% of Alliance Members' severely injured soldiers in Palace and Aerie battles are instantly healed for the next combat if they win the battle. Cooldown 60 minutes, cost 40,000."><figcaption>Dragonblood Healing<br><span class="cost">40,000 · 10 min · CD 60 min</span></figcaption></figure>
+            <figure class="shot"><img src="img/crystal-skills/dragonscale-armor.jpg" alt="Dragonscale Armor skill panel: for 30 minutes, Alliance Members' Palace and Aerie Defender Soldiers gain 15% increased Attack and Defense. Cooldown 60 minutes, cost 50,000."><figcaption>Dragonscale Armor<br><span class="cost">50,000 · 30 min · CD 60 min</span></figcaption></figure>
+            <figure class="shot"><img src="img/crystal-skills/dragonroar-rally.jpg" alt="Dragonroar Rally skill panel: for 30 minutes, increases Alliance Members' Rally Capacity by 30%. Cooldown 60 minutes, cost 50,000."><figcaption>Dragonroar Rally<br><span class="cost">50,000 · 30 min · CD 60 min</span></figcaption></figure>
+          </div>
+          <p class="mono" style="font-size:12px;color:var(--ash-dim);margin-top:14px">Captured in game, Server 745. Screenshots are Century Games' material, reproduced here for alliance briefing.</p>
+        </div>
+      </details>
+
+      <p class="scroll-hint">↔ swipe the table sideways</p>
       <div class="tw">
       <table>
         <thead><tr><th>Skill</th><th class="mono">Cost</th><th class="mono">Duration</th><th class="mono">Cooldown</th><th>Effect</th><th>Fire it when</th></tr></thead>
@@ -823,7 +854,7 @@
           <tr><td><strong>Dragonroar Rally</strong></td><td class="mono">50,000</td><td class="mono">30 min</td><td class="mono">60 min</td><td>+30% alliance rally capacity.</td><td><strong>Before</strong> the rally forms, not after — capacity is read at formation. Use it on your biggest re-stack, not on the 12:00 seize — you cannot afford it then.</td></tr>
           <tr><td><strong>Dragonbreath Fury</strong></td><td class="mono">35,000</td><td class="mono">10 min</td><td class="mono">20 min</td><td><strong>Force-teleports a town you just beat</strong> out to the Border Region and blocks it from teleporting back for 10 minutes. Not a stat buff — a map-control tool.</td><td>Before a re-take. Pushing enemy cities away from the Palace lengthens every rival's reinforcement march.</td></tr>
           <tr><td><strong>Dragonborn Gathering</strong></td><td class="mono">20,000</td><td class="mono">10 min</td><td class="mono">30 min</td><td>+50% Pyrocrystal gathering speed, even for squads already marching or gathering. Effects end the instant the skill expires.</td><td><strong>The first purchase of the day</strong>, around 12:15–12:30 as soon as the bank allows. It is the only skill that pays for itself, and only if bought early.</td></tr>
-          <tr><td><strong>Firebreath Shield</strong></td><td class="mono">20,000</td><td class="mono">10 min</td><td class="mono">30 min</td><td>Your defenders in a town under attack deal 50% more deaths and take 50% fewer severe injuries.</td><td>The moment a rival commits to hitting your members' towns. It flips the trade in your favor, instead of just absorbing it.</td></tr>
+          <tr><td><strong>Firebreath Shield</strong></td><td class="mono">20,000</td><td class="mono">10 min</td><td class="mono">30 min</td><td>Your defenders in a town under attack deal 50% more deaths and take 50% fewer severe injuries.</td><td>The moment a rival starts hitting your members' towns. It flips the trade in your favor, instead of just absorbing it.</td></tr>
           <tr><td><strong>Dragonsoul Revival</strong></td><td class="mono">10,000</td><td class="mono">10 min</td><td class="mono">30 min</td><td>50% of your alliance's losses from a town attack survive instead of dying, and go to the infirmary as severely injured.</td><td>Before or during a town raid. This is the skill that makes Rule 4 survivable, and it is the cheapest on the board.</td></tr>
           <tr><td><strong>All 8 once</strong></td><td class="mono"><strong>245,000</strong></td><td class="mono">—</td><td class="mono">—</td><td colspan="2">More than 8 dedicated gatherers can bring in over six hours. Choose what you are skipping in advance — see <a href="#s9">§09</a>.</td></tr>
         </tbody>
@@ -835,14 +866,29 @@
         The title is decided in occupation seconds, and every re-take spends travel time in which the Palace clock is not running for you. <strong>Swiftwing Express halves that, on every march launched in the window, for the cheapest tier on the board.</strong> Over six hours of continuous re-forming, that plausibly beats a 40,000 heal that only pays out on fights you already win. This is a judgement call, not a settled fact — but it is the skill most alliances under-buy.
       </div>
 
-      <div class="warn">
-        <span class="tag">Skills stop at the map edge</span>
-        A skill's effect disappears the moment you leave the battlefield, and comes back if you return before it expires. Do not fire a 30-minute skill onto a roster that is about to take a break.
-      </div>
+      <p><strong>Skills stop at the map edge.</strong> A skill's effect disappears the moment you leave the battlefield, and comes back if you return before it expires. Do not fire a 30-minute skill onto a roster that is about to take a break.</p>
 
       <h3>The end-game hoard</h3>
-      <p>The strongest crystal play is not spending early. In the final 60–90 minutes, the leading alliances have used up their healing, their activity drops, and their garrisons are thin. An alliance that has banked <strong>140,000</strong> crystals and fires <strong>Dragonroar Rally (50,000) → seize → Dragonscale Armor (50,000) → Dragonblood Healing (40,000)</strong> in that order can take the throne from a stronger rival and hold it to the end. Occupation time adds up — but so does exhaustion.</p>
-      <p class="mono" style="font-size:12.5px;color:var(--ash-dim)">That one sequence is 140,000 of the 245,000 it costs to fire all 8 skills once. Banking for it means skipping most of the rest — decide which, before the battle, not at 16:00.</p>
+      <p>The strongest crystal play is not spending early. In the final 60–90 minutes, the leading alliances have used up their healing, their activity drops, and their garrisons are thin. An alliance that has banked <strong>160,000</strong> crystals and fires this sequence can take the throne from a stronger rival and hold it to the end:</p>
+      <div class="tw">
+      <table class="stack">
+        <thead><tr><th class="mono">Order</th><th>Skill</th><th class="mono">Cost</th><th>Why here</th></tr></thead>
+        <tbody>
+          <tr><td class="mono" data-l="Order">1</td><td data-l="Skill"><strong>Swiftwing Express</strong></td><td class="mono" data-l="Cost">20,000</td><td data-l="Why here">Arrive first. A re-take is decided by who lands on the tile, not who is stronger on paper.</td></tr>
+          <tr><td class="mono" data-l="Order">2</td><td data-l="Skill"><strong>Dragonroar Rally</strong></td><td class="mono" data-l="Cost">50,000</td><td data-l="Why here">Fire before the rally forms — capacity is read at formation.</td></tr>
+          <tr><td class="mono" data-l="Order">3</td><td class="mono" data-l="Skill">— seize —</td><td class="mono" data-l="Cost">—</td><td data-l="Why here">CASTLE-1 breaks, CASTLE-2 lands and holds.</td></tr>
+          <tr><td class="mono" data-l="Order">4</td><td data-l="Skill"><strong>Dragonscale Armor</strong></td><td class="mono" data-l="Cost">50,000</td><td data-l="Why here">The moment CASTLE-2 turns into a garrison.</td></tr>
+          <tr><td class="mono" data-l="Order">5</td><td data-l="Skill"><strong>Dragonblood Healing</strong></td><td class="mono" data-l="Cost">40,000</td><td data-l="Why here">Once you are visibly taking hits — not before.</td></tr>
+          <tr><td class="mono" data-l="Order"><strong>Total</strong></td><td data-l="Skill"></td><td class="mono" data-l="Cost"><strong>160,000</strong></td><td data-l="Why here">Of the 245,000 it costs to fire all 8 skills once.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Occupation time adds up — but so does exhaustion.</p>
+      <div class="tip">
+        <span class="tag">Buying early is not spending against the hoard</span>
+        <strong>Dragonborn Gathering at 12:15 is how you reach 160,000, not a reason you miss it.</strong> 20,000 spent that early returns more than 20,000 by 16:00, because it compounds across every gathering cycle after it. The two plans are one plan: buy the cheap multiplier first, bank everything else.
+      </div>
+      <p class="mono" style="font-size:12.5px;color:var(--ash-dim)">Banking 160,000 means skipping most of the rest of the book — decide which, before the battle, not at 16:00.</p>
     </section>
 
     <!-- ================= 11 ================= -->
@@ -851,12 +897,12 @@
       <p class="lede"><strong>The battle is 8 hours: 1 hour to get in position, 6 hours of fighting, 1 hour to heal.</strong> Print this. Everything in the battle phase runs off it.</p>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th class="mono">Window (UTC)</th><th class="mono">Length</th><th>What happens</th></tr></thead>
         <tbody>
-          <tr><td class="mono">11:00 – 12:00</td><td class="mono">1 h</td><td>Enter, teleport, position, stage, pre-fill rallies. <strong>No combat.</strong> A 5-minute lock at 11:00 disables teleport, attack, scout and garrison.</td></tr>
-          <tr><td class="mono">12:00 – 18:00</td><td class="mono">6 h</td><td>Palace open. Aeries run the 30/30 cycle. Crystal skills are live. Mines and escorts spawn every 30 minutes.</td></tr>
-          <tr><td class="mono">18:00 – 19:00</td><td class="mono">1 h</td><td>Healing. <strong>No attacks. Leaving the map is permanent — you cannot come back.</strong></td></tr>
+          <tr><td class="mono" data-l="Window (UTC)">11:00 – 12:00</td><td class="mono" data-l="Length">1 h</td><td data-l="What happens">Enter, teleport, position, stage, pre-fill rallies. <strong>No combat.</strong> A 5-minute lock at 11:00 disables teleport, attack, scout and garrison.</td></tr>
+          <tr><td class="mono" data-l="Window (UTC)">12:00 – 18:00</td><td class="mono" data-l="Length">6 h</td><td data-l="What happens">Palace open. Aeries run the 30/30 cycle. Crystal skills are live. Mines and escorts spawn every 30 minutes.</td></tr>
+          <tr><td class="mono" data-l="Window (UTC)">18:00 – 19:00</td><td class="mono" data-l="Length">1 h</td><td data-l="What happens">Healing. <strong>No attacks. Leaving the map is permanent — you cannot come back.</strong></td></tr>
         </tbody>
       </table>
       </div>
@@ -864,7 +910,7 @@
       <h3>Aerie rounds inside the battle window</h3>
       <p>Six vulnerable rounds, six protected rounds:</p>
       <div class="tw">
-      <table>
+      <table class="narrow">
         <thead><tr><th class="mono">Vulnerable — take towers</th><th class="mono">Protected — buff is live, hit the Palace</th></tr></thead>
         <tbody>
           <tr><td class="mono">12:00–12:30</td><td class="mono">12:30–13:00</td></tr>
@@ -935,7 +981,7 @@
                 <rect x="1028" y="222" width="126" height="30" fill="#D9A82F" stroke="#14110F"/><text x="1091" y="242" text-anchor="middle" fill="#3d2f06">USE EVERYTHING</text>
               </g>
 
-              <text x="16" y="292" fill="#5d564c">CAPTAIN</text>
+              <text x="16" y="292" fill="#5d564c">GARRISON</text>
               <rect x="248" y="274" width="906" height="26" fill="none" stroke="#B62F17" stroke-width="2.5" stroke-dasharray="7 4"/>
               <text x="700" y="292" text-anchor="middle" fill="#B62F17" letter-spacing="1.6">ONE NAMED GOVERNOR — GARRISON LEADER, NEVER SUBSTITUTED WITHOUT A CALL</text>
 
@@ -943,7 +989,7 @@
               <g font-size="10.5" fill="#14110F">
                 <text x="152" y="330">5-min lock</text><text x="152" y="346">at 11:00</text>
                 <text x="250" y="330">Old Guard must</text><text x="250" y="346">fall first · first</text><text x="250" y="362">occupancy reward</text>
-                <text x="410" y="330">switch tower pair</text><text x="410" y="346">to match mode</text>
+                <text x="410" y="330">hold Life + Dragon</text><text x="410" y="346">all day · HP WEST</text><text x="410" y="362">only if Palace lost</text>
                 <text x="722" y="330">heal in waves — never</text><text x="722" y="346">all captains at once</text>
                 <text x="1032" y="330">skills · last</text><text x="1032" y="346">reserves</text>
               </g>
@@ -963,10 +1009,7 @@
       <div class="sec-head"><span class="sec-num">12</span><h2>Order of battle — 60 players</h2></div>
       <p class="lede"><strong>A fixed four-team plan: 20 at the Palace, 10 on Life, 10 on Dragon, 20 farming from four posts.</strong> Every position, every rotation, every call.</p>
 
-      <div class="rule">
-        <span class="tag">What this build is</span>
-        <strong>Seize early, dig in, grind.</strong> It commits to a defensive tower pair and spends nothing on disruption. That makes it hard to remove you from the Palace. It also means you must take the Palace in the first 30 minutes — this build is not made to take it back from a dug-in enemy later.
-      </div>
+      <p><strong>What this build is: seize early, dig in, grind.</strong> We choose two towers — Life and Dragon — and hold them. We do not attack enemy cities. We buy that effect with crystals instead. That makes us hard to remove from the Palace. It also means we must take the Palace in the first 30 minutes. This build is not made to take it back from a dug-in enemy later.</p>
 
       <h3>Why Life + Dragon is the right pair here</h3>
       <p>The obvious defensive pair is Life + Shield. <strong>Life + Dragon works better for this build</strong>, and it is worth knowing why before someone argues with you about it.</p>
@@ -982,13 +1025,13 @@
 
       <h3>The four teams</h3>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Team</th><th class="mono">Size</th><th>Station</th><th>Job</th></tr></thead>
         <tbody>
-          <tr><td><strong>CASTLE TEAM</strong><br><span class="pill p-a">center</span></td><td class="mono">20</td><td>One cluster, staged tight against the Palace's south-east face, inside the Lava Shelter ring</td><td>Seize and hold the Palace. Two rallies running at once.</td></tr>
-          <tr><td><strong>HP TURRET TEAM</strong><br><span class="pill p-b">south</span></td><td class="mono">10</td><td>Palace side of the Life Aerie</td><td>Take and hold Life Aerie (+50% Health) every vulnerable round.</td></tr>
-          <tr><td><strong>LETHALITY TURRET TEAM</strong><br><span class="pill p-b">east</span></td><td class="mono">10</td><td>Palace side of the Dragon Aerie</td><td>Take and hold Dragon Aerie (+50% Lethality) every vulnerable round.</td></tr>
-          <tr><td><strong>SUPPORT TEAM</strong><br><span class="pill p-n">4 posts</span></td><td class="mono">20</td><td>Four posts in the Border Region</td><td>Crystals and escorts. Feed the alliance skill pool.</td></tr>
+          <tr><td data-l="Team"><strong>CASTLE TEAM</strong><br><span class="pill p-a">center</span></td><td class="mono" data-l="Size">20</td><td data-l="Station">One cluster, staged tight against the Palace's south-east face, inside the Lava Shelter ring</td><td data-l="Job">Seize and hold the Palace. Two rallies running at once.</td></tr>
+          <tr><td data-l="Team"><strong>HP TURRET TEAM</strong><br><span class="pill p-b">south</span></td><td class="mono" data-l="Size">10</td><td data-l="Station">Palace side of the Life Aerie</td><td data-l="Job">Take and hold Life Aerie (+50% Health) every vulnerable round.</td></tr>
+          <tr><td data-l="Team"><strong>LETHALITY TURRET TEAM</strong><br><span class="pill p-b">east</span></td><td class="mono" data-l="Size">10</td><td data-l="Station">Palace side of the Dragon Aerie</td><td data-l="Job">Take and hold Dragon Aerie (+50% Lethality) every vulnerable round.</td></tr>
+          <tr><td data-l="Team"><strong>SUPPORT TEAM</strong><br><span class="pill p-n">4 posts</span></td><td class="mono" data-l="Size">20</td><td data-l="Station">Four posts in the Border Region</td><td data-l="Job">Crystals and escorts. Feed the alliance skill pool.</td></tr>
         </tbody>
       </table>
       </div>
@@ -1047,7 +1090,8 @@
               <circle cx="408" cy="460" r="6"/><circle cx="421" cy="460" r="6"/><circle cx="434" cy="460" r="6"/><circle cx="447" cy="460" r="6"/><circle cx="460" cy="460" r="6"/>
             </g>
             <circle cx="408" cy="421" r="8" fill="#D9A82F" stroke="#14110F" stroke-width="2"/>
-            <text x="408" y="407" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#8a6a10">CAPTAIN</text>
+            <text x="399" y="443" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="#8a6a10">GARRISON LEADER</text>
+            <line x1="401" y1="440" x2="405" y2="429" stroke="#8a6a10" stroke-width="1"/>
             <text x="490" y="500" text-anchor="middle" font-family="Cinzel, serif" font-weight="700" font-size="14" fill="#B62F17">CASTLE TEAM 20</text>
 
             <!-- LETHALITY TURRET 10 — east -->
@@ -1086,51 +1130,56 @@
               <circle cx="40" cy="760" r="8" fill="#B62F17" stroke="#14110F"/><text x="56" y="765" fill="#14110F">CASTLE TEAM 20 — palace</text>
               <circle cx="270" cy="760" r="8" fill="#2C5966" stroke="#14110F"/><text x="286" y="765" fill="#14110F">HP / LTH TURRET 10+10 — aeries</text>
               <circle cx="536" cy="760" r="8" fill="#8E2FB0" stroke="#14110F"/><text x="552" y="765" fill="#14110F">SUPPORT 20 — 4 posts</text>
-              <circle cx="40" cy="786" r="9" fill="#D9A82F" stroke="#14110F" stroke-width="2"/><text x="56" y="791" fill="#14110F">throne candidate — the only account earning occupation time</text>
+              <circle cx="40" cy="786" r="9" fill="#D9A82F" stroke="#14110F" stroke-width="2"/><text x="56" y="791" fill="#14110F">Garrison Leader — the only account earning occupation time</text>
             </g>
           </svg>
         </div>
         <figcaption>Fig. 5 — Deployment. CASTLE TEAM stages as one tight cluster on the Palace's south-east face, close to both Turret Teams, for the fastest possible reinforcement. Turret squads stage on the Palace side of their tower. SUPPORT fans out per post for wider spawn coverage.</figcaption>
       </figure>
 
-      <h3>Why south-east</h3>
+      <details class="more">
+        <summary>Why south-east <span class="why">— it puts all 40 fighters on one side of the map</span></summary>
+        <div class="inner">
       <ul>
         <li>The Life Aerie is south. The Dragon Aerie is east. Both Turret Teams are already in that quadrant.</li>
         <li>Staging Castle Team in the south-east puts all 40 combat players on one side of the map, with short reinforcement lines in every direction.</li>
         <li>When a Turret Team comes into the Palace on a protected round, the march takes seconds.</li>
         <li>You get one strong defensive front instead of three separate ones.</li>
       </ul>
-      <div class="tip">
-        <span class="tag">The trade-off, stated honestly</span>
-        Concentration means a single well-aimed enemy rally catches more players at once, and all three teams share the same approach lanes. Accept it — how fast you rebuild and pull back the rally matters more over six hours than how safe the staging spot is.
-      </div>
+      <p><strong>The trade-off, stated honestly.</strong> Standing close together has one risk: one good enemy rally can hit many of us at once. We accept it. How fast you rebuild the rally matters more over six hours than how safe the staging spot is.</p>
+        </div>
+      </details>
 
-      <h3>Teleport drill</h3>
-      <p>Good tiles are gone within a minute of the window opening. Positioning is a 60-second scramble, then 59 minutes of waiting.</p>
+      <details class="more">
+        <summary>Teleport drill <span class="why">— good tiles are gone in 60 seconds</span></summary>
+        <div class="inner">
+      <p>Positioning is a 60-second scramble, then 59 minutes of waiting.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th class="mono">Step</th><th class="mono">Time</th><th>Action</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td class="mono">T−15 min</td><td>Everyone online, teleport item ready, map open. No scouting, no marching, no burning barricade — any of these blocks entry.</td></tr>
-          <tr><td>2</td><td class="mono">Window opens</td><td>R4 posts the drop call. <strong>Castle Team drops first</strong> — they need the tightest cluster.</td></tr>
-          <tr><td>3</td><td class="mono">+0–60 sec</td><td>Castle Team lands in the south-east diagonal. Turret Teams land on the Palace side of their tower.</td></tr>
-          <tr><td>4</td><td class="mono">+60–120 sec</td><td>Support Team takes the four Border Region posts.</td></tr>
-          <tr><td>5</td><td class="mono">+5 min</td><td>Everyone reports march time to their objective. Anyone slower than the group average moves now, not at 11:50.</td></tr>
+          <tr><td data-l="Step">1</td><td class="mono" data-l="Time">T−15 min</td><td data-l="Action">Everyone online, teleport item ready, map open. No scouting, no marching, no burning barricade — any of these blocks entry.</td></tr>
+          <tr><td data-l="Step">2</td><td class="mono" data-l="Time">Window opens</td><td data-l="Action">R4 posts the drop call. <strong>Castle Team drops first</strong> — they need the tightest cluster.</td></tr>
+          <tr><td data-l="Step">3</td><td class="mono" data-l="Time">+0–60 sec</td><td data-l="Action">Castle Team lands in the south-east diagonal. Turret Teams land on the Palace side of their tower.</td></tr>
+          <tr><td data-l="Step">4</td><td class="mono" data-l="Time">+60–120 sec</td><td data-l="Action">Support Team takes the four Border Region posts.</td></tr>
+          <tr><td data-l="Step">5</td><td class="mono" data-l="Time">+5 min</td><td data-l="Action">Everyone reports march time to their objective. Anyone slower than the group average moves now, not at 11:50.</td></tr>
         </tbody>
       </table>
       </div>
       <p><strong>Every player carries three ranked target tiles, not one.</strong> If tile 1 is taken, drop on tile 2 without asking.</p>
+        </div>
+      </details>
 
       <h3>CASTLE TEAM · 20 · the Palace</h3>
       <p><strong>Castle Team is 20 players running two full rallies of 10 at the same time.</strong> That is why it is 20 and not 10.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th></th><th>CASTLE-1 — the breaker</th><th>CASTLE-2 — the holder</th></tr></thead>
         <tbody>
-          <tr><td><strong>Captain</strong></td><td>Any strong rally leader.</td><td><strong>The Tyrant candidate.</strong> Never substituted without a call.</td></tr>
-          <tr><td><strong>Formation</strong></td><td class="mono"><strong>Attack 50/10/40</strong></td><td class="mono"><strong>Defense 60/40/0</strong></td></tr>
-          <tr><td><strong>Troop types</strong></td><td class="mono">5 INF · 1 CAV · 4 ARC</td><td class="mono">6 INF · 4 CAV</td></tr>
-          <tr><td><strong>Standing job</strong></td><td>Hit first. Break or thin the defenders. It does not need to win the tile.</td><td>Land second and hold. Start the rally again every time the garrison breaks.</td></tr>
+          <tr><td data-l=""><strong>Captain</strong></td><td data-l="CASTLE-1 — the breaker">Any strong rally leader.</td><td data-l="CASTLE-2 — the holder"><strong>The Tyrant candidate.</strong> Never substituted without a call.</td></tr>
+          <tr><td data-l=""><strong>Formation</strong></td><td class="mono" data-l="CASTLE-1 — the breaker"><strong>Attack 50/10/40</strong></td><td class="mono" data-l="CASTLE-2 — the holder"><strong>Defense 60/40/0</strong></td></tr>
+          <tr><td data-l=""><strong>Troop types</strong></td><td class="mono" data-l="CASTLE-1 — the breaker">5 INF · 1 CAV · 4 ARC</td><td class="mono" data-l="CASTLE-2 — the holder">6 INF · 4 CAV</td></tr>
+          <tr><td data-l=""><strong>Standing job</strong></td><td data-l="CASTLE-1 — the breaker">Hit first. Break or thin the defenders. It does not need to win the tile.</td><td data-l="CASTLE-2 — the holder">Land second and hold. Start the rally again every time the garrison breaks.</td></tr>
         </tbody>
       </table>
       </div>
@@ -1157,15 +1206,12 @@
       <h3>HP TURRET TEAM · 10 · Life Aerie (South) &nbsp;·&nbsp; LETHALITY TURRET TEAM · 10 · Dragon Aerie (East)</h3>
       <p>Same structure, different tower: <strong>1 captain, 4 core joiners, 5 fillers, formation attack 50/20/30.</strong> 10 players is roughly one full rally — exactly what an Aerie needs, and exactly why you contest two towers and not four.</p>
 
-      <div class="rule">
-        <span class="tag">The rule that makes this build work</span>
-        Turret Teams are <strong>not</strong> idle during protected half-hours.
-        <ul>
-          <li><strong>Vulnerable round:</strong> rally your tower.</li>
-          <li><strong>Protected round:</strong> the tower is locked. Two options — <strong>gather crystals, or reinforce the Palace.</strong> R4/R5 calls which, clearly, every round. Do not guess and do not split.</li>
-        </ul>
-        Your Palace manpower alternates between 20 and 40, and the 40-strong window lands on exactly the half-hour your Aerie buffs are live. That is the entire engine of this build.
-      </div>
+      <p><strong>Turret Teams are never idle during a protected half-hour.</strong> This is the rule that makes the build work.</p>
+      <ul>
+        <li><strong>Vulnerable round:</strong> rally your tower.</li>
+        <li><strong>Protected round:</strong> the tower is locked. Two options — <strong>gather crystals, or reinforce the Palace.</strong> R4/R5 calls which, clearly, every round. Do not guess and do not split.</li>
+      </ul>
+      <p>Your Palace manpower alternates between 20 and 40. The 40-strong window lands on exactly the half-hour your Aerie buffs are live. That is the entire engine of this build.</p>
 
       <figure>
         <div class="plate scroll">
@@ -1205,18 +1251,18 @@
 
       <ul>
         <li><strong>Staging:</strong> both teams sit on the Palace side of their tower. One short march to the Aerie, one short march to the Palace, no wasted travel either way.</li>
-        <li><strong>Never give up the tower.</strong> If a stronger alliance commits to it, <strong>call Castle Team in to help take it</strong> rather than pulling back. Winning the tower means the next 30 minutes are fought with the buff on our side — that half-hour is what decides the Palace, so the tower is worth a hard fight.</li>
+        <li><strong>Never give up the tower.</strong> If a stronger alliance goes for it, <strong>call Castle Team in to help take it</strong> rather than pulling back. Winning the tower means the next 30 minutes are fought with the buff on our side. That half-hour is what decides the Palace. The tower is worth a hard fight.</li>
         <li><strong>One tower is better than none.</strong> If HP Turret Team wins Life but Lethality Turret Team loses Dragon, the Palace still gets +50% Health that round. A split round is not a failure — but two towers is the goal, not the bonus.</li>
         <li>The R4/R5 in each team can fire skills from the tower if the center's leaders are mid-march.</li>
       </ul>
 
       <h3>SUPPORT TEAM · 20 · four posts</h3>
-      <p>Five players per side of the map, in the Border Region with shields up. Each post fans out in a shallow arc with small gaps between members, instead of bunching on one spot — that spread covers more of the surrounding spawns per post, instead of five accounts racing each other for the same node. 20 farmers is a large detail on purpose. It is what turns the last hour from a grind into a decision.</p>
+      <p>Five players per side of the map, in the Border Region with shields up. Each post fans out in a shallow arc, with small gaps between members. Do not bunch on one spot. The spread covers more spawns per post, instead of five accounts racing each other for the same node. 20 farmers is a large detail on purpose. It is what turns the last hour from a grind into a decision.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Post</th><th class="mono">Composition</th><th>Rule</th></tr></thead>
         <tbody>
-          <tr><td><strong>SUPPORT-N / E / S / W</strong></td><td class="mono">1 post lead<br>3 gatherers<br>1 escort hunter</td><td>Post lead claims nodes in text so two members never march on the same one. Gatherers work the nearest Lv.2 node, falling back to Lv.1. The escort hunter runs solo attacks only — <strong>escorts cannot be rallied.</strong></td></tr>
+          <tr><td data-l="Post"><strong>SUPPORT-N / E / S / W</strong></td><td class="mono" data-l="Composition">1 post lead<br>3 gatherers<br>1 escort hunter</td><td data-l="Rule">Post lead claims nodes in text so two members never march on the same one. Gatherers work the nearest Lv.2 node, falling back to Lv.1. The escort hunter runs solo attacks only — <strong>escorts cannot be rallied.</strong></td></tr>
         </tbody>
       </table>
       </div>
@@ -1224,22 +1270,23 @@
         <li><strong>Fight for a mine you can win.</strong> Every crystal counts, and crystals pay for every skill we fire. Walk away only from a fight you will lose — node fights give no personal points, so there is no reward for losing one.</li>
         <li><strong>Post assignment matters</strong> because it stops 20 people racing the same spawns. Each post owns its quadrant, reports its haul at the top of the hour, and stays out of the other three.</li>
         <li><strong>Escort hunters are chosen on march speed</strong>, not power. Escorts go to whoever arrives first.</li>
-        <li><strong>Expected yield:</strong> roughly 200,000+ crystals across the battle with a full 16-player detail — close to, but not above, the <strong>245,000</strong> it costs to fire all 8 skills once. Report the running total hourly so leadership knows what it can afford in the last hour.</li>
-        <li><strong>16:30 — move.</strong> Posts move to the inner edge of the Border Region so the final-hour march into the Palace is short. Teleport destination is power-gated, so low-power accounts may not be able to drop into the Sanctum — move early and march in, rather than relying on a teleport at 17:15.</li>
+        <li><strong>Why the yield is quoted for 16, not 20.</strong> Each post is 1 lead + 3 gatherers + 1 escort hunter, so across four posts that is <strong>16 accounts on nodes and 4 on escorts</strong>. The gathering chart in <a href="#s9">§09</a> counts node gatherers only.</li>
+        <li><strong>Expected yield:</strong> roughly 200,000+ crystals with a full 16-gatherer detail. That is under the <strong>245,000</strong> needed to fire all 8 skills once. It is above the <strong>160,000</strong> the end-game sequence needs. Report the running total every hour, so leadership knows what it can afford.</li>
+        <li><strong>16:30 — move.</strong> Posts move to the inner edge of the Border Region so the final-hour march into the Palace is short. Teleport destination is power-gated. Low-power accounts may not be able to drop into the Sanctum. Move early and march in. Do not rely on a teleport at 17:15.</li>
         <li><strong>17:15 — stop farming only if the bank is done.</strong> If R4/R5 is still firing skills, keep farming: crystals that get spent are worth more than one extra body in a rally. Once the last skill is fired, everyone marches in and joins Palace rallies.</li>
       </ul>
 
       <h3>Troop type census</h3>
       <p>One troop type per player means the roster is a <strong>census, not a power ranking</strong>. Assign types first, then pick the 60.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Team</th><th class="mono">INF</th><th class="mono">CAV</th><th class="mono">ARC</th><th class="mono">Total</th></tr></thead>
         <tbody>
-          <tr><td>CASTLE-1 — attack 50/10/40</td><td class="mono">5</td><td class="mono">1</td><td class="mono">4</td><td class="mono">10</td></tr>
-          <tr><td>CASTLE-2 — defense 60/40/0</td><td class="mono">6</td><td class="mono">4</td><td class="mono">0</td><td class="mono">10</td></tr>
-          <tr><td>HP TURRET — attack 50/20/30</td><td class="mono">5</td><td class="mono">2</td><td class="mono">3</td><td class="mono">10</td></tr>
-          <tr><td>LTH TURRET — attack 50/20/30</td><td class="mono">5</td><td class="mono">2</td><td class="mono">3</td><td class="mono">10</td></tr>
-          <tr><td><strong>Total</strong></td><td class="mono"><strong>21</strong></td><td class="mono"><strong>9</strong></td><td class="mono"><strong>10</strong></td><td class="mono"><strong>40</strong></td></tr>
+          <tr><td data-l="Team">CASTLE-1 — attack 50/10/40</td><td class="mono" data-l="INF">5</td><td class="mono" data-l="CAV">1</td><td class="mono" data-l="ARC">4</td><td class="mono" data-l="Total">10</td></tr>
+          <tr><td data-l="Team">CASTLE-2 — defense 60/40/0</td><td class="mono" data-l="INF">6</td><td class="mono" data-l="CAV">4</td><td class="mono" data-l="ARC">0</td><td class="mono" data-l="Total">10</td></tr>
+          <tr><td data-l="Team">HP TURRET — attack 50/20/30</td><td class="mono" data-l="INF">5</td><td class="mono" data-l="CAV">2</td><td class="mono" data-l="ARC">3</td><td class="mono" data-l="Total">10</td></tr>
+          <tr><td data-l="Team">LTH TURRET — attack 50/20/30</td><td class="mono" data-l="INF">5</td><td class="mono" data-l="CAV">2</td><td class="mono" data-l="ARC">3</td><td class="mono" data-l="Total">10</td></tr>
+          <tr><td data-l="Team"><strong>Total</strong></td><td class="mono" data-l="INF"><strong>21</strong></td><td class="mono" data-l="CAV"><strong>9</strong></td><td class="mono" data-l="ARC"><strong>10</strong></td><td class="mono" data-l="Total"><strong>40</strong></td></tr>
         </tbody>
       </table>
       </div>
@@ -1249,13 +1296,14 @@
       <p><strong>Census checklist, before dispatch closes:</strong></p>
       <ul class="tick">
         <li>All 40 combat slots named, each with one assigned troop type</li>
-        <li>Each player holds at least one full load of that type, ideally more — you will send more than one march, and healing is not instant</li>
+        <li>Each player holds at least one full load of that type, ideally more. You will send more than one march, and healing is not instant</li>
         <li>4 core hero carriers named per rally (4 rallies = 16 carriers), each with a named backup</li>
         <li>Type shortages covered from the reserve list</li>
         <li>Published and pinned, with the ratio tables</li>
       </ul>
 
       <h3>Hour by hour, by team</h3>
+      <p class="scroll-hint">↔ swipe the table sideways</p>
       <div class="tw">
       <table>
         <thead><tr><th class="mono">UTC</th><th>CASTLE TEAM 20</th><th>HP TURRET 10 · LTH TURRET 10</th><th>SUPPORT TEAM 20</th></tr></thead>
@@ -1266,7 +1314,7 @@
           <tr><td class="mono">12:00–12:30</td><td><strong>Seize, on troops and heroes alone.</strong> CASTLE-1 breaks the Old Guard. CASTLE-2 lands behind it and turns into the garrison — its captain becomes the Garrison Leader and the timer starts. No crystal support is available yet.</td><td>Round 1 — take both towers. This round is raw, no buff yet.</td><td>Escorts at 12:00 (~300 each), first mines at 12:15. Full cycle. Report the running total.</td></tr>
           <tr><td class="mono">12:30–13:00</td><td>Hold under +50% Health and +50% Lethality. <strong>40 players at the center: 10 in the Garrison Leader's rally, 30 reinforcing the garrison and filling CASTLE-1.</strong> <strong>First skill of the day once the bank allows it — Dragonborn Gathering (20,000)</strong>, which compounds everything after it.</td><td>Towers locked — gather or reinforce, on the R4/R5 call.</td><td>Mines at 12:45, escorts at 12:30. Report the crystal total.</td></tr>
           <tr><td class="mono">13:00–16:00</td><td>Grind. CASTLE-2 never stops. CASTLE-1 rotates: stand down on the odd half-hours to heal, reinforce the garrison the rest of the time.</td><td>Alternate: towers on the vulnerable round, gather-or-reinforce on the protected round. <strong>Do not give up a tower</strong> — call Castle Team in to help take it.</td><td>Keep cycling. <strong>Fight for a mine you can win.</strong> Hourly totals to leadership.</td></tr>
-          <tr><td class="mono">16:00–17:00</td><td>Check healing stock across all 20. If joiners are dry, run a smaller rally that refills every time, rather than a big one that breaks.</td><td>Same rhythm. If the Palace is under real pressure, skip a tower round and stay in the center — <strong>the Palace outranks both towers.</strong></td><td>Last two full cycles, then <strong>move to the inner border edge at 16:30.</strong></td></tr>
+          <tr><td class="mono">16:00–17:00</td><td>Check healing stock across all 20. If joiners are dry, run a smaller rally that refills every time, rather than a big one that breaks.</td><td>Same rhythm. If the Palace is under real pressure, skip a tower round and stay in the center — <strong>the Palace matters more than both towers.</strong></td><td>Last two full cycles, then <strong>move to the inner border edge at 16:30.</strong></td></tr>
           <tr><td class="mono">17:00–18:00</td><td><strong>Use everything.</strong> All reserves, all speedups, the full crystal bank. A second at 17:50 is worth exactly as much as a second at 12:00.</td><td>Full commitment to the Palace, unless a tower is free to take with no fight.</td><td><strong>17:15 — stop farming only if the bank is done.</strong> If R4/R5 is still firing skills, keep farming. Otherwise march in and join Palace rallies as extra bodies.</td></tr>
           <tr><td class="mono">18:00–19:00</td><td colspan="3">No attacks. <strong>Every one of the 60 heals down below their real infirmary cap before exiting.</strong> Nobody retreats without a call — retreat is permanent removal from the map.</td></tr>
         </tbody>
@@ -1275,48 +1323,63 @@
 
       <h3>Comms</h3>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Call</th><th class="mono">Format</th><th>Means</th></tr></thead>
         <tbody>
-          <tr><td>Seize</td><td class="mono">CASTLE GO — 12:00</td><td>Both Castle rallies launch. CASTLE-1 breaks, CASTLE-2 lands and holds. Everything else is secondary.</td></tr>
-          <tr><td>Collapse</td><td class="mono">HP IN / LTH IN</td><td>Tower locked. Team reinforces the Palace now — this call overrides gathering.</td></tr>
-          <tr><td>Gather</td><td class="mono">HP FARM / LTH FARM</td><td>Tower locked. Team gathers crystals this round instead of reinforcing. One or the other, never both.</td></tr>
-          <tr><td>Help</td><td class="mono">HP HELP / LTH HELP</td><td>A stronger alliance is on our tower. Castle Team sends help — <strong>we do not concede the round.</strong></td></tr>
-          <tr><td>Flip</td><td class="mono">HP WEST</td><td>Palace lost. HP Turret Team abandons Life, takes Blade. Mode switches to attack.</td></tr>
-          <tr><td>Skill</td><td class="mono">ARMOR UP / BLOOD NOW</td><td>Dragonscale Armor / Dragonblood Healing firing this second. Nobody else spends crystals.</td></tr>
-          <tr><td>Endgame</td><td class="mono">SUPPORT IN</td><td>The crystal bank is done. Farming ends, all four posts march to the center. Not before this call.</td></tr>
-          <tr><td>Heal</td><td class="mono">SHIFT HEAL</td><td>The named rally heals. The other holds.</td></tr>
+          <tr><td data-l="Call">Seize</td><td class="mono" data-l="Format">CASTLE GO — 12:00</td><td data-l="Means">Both Castle rallies launch. CASTLE-1 breaks, CASTLE-2 lands and holds. Everything else is secondary.</td></tr>
+          <tr><td data-l="Call">Collapse</td><td class="mono" data-l="Format">HP IN / LTH IN</td><td data-l="Means">Tower locked. Team reinforces the Palace now — this call overrides gathering.</td></tr>
+          <tr><td data-l="Call">Gather</td><td class="mono" data-l="Format">HP FARM / LTH FARM</td><td data-l="Means">Tower locked. Team gathers crystals this round instead of reinforcing. One or the other, never both.</td></tr>
+          <tr><td data-l="Call">Help</td><td class="mono" data-l="Format">HP HELP / LTH HELP</td><td data-l="Means">A stronger alliance is on our tower. Castle Team sends help — <strong>we do not concede the round.</strong></td></tr>
+          <tr><td data-l="Call">Flip</td><td class="mono" data-l="Format">HP WEST</td><td data-l="Means">Palace lost. HP Turret Team abandons Life, takes Blade. Mode switches to attack.</td></tr>
+          <tr><td data-l="Call">Skill</td><td class="mono" data-l="Format">ARMOR UP / BLOOD NOW</td><td data-l="Means">Dragonscale Armor / Dragonblood Healing firing this second. Nobody else spends crystals.</td></tr>
+          <tr><td data-l="Call">Endgame</td><td class="mono" data-l="Format">SUPPORT IN</td><td data-l="Means">The crystal bank is done. Farming ends, all four posts march to the center. Not before this call.</td></tr>
+          <tr><td data-l="Call">Heal</td><td class="mono" data-l="Format">SHIFT HEAL</td><td data-l="Means">The named rally heals. The other holds.</td></tr>
         </tbody>
       </table>
       </div>
       <p class="mono" style="font-size:12.5px;color:var(--ash-dim)">All calls in UTC. One voice, one channel. The battle commander sits in Castle Team.</p>
 
-      <h3>What this build gives up — read before committing</h3>
+      <details class="more">
+        <summary>What this build gives up <span class="why">— four honest gaps, read before committing</span></summary>
+        <div class="inner">
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Gap</th><th>Consequence</th><th>What to do</th></tr></thead>
         <tbody>
-          <tr><td><strong>No disruption unit.</strong> Nobody is assigned to counter-rally, intercept enemy captains or clear cities.</td><td>Rivals stage next to the Palace unmolested and rally you at their own timing.</td><td><strong>Buy it with crystals instead of bodies.</strong> Dragonbreath Fury clears enemy cities out of the Palace area for ~10 minutes — that is your disruption unit, and Support Team pays for it. Do not improvise a raid party out of Castle Team; that is how the rally lapses.</td></tr>
-          <tr><td><strong>No offensive tower pair.</strong> Blade and Shield are given up to whoever wants them.</td><td>If you lose the Palace after ~14:00 you have no Attack buff to push a dug-in enemy off it.</td><td>This is why the 12:00 seize is required, and why the crystal bank exists. Re-take package: <span class="mono">HP WEST</span> → <strong>Dragonbreath Fury</strong> (clear their cities) → Dragonroar Rally → full push. Rehearse the sequence and the order.</td></tr>
-          <tr><td><strong>20 at the center is thin for six hours.</strong> Healing time off costs you.</td><td>Between 13:00 and 16:00 your effective rally can drop well below 20 on the vulnerable half-hours.</td><td>The CASTLE-1 / CASTLE-2 split is what holds this together — the single most important discipline in the plan. The 40-player protected windows cover the rest.</td></tr>
-          <tr><td><strong>20 farmers is a third of the roster off the objective.</strong></td><td>Fewer bodies in the fight all afternoon.</td><td>Justified only if the crystals are actually spent. If leadership will not fire skills, cut Support Team to 12 and move 8 into Castle Team.</td></tr>
+          <tr><td data-l="Gap"><strong>No disruption unit.</strong> Nobody is assigned to counter-rally, intercept enemy captains or clear cities.</td><td data-l="Consequence">Enemies can park next to the Palace and attack whenever they choose.</td><td data-l="What to do"><strong>Buy it with crystals instead of bodies.</strong> Dragonbreath Fury clears enemy cities out of the Palace area for ~10 minutes — that is how we push enemies away, and Support Team pays for it. Do not make up a raid party out of Castle Team on the day. That is how the rally stops.</td></tr>
+          <tr><td data-l="Gap"><strong>No Attack buff.</strong> Blade and Shield go to whoever wants them.</td><td data-l="Consequence">If you lose the Palace after ~14:00 you have Lethality, but no Attack to push a dug-in enemy off it.</td><td data-l="What to do">This is why the 12:00 seize is required, and why the crystal bank exists. Re-take package: <span class="mono">HP WEST</span> → <strong>Dragonbreath Fury</strong> (35,000, clear their cities) → <strong>Swiftwing Express</strong> (20,000, arrive first) → <strong>Dragonroar Rally</strong> (50,000) → full push. Rehearse the sequence and the order.</td></tr>
+          <tr><td data-l="Gap"><strong>20 at the center is thin for six hours.</strong> Healing time off costs you.</td><td data-l="Consequence">Between 13:00 and 16:00 your effective rally can drop well below 20 on the vulnerable half-hours.</td><td data-l="What to do">The CASTLE-1 / CASTLE-2 split is what holds this together — the single most important discipline in the plan. The 40-player protected windows cover the rest.</td></tr>
+          <tr><td data-l="Gap"><strong>20 farmers is a third of the roster off the objective.</strong></td><td data-l="Consequence">Fewer bodies in the fight all afternoon.</td><td data-l="What to do">Justified only if the crystals are actually spent. If leadership will not fire skills, cut Support Team to 12 and move 8 into Castle Team.</td></tr>
         </tbody>
       </table>
       </div>
+        </div>
+      </details>
 
-      <h3>Rethink what "winning" costs</h3>
-      <div class="rule">
-        <span class="tag">The number that changes the whole plan</span>
-        In a competitive Zone the Palace changes hands constantly, and the <strong>winning Tyrant's total occupation time is often under one hour</strong> — with the longest single unbroken hold often under 30 minutes. You are not being asked to hold for six hours. <strong>You are being asked to add up roughly 45–60 minutes of captain time in bursts, and to be holding more often than anyone else.</strong> That target is more achievable than it sounds, and it is why starting the rally again the instant it breaks is the single highest-value habit in the plan.
-      </div>
+      <details class="more">
+        <summary>What "winning" actually costs <span class="why">— the winning total is often under one hour</span></summary>
+        <div class="inner">
+      <p>In a competitive Zone the Palace changes hands constantly. The <strong>winning Tyrant's total occupation time is often under one hour</strong>, and the longest single unbroken hold is often under 30 minutes. You are not being asked to hold for six hours. <strong>You are being asked to add up roughly 45–60 minutes, in bursts, and to be holding more often than anyone else.</strong> That is easier than it sounds. Start the rally again the second it breaks. Nothing else matters more.</p>
       <ul>
         <li><strong>Every second counts equally.</strong> A 4-minute hold at 13:12 is worth the same as a 4-minute hold at 17:50. Never write off a round because the Palace looks contested.</li>
         <li><strong>Do not expect to be first.</strong> First occupancy is decided by march speedups and connection speed, not power — and the first occupier almost never becomes Tyrant. Take the First Occupancy Reward if you get it, then settle into the grind.</li>
-        <li><strong>Share the captaincy once the bid is safe.</strong> Strong alliances rotate the captain role inside the Palace late in the battle, so several members land in the top-100 occupation ranking. Your relief captains are the ones who benefit — make the call around 17:00 once the candidate's lead is safe.</li>
+        <li><strong>Share the role once the bid is safe.</strong> Strong alliances swap the Garrison Leader late in the battle, so several members land in the top-100 occupation ranking. Make the call around 17:00, once the candidate's lead is safe.</li>
       </ul>
-      <div class="tip">
-        <span class="tag">Realistic targets for this build</span>
-        <strong>First Occupancy Reward</strong> if the rush lands, roughly 45–60 minutes of total captain time for the candidate, a recorded occupation ranking for the candidate plus the relief captains, an alliance occupation-leaderboard place, and full personal-point milestones across all 60. On those numbers, the Tyrant title is a real target, not a fantasy.
+      <p><strong>Realistic targets for this build.</strong> The First Occupancy Reward, if the rush lands. Roughly 45–60 minutes of total Garrison Leader time for the candidate. A recorded occupation ranking for him and for the relief captains. An alliance leaderboard place. Full personal-point milestones across all 60. On those numbers the Tyrant title is a real target, not a fantasy.</p>
+        </div>
+      </details>
+
+      <h3>When to stop bidding</h3>
+      <div class="warn">
+        <span class="tag">If we do not hold the Palace by 13:00, the bid is over</span>
+        <strong>Say this out loud before D-Day, and set the time now.</strong> A bid that has not landed in the first hour is not going to land against a dug-in enemy with no Attack buff.
+        <ul>
+          <li><strong>Switch the objective to points and rankings.</strong> Nobody goes home early — the rewards change, not the workload.</li>
+          <li><strong>Turret Teams</strong> keep taking towers. Tower combat pays personal points.</li>
+          <li><strong>Support Team</strong> keeps farming. Crystals and gathering both pay.</li>
+          <li><strong>Castle Team</strong> runs Route 1 on the smaller structures around the Palace instead of grinding the tile.</li>
+        </ul>
+        Everyone still finishes with full milestones and an intact army. <strong>Grinding a lost bid for five hours costs the roster a whole Sunday and returns nothing extra.</strong>
       </div>
     </section>
 
@@ -1326,13 +1389,13 @@
       <p class="lede"><strong>Where you fight decides whether your troops come back.</strong></p>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Action</th><th>Outcome</th><th>Points?</th></tr></thead>
         <tbody>
-          <tr><td>Attacking / defending the <strong>Palace</strong> or an <strong>Aerie</strong></td><td>Severely injured only — <strong>no deaths</strong></td><td>Yes — this is your main point source</td></tr>
-          <tr><td>Attacking another player's <strong>town</strong></td><td><strong>Deaths possible.</strong> Real, permanent losses</td><td>No</td></tr>
-          <tr><td>Fighting over a <strong>crystal node</strong></td><td>Losses</td><td>No</td></tr>
-          <tr><td>Gathering / killing escorts</td><td>Minimal risk</td><td>Yes</td></tr>
+          <tr><td data-l="Action">Attacking / defending the <strong>Palace</strong> or an <strong>Aerie</strong></td><td data-l="Outcome">Severely injured only — <strong>no deaths</strong></td><td data-l="Points?">Yes — this is your main point source</td></tr>
+          <tr><td data-l="Action">Attacking another player's <strong>town</strong></td><td data-l="Outcome"><strong>Deaths possible.</strong> Real, permanent losses</td><td data-l="Points?">No</td></tr>
+          <tr><td data-l="Action">Fighting over a <strong>crystal node</strong></td><td data-l="Outcome">Losses</td><td data-l="Points?">No</td></tr>
+          <tr><td data-l="Action">Gathering / killing escorts</td><td data-l="Outcome">Minimal risk</td><td data-l="Points?">Yes</td></tr>
         </tbody>
       </table>
       </div>
@@ -1360,26 +1423,28 @@
       <p>You earn personal points <strong>only</strong> by attacking governors or NPCs at the Palace and the Aeries, plus gathering crystals and killing escorts. Holding the Palace pays nothing by itself. Town raids and node fights pay nothing. A disciplined player who never sees the Palace can still hit high milestones through escorts and gathering alone.</p>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Track</th><th>Who wins it</th><th>Typical payout</th></tr></thead>
         <tbody>
-          <tr><td><strong>Flamedragon Tyrant</strong></td><td>Longest total Palace occupation as Defence Garrison Leader. Ties go to whoever reached that time first.</td><td>30-day title: +10% Attack / Defense / Lethality / Health, +5,000 deployment capacity (stacks with King titles). Exclusive city, march and teleport skins, avatar frames, a free pack, four appointable Zone titles, commendation chests, the Dragon Banquet.</td></tr>
-          <tr><td><strong>Occupation ranking</strong></td><td>Any captain with recorded occupation time (under 1 second does not register).</td><td>Roughly the top 100–200 get Mythril, gems, Honor Points and an <strong>exclusive island decoration</strong>. Reachable for a mid-tier alliance that takes the Palace even briefly — read the ranking note below first.</td></tr>
-          <tr><td><strong>First Occupancy</strong></td><td><strong>Every member</strong> of the first alliance to hold the Palace.</td><td>One-time reward — worth a full commitment to the opening rush, whether or not you can hold.</td></tr>
-          <tr><td><strong>Personal point milestones</strong></td><td>Anyone. Fixed thresholds, not competitive.</td><td>Around 2 Mythril across the track, plus speedups and resources. The reliable free-to-play reward.</td></tr>
-          <tr><td><strong>Personal point ranking</strong></td><td>Competitive leaderboard.</td><td>Charm designs, Mythril, gems, orange shards, Truegold, Honor Points, cosmetics.</td></tr>
-          <tr><td><strong>Alliance occupation leaderboard</strong></td><td>Sum of all your captains' Palace occupation time. Only battle participants receive it.</td><td>Mailed after the battle by final rank.</td></tr>
-          <tr><td><strong>Predictions</strong></td><td>Anyone. 1,000 Dragonclaw Marks per pick, up to three alliances.</td><td>10:1 payout — 10,000 marks for a correct call; a wrong call refunds 500. Free trivia predictions pay 1,000 per correct answer. <strong>See the wager loop below — your first bet is basically free.</strong></td></tr>
+          <tr><td data-l="Track"><strong>Flamedragon Tyrant</strong></td><td data-l="Who wins it">Longest total Palace occupation as Defence Garrison Leader. Ties go to whoever reached that time first.</td><td data-l="Typical payout">30-day title: +10% Attack / Defense / Lethality / Health, +5,000 deployment capacity (stacks with King titles). Exclusive city, march and teleport skins, avatar frames, a free pack, four appointable Zone titles, commendation chests, the Dragon Banquet.</td></tr>
+          <tr><td data-l="Track"><strong>Occupation ranking</strong></td><td data-l="Who wins it">Any captain with recorded occupation time (under 1 second does not register).</td><td data-l="Typical payout">Roughly the top 100–200 get Mythril, gems, Honor Points and an <strong>exclusive island decoration</strong>. Reachable for a mid-tier alliance that takes the Palace even briefly — read the ranking note below first.</td></tr>
+          <tr><td data-l="Track"><strong>First Occupancy</strong></td><td data-l="Who wins it"><strong>Every member</strong> of the first alliance to hold the Palace.</td><td data-l="Typical payout">One-time reward — worth a full commitment to the opening rush, whether or not you can hold.</td></tr>
+          <tr><td data-l="Track"><strong>Personal point milestones</strong></td><td data-l="Who wins it">Anyone. Fixed thresholds, not competitive.</td><td data-l="Typical payout">Around 2 Mythril across the track, plus speedups and resources. The reliable free-to-play reward.</td></tr>
+          <tr><td data-l="Track"><strong>Personal point ranking</strong></td><td data-l="Who wins it">Competitive leaderboard.</td><td data-l="Typical payout">Charm designs, Mythril, gems, orange shards, Truegold, Honor Points, cosmetics.</td></tr>
+          <tr><td data-l="Track"><strong>Alliance occupation leaderboard</strong></td><td data-l="Who wins it">Sum of all your captains' Palace occupation time. Only battle participants receive it.</td><td data-l="Typical payout">Mailed after the battle by final rank.</td></tr>
+          <tr><td data-l="Track"><strong>Predictions</strong></td><td data-l="Who wins it">Anyone. 1,000 Dragonclaw Marks per pick, up to three alliances.</td><td data-l="Typical payout">10:1 payout — 10,000 marks for a correct call; a wrong call refunds 500. Free trivia predictions pay 1,000 per correct answer. <strong>See the wager loop below — your first bet is basically free.</strong></td></tr>
         </tbody>
       </table>
       </div>
 
-      <h3>Two safe ways to earn points</h3>
+      <details class="more">
+        <summary>Two safe ways to earn points <span class="why">— for accounts not in the Palace fight</span></summary>
+        <div class="inner">
       <p>Two low-risk ways to farm this event. They suit different accounts. Run whichever fits, or switch between them.</p>
       <div class="cols">
         <div class="col-a">
           <h4><span class="pill p-a">Route 1</span> — the small structures</h4>
-          <p>Stay near the center and <strong>hit the small buildings ringing the Palace, over and over</strong>. Palace and Aerie combat only injures, and the battlefield infirmary is unlimited, so you can grind points here almost without limit and never lose a soldier for good. This is the best point-per-hour route for a low-power account.</p>
+          <p>Stay near the center and <strong>hit the small buildings ringing the Palace, over and over</strong>. Palace and Aerie combat only injures. The battlefield infirmary is unlimited. So you can grind points here almost without limit, and never lose a soldier for good. This is the best point-per-hour route for a low-power account.</p>
           <p class="mono" style="font-size:12px;color:var(--ash-dim)">Risk: you are inside the Magma Sanctum with no shield. Expect to get hit by strong accounts between rounds. Accept it — the injuries heal.</p>
         </div>
         <div class="col-b">
@@ -1388,36 +1453,29 @@
           <p class="mono" style="font-size:12px;color:var(--ash-dim)">Risk: low. Contest a node when you can win it — walk away from the ones you cannot.</p>
         </div>
       </div>
-      <div class="tip">
-        <span class="tag">Either route, same closing sequence</span>
-        Hit every personal-point milestone. Place all three predictions plus the free trivia. Heal down before leaving the map. You finish with Mythril, gems, speedups, and an intact army.
-      </div>
+      <p><strong>Either route, same closing sequence.</strong> Hit every personal-point milestone. Place all three predictions plus the free trivia. Heal down before leaving the map. You finish with Mythril, gems, speedups, and an intact army.</p>
+        </div>
+      </details>
 
-      <div class="warn">
-        <span class="tag">Set your ranking expectations honestly</span>
-        Community guides disagree here. Some say the top 100–200 occupation slots are easy to reach. The official wiki's own free-to-play note is more direct: <strong>outside top-tier servers, climbing past roughly rank 1000 on the personal ranking is hard without real spending.</strong> Both can be true — the occupation ranking and the personal-point ranking are different tables with different competition. <strong>Plan around the fixed milestones, which are guaranteed. Treat every leaderboard place as a bonus.</strong>
-      </div>
+      <p><strong>Set your ranking expectations honestly.</strong> Community guides disagree here. Some say the top 100–200 occupation slots are easy to reach. The official wiki's own free-to-play note is more direct: <strong>outside top-tier servers, climbing past roughly rank 1000 on the personal ranking is hard without real spending.</strong> Both can be true — the occupation ranking and the personal-point ranking are different tables with different competition. <strong>Plan around the fixed milestones, which are guaranteed. Treat every leaderboard place as a bonus.</strong></p>
 
       <h3>Tyrant appointments</h3>
       <p>If your candidate wins, the four Zone titles are a strategic asset, not just a bonus. Each grants <strong>+20% to one stat and +2,000 deployment capacity</strong>, stacks with King and High King bonuses, and has a one-hour cooldown between appointments:</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Title</th><th class="mono">Bonus</th><th>Give it to</th></tr></thead>
         <tbody>
-          <tr><td>Bloodwyrm Warlord</td><td class="mono">+20% Troop Health</td><td>Your best garrison holder for the next month of KvK.</td></tr>
-          <tr><td>Wyrmbreath Overlord</td><td class="mono">+20% Troop Lethality</td><td>Your primary attack rally lead.</td></tr>
-          <tr><td>Dragonscale Guard</td><td class="mono">+20% Troop Defense</td><td>Your defense rally lead.</td></tr>
-          <tr><td>Dragontooth General</td><td class="mono">+20% Troop Attack</td><td>Your second attack lead.</td></tr>
+          <tr><td data-l="Title">Bloodwyrm Warlord</td><td class="mono" data-l="Bonus">+20% Troop Health</td><td data-l="Give it to">Your best garrison holder for the next month of KvK.</td></tr>
+          <tr><td data-l="Title">Wyrmbreath Overlord</td><td class="mono" data-l="Bonus">+20% Troop Lethality</td><td data-l="Give it to">Your primary attack rally lead.</td></tr>
+          <tr><td data-l="Title">Dragonscale Guard</td><td class="mono" data-l="Bonus">+20% Troop Defense</td><td data-l="Give it to">Your defense rally lead.</td></tr>
+          <tr><td data-l="Title">Dragontooth General</td><td class="mono" data-l="Bonus">+20% Troop Attack</td><td data-l="Give it to">Your second attack lead.</td></tr>
         </tbody>
       </table>
       </div>
 
       <h3>The prediction market — free money, done right</h3>
       <p>Predictions are the best return-per-minute activity in the whole event. Most players skip them, or treat them as a loyalty vote. Neither is correct.</p>
-      <div class="rule">
-        <span class="tag">The wager loop</span>
-        Placing a single 1,000-mark wager <strong>completes a Searing Path mission that pays back 500 Dragonclaw Marks and 15 Dragon Essence.</strong> A losing bet also refunds 500 marks. So your first wager costs you nothing, and hands you Dragon Essence on top. <strong>Always place it.</strong>
-      </div>
+      <p><strong>The wager loop: your first bet is free.</strong> Placing a single 1,000-mark wager <strong>completes a Searing Path mission that pays back 500 Dragonclaw Marks and 15 Dragon Essence.</strong> A losing bet also refunds 500 marks. So your first wager costs you nothing, and hands you Dragon Essence on top. <strong>Always place it.</strong></p>
       <ul>
         <li>Back up to three alliances at 1,000 marks each. A correct call returns 10,000.</li>
         <li>You do not have to back your own alliance, and there is no reward for loyalty. Bet on who will actually win.</li>
@@ -1426,26 +1484,29 @@
         <li>Spend leftover marks in the Prediction Shop before the event closes — they do not carry over.</li>
       </ul>
 
-      <h4>Trivia question cheat sheet</h4>
+      <details class="more">
+        <summary>Trivia cheat sheet <span class="why">— five picks, and what they tell you about the event</span></summary>
+        <div class="inner">
       <p>The trivia set repeats between cycles. These are the recommended picks, with the reasoning — check the wording in your own event before copying them, since answer bands can shift.</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Question</th><th class="mono">Pick</th><th>Reasoning</th></tr></thead>
         <tbody>
-          <tr><td>Total Palace hold time of the Tyrant in your Zone?</td><td class="mono">&lt; 1 hour</td><td>Zones with 100+ alliances flip the Palace constantly. Total winning time is usually short.</td></tr>
-          <tr><td>Will the first occupier become the Tyrant?</td><td class="mono">No</td><td>First occupancy is won by march speedups and connection speed, not power. Historically well under 1%.</td></tr>
-          <tr><td>Squads defeated by the deadliest governor?</td><td class="mono">&gt; 70 million</td><td>Combat density around the Palace guarantees extreme kill counts.</td></tr>
-          <tr><td>Longest continuous Palace hold across all Zones?</td><td class="mono">&lt; 30 minutes</td><td>Holding without a break against dozens of simultaneous rallies is close to impossible.</td></tr>
-          <tr><td>Shortest Tyrant hold across all Zones?</td><td class="mono">&lt; 1 hour</td><td>Winning alliances swap Garrison Leaders late to share top-10 leaderboard rewards, which shortens any one governor's total.</td></tr>
+          <tr><td data-l="Question">Total Palace hold time of the Tyrant in your Zone?</td><td class="mono" data-l="Pick">&lt; 1 hour</td><td data-l="Reasoning">Zones with 100+ alliances flip the Palace constantly. Total winning time is usually short.</td></tr>
+          <tr><td data-l="Question">Will the first occupier become the Tyrant?</td><td class="mono" data-l="Pick">No</td><td data-l="Reasoning">First occupancy is won by march speedups and connection speed, not power. Historically well under 1%.</td></tr>
+          <tr><td data-l="Question">Squads defeated by the deadliest governor?</td><td class="mono" data-l="Pick">&gt; 70 million</td><td data-l="Reasoning">Combat density around the Palace guarantees extreme kill counts.</td></tr>
+          <tr><td data-l="Question">Longest continuous Palace hold across all Zones?</td><td class="mono" data-l="Pick">&lt; 30 minutes</td><td data-l="Reasoning">Holding without a break against dozens of simultaneous rallies is close to impossible.</td></tr>
+          <tr><td data-l="Question">Shortest Tyrant hold across all Zones?</td><td class="mono" data-l="Pick">&lt; 1 hour</td><td data-l="Reasoning">Winning alliances swap Garrison Leaders late to share top-10 leaderboard rewards, which shortens any one governor's total.</td></tr>
         </tbody>
       </table>
       </div>
-      <div class="tip">
-        <span class="tag">Read these as intelligence, not just answers</span>
-        Two of these picks tell you something useful. <strong>"Longest continuous hold &lt; 30 minutes"</strong> means being dug in is temporary for everyone — including whoever is on the throne when you check. <strong>"Shortest Tyrant hold &lt; 1 hour"</strong> means the bar for winning is far lower than six hours of full control. Both should make you more aggressive, not less.
-      </div>
+      <p><strong>Read these as intelligence, not just answers.</strong> Two of these picks tell you something useful. <strong>"Longest continuous hold &lt; 30 minutes"</strong> means being dug in is temporary for everyone — including whoever is on the throne when you check. <strong>"Shortest Tyrant hold &lt; 1 hour"</strong> means the bar for winning is far lower than six hours of full control. Both should make you more aggressive, not less.</p>
+        </div>
+      </details>
 
-      <h3>The Dragon Banquet</h3>
+      <details class="more">
+        <summary>The Dragon Banquet <span class="why">— one hour, kingdom-wide, cannot be cancelled</span></summary>
+        <div class="inner">
       <ul>
         <li>One banquet per reign, kingdom-wide, hosted in the Tyrant's own kingdom. <strong>It cannot be canceled once started</strong> and runs for exactly one hour.</li>
         <li>Governors need <strong>Town Center Lv.13 or above</strong> to join, and have <strong>3 dining squads</strong> to send.</li>
@@ -1453,6 +1514,8 @@
         <li>The Tyrant can edit the Tyrant Declaration once per day. Each edit fires a broadcast.</li>
       </ul>
       <p class="mono" style="font-size:12.5px;color:var(--ash-dim)">Schedule the banquet at your kingdom's busiest hour. One hour, no cancel, and everyone below TC13 is locked out — announce it in advance.</p>
+        </div>
+      </details>
 
       <h3>Side events: prep before the battle</h3>
 
@@ -1464,28 +1527,28 @@
       </figure>
 
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Event</th><th class="mono">Runs</th><th>Currency</th><th>What to do with it</th></tr></thead>
         <tbody>
-          <tr><td><strong>Searing Path</strong> (Blazing Trail missions)</td><td class="mono">Day 1 – 6</td><td>Dragon Essence, Dragonclaw Marks</td><td>Daily missions reset at 00:00 UTC; season missions do not. Clear the dailies — they are the free source of both currencies.</td></tr>
-          <tr><td><strong>Dragon Caravan</strong></td><td class="mono">Day 1 – 7</td><td>Dragon Essence</td><td>Daily sign-in for an Ashen Bounty Pack. <strong>Tap the "+" in the store menu for a free daily allotment of Dragon Essence</strong> — easy to miss. Stock does not reset daily except the free pack. Free-to-play priorities: Mythril, charm designs, artisan's visions, Truegold. The store carries up to 25 Mythril in total.</td></tr>
-          <tr><td><strong>Championship Prediction</strong></td><td class="mono">Day 1 – 9</td><td>Dragonclaw Marks</td><td>Battle predictions from Day 3. Outcomes and payouts are mailed on Day 9. Spend leftover marks in the Prediction Shop before the event closes.</td></tr>
-          <tr><td><strong>Champion's Eve</strong></td><td class="mono">Eve of Battle</td><td>Preparation Points</td><td>Six 50,000-point alliance milestones. This is the only prep that helps <em>during</em> the battle. Milestones also drop Governor Chests (1h speedups, gear materials, 5 Truegold); a full batch of T10 troops trained is worth roughly 1.5 chests.</td></tr>
+          <tr><td data-l="Event"><strong>Searing Path</strong> (Blazing Trail missions)</td><td class="mono" data-l="Runs">Day 1 – 6</td><td data-l="Currency">Dragon Essence, Dragonclaw Marks</td><td data-l="What to do with it">Daily missions reset at 00:00 UTC; season missions do not. Clear the dailies — they are the free source of both currencies.</td></tr>
+          <tr><td data-l="Event"><strong>Dragon Caravan</strong></td><td class="mono" data-l="Runs">Day 1 – 7</td><td data-l="Currency">Dragon Essence</td><td data-l="What to do with it">Daily sign-in for an Ashen Bounty Pack. <strong>Tap the "+" in the store menu for a free daily allotment of Dragon Essence</strong> — easy to miss. Stock does not reset daily except the free pack. Free-to-play priorities: Mythril, charm designs, artisan's visions, Truegold. The store carries up to 25 Mythril in total.</td></tr>
+          <tr><td data-l="Event"><strong>Championship Prediction</strong></td><td class="mono" data-l="Runs">Day 1 – 9</td><td data-l="Currency">Dragonclaw Marks</td><td data-l="What to do with it">Battle predictions from Day 3. Outcomes and payouts are mailed on Day 9. Spend leftover marks in the Prediction Shop before the event closes.</td></tr>
+          <tr><td data-l="Event"><strong>Champion's Eve</strong></td><td class="mono" data-l="Runs">Eve of Battle</td><td data-l="Currency">Preparation Points</td><td data-l="What to do with it">Six 50,000-point alliance milestones. This is the only prep that helps <em>during</em> the battle. Milestones also drop Governor Chests (1h speedups, gear materials, 5 Truegold); a full batch of T10 troops trained is worth roughly 1.5 chests.</td></tr>
         </tbody>
       </table>
       </div>
 
       <p>Champion's Eve pays out in six steps. It is promoted into the <a href="#s15">§15 checklist</a> because it is the only prep that helps during the battle:</p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th class="mono">Level</th><th>Bonus</th></tr></thead>
         <tbody>
-          <tr><td class="mono">1</td><td>+100% healing speed</td></tr>
-          <tr><td class="mono">2</td><td>−10% healing cost</td></tr>
-          <tr><td class="mono">3</td><td>+150% healing speed</td></tr>
-          <tr><td class="mono">4</td><td>−20% healing cost</td></tr>
-          <tr><td class="mono">5</td><td>+200% healing speed</td></tr>
-          <tr><td class="mono">6</td><td>−30% healing cost</td></tr>
+          <tr><td class="mono" data-l="Level">1</td><td data-l="Bonus">+100% healing speed</td></tr>
+          <tr><td class="mono" data-l="Level">2</td><td data-l="Bonus">−10% healing cost</td></tr>
+          <tr><td class="mono" data-l="Level">3</td><td data-l="Bonus">+150% healing speed</td></tr>
+          <tr><td class="mono" data-l="Level">4</td><td data-l="Bonus">−20% healing cost</td></tr>
+          <tr><td class="mono" data-l="Level">5</td><td data-l="Bonus">+200% healing speed</td></tr>
+          <tr><td class="mono" data-l="Level">6</td><td data-l="Bonus">−30% healing cost</td></tr>
         </tbody>
       </table>
       </div>
@@ -1506,7 +1569,7 @@
       <ul class="tick">
         <li>Read the Zone list. Find the 2 or 3 alliances that can realistically win.</li>
         <li>Decide: are you bidding for the throne, or maximizing guaranteed rewards? Tell the roster which.</li>
-        <li>If bidding, name the throne candidate. In writing. No second candidate.</li>
+        <li>If bidding, name the Tyrant candidate — the player who leads CASTLE-2 and holds the tile. In writing. No second candidate.</li>
       </ul>
 
       <h4>Mon–Tue · sign-up</h4>
@@ -1525,19 +1588,19 @@
 
       <h4>Fri–Sun · eve of battle</h4>
 
-      <div class="rule">
-        <span class="tag">Champion's Eve — the only prep that helps during the battle</span>
+      <div class="card">
+        <h4 style="font-size:14px;letter-spacing:.1em;color:var(--gold-soft);margin-bottom:10px">Champion's Eve — the only prep that helps during the battle</h4>
         <strong>Six 50,000-point alliance milestones, worth up to +200% battlefield healing speed and −30% healing cost.</strong> Gathering and troop training are what earn the points.
         <div class="tw">
-        <table>
+        <table class="stack">
           <thead><tr><th class="mono">Level</th><th>Bonus</th></tr></thead>
           <tbody>
-            <tr><td class="mono">1</td><td>+100% healing speed</td></tr>
-            <tr><td class="mono">2</td><td>−10% healing cost</td></tr>
-            <tr><td class="mono">3</td><td>+150% healing speed</td></tr>
-            <tr><td class="mono">4</td><td>−20% healing cost</td></tr>
-            <tr><td class="mono">5</td><td>+200% healing speed</td></tr>
-            <tr><td class="mono">6</td><td>−30% healing cost</td></tr>
+            <tr><td class="mono" data-l="Level">1</td><td data-l="Bonus">+100% healing speed</td></tr>
+            <tr><td class="mono" data-l="Level">2</td><td data-l="Bonus">−10% healing cost</td></tr>
+            <tr><td class="mono" data-l="Level">3</td><td data-l="Bonus">+150% healing speed</td></tr>
+            <tr><td class="mono" data-l="Level">4</td><td data-l="Bonus">−20% healing cost</td></tr>
+            <tr><td class="mono" data-l="Level">5</td><td data-l="Bonus">+200% healing speed</td></tr>
+            <tr><td class="mono" data-l="Level">6</td><td data-l="Bonus">−30% healing cost</td></tr>
           </tbody>
         </table>
         </div>
@@ -1575,45 +1638,56 @@
       <div class="sec-head"><span class="sec-num">16</span><h2>Failure modes</h2></div>
       <p class="lede"><strong>Mistakes so common they get their own table. Know them before D-Day.</strong></p>
       <div class="tw">
-      <table>
+      <table class="stack">
         <thead><tr><th>Mistake</th><th>Cost</th><th>Fix</th><th class="mono">Owner</th></tr></thead>
         <tbody>
-          <tr><td>Two throne candidates in one alliance</td><td>Neither wins. Both finish outside the Tyrant contest.</td><td>Name one, in writing, before sign-up closes.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Rushing the Palace with no Aerie buffs</td><td>You feed the alliance that took the towers.</td><td>Round 1 is towers. The Palace push comes on the protected half-hour.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Contesting all four Aeries</td><td>You lose all four, plus the crystals you spent doing it.</td><td>Two towers — Life and Dragon — held all day.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Firing Dragonblood Healing during a march</td><td>The best skill in the event, wasted on an empty 10 minutes.</td><td>Skills fire on contact, not on hope.</td><td class="who">R4/R5</td></tr>
-          <tr><td><strong>A named carrier has an unleveled Hero 1 first skill</strong></td><td>The rally takes a filler's maxed skill instead. You lose the buff and the join order never told you.</td><td>Check skill levels, not tap order. Max the first skill on every carrier before Sunday.</td><td class="who">Each player</td></tr>
-          <tr><td>A filler with a maxed first skill displaces a carrier</td><td>The rally loses the buff you planned for.</td><td>If your first skill is weak, send no hero in slot 1 — your troops still count in full.</td><td class="who">Each player</td></tr>
-          <tr><td><strong>Planning crystal skills for the 12:00 seize</strong></td><td>The pool is zero until 12:15. The seize happens with none of the support people expected.</td><td>Open on troops, heroes and 50% rally march speedups. First skill ~12:15–12:30.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Mixed troop types in one march</td><td>The ratio breaks and cannot be fixed. The player's own buffs are split across two types.</td><td>Troop type assigned before the battle. The player does not choose.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Sending more troops than called</td><td>The rally fills early and locks out the last joiner — sometimes a hero carrier.</td><td>Send the number R5 says. Nothing else.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Farming towns because there is nothing else to do</td><td>Real, permanent troop deaths. No points.</td><td>Town hits always need a named call.</td><td class="who">Each player</td></tr>
-          <tr><td>Throwing squads at crystal nodes you cannot win</td><td>Losses with no points attached.</td><td>Fight for a node you can win. Walk away from one you cannot.</td><td class="who">Each player</td></tr>
-          <tr><td>Giving up a tower to a stronger alliance</td><td>You hand them the buff for the whole locked half-hour — the half-hour that decides the Palace.</td><td>Call Castle Team in to help take it. Do not concede the round.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Nobody assigned to farming</td><td>No crystal pool means no skills, and skills decide the last hour.</td><td>Eight minimum, twelve to sixteen preferred. Give it to low-power accounts.</td><td class="who">R4/R5</td></tr>
-          <tr><td>Logging off after the battle without healing</td><td>Every injured soldier above your real infirmary cap dies.</td><td>Heal down first. Set an alarm.</td><td class="who">Each player</td></tr>
-          <tr><td>Retreating from the map mid-battle</td><td>You cannot re-enter, and re-entry after a defeat drops you at random anyway.</td><td>Nobody leaves the battlefield without a call.</td><td class="who">Each player</td></tr>
+          <tr><td data-l="Mistake">Two Tyrant candidates in one alliance</td><td data-l="Cost">Neither wins. Both finish outside the Tyrant contest.</td><td data-l="Fix">Name one, in writing, before sign-up closes.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Rushing the Palace with no Aerie buffs</td><td data-l="Cost">You feed the alliance that took the towers.</td><td data-l="Fix">Round 1 is towers. The Palace push comes on the protected half-hour.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Contesting all four Aeries</td><td data-l="Cost">You lose all four, plus the crystals you spent doing it.</td><td data-l="Fix">Two towers — Life and Dragon — held all day.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Firing Dragonblood Healing during a march</td><td data-l="Cost">The best skill in the event, wasted on an empty 10 minutes.</td><td data-l="Fix">Skills fire on contact, not on hope.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake"><strong>A named carrier has an unleveled Hero 1 first skill</strong></td><td data-l="Cost">The rally takes a filler's maxed skill instead. You lose the buff and the join order never told you.</td><td data-l="Fix">Check skill levels, not tap order. Max the first skill on every carrier before Sunday.</td><td class="who" data-l="Owner">Each player</td></tr>
+          <tr><td data-l="Mistake">A filler with a maxed first skill replaces a carrier</td><td data-l="Cost">The rally loses the buff you planned for.</td><td data-l="Fix">If your first skill is weak, send no hero in slot 1 — your troops still count in full.</td><td class="who" data-l="Owner">Each player</td></tr>
         </tbody>
       </table>
       </div>
+
+      <details class="more">
+        <summary>Nine more failure modes <span class="why">— crystals, troop types, and the exit trap</span></summary>
+        <div class="inner">
+      <div class="tw">
+      <table class="stack">
+        <thead><tr><th>Mistake</th><th>Cost</th><th>Fix</th><th class="mono">Owner</th></tr></thead>
+        <tbody>
+          <tr><td data-l="Mistake"><strong>Planning crystal skills for the 12:00 seize</strong></td><td data-l="Cost">The pool is zero until 12:15. The seize happens with none of the support people expected.</td><td data-l="Fix">Open on troops, heroes and 50% rally march speedups. First skill ~12:15–12:30.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Mixed troop types in one march</td><td data-l="Cost">The ratio breaks and cannot be fixed. The player's own buffs are split across two types.</td><td data-l="Fix">Troop type assigned before the battle. The player does not choose.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Sending more troops than called</td><td data-l="Cost">The rally fills early and locks out the last joiner — sometimes a hero carrier.</td><td data-l="Fix">Send the number R5 says. Nothing else.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Farming towns because there is nothing else to do</td><td data-l="Cost">Real, permanent troop deaths. No points.</td><td data-l="Fix">Town hits always need a named call.</td><td class="who" data-l="Owner">Each player</td></tr>
+          <tr><td data-l="Mistake">Throwing squads at crystal nodes you cannot win</td><td data-l="Cost">Losses with no points attached.</td><td data-l="Fix">Fight for a node you can win. Walk away from one you cannot.</td><td class="who" data-l="Owner">Each player</td></tr>
+          <tr><td data-l="Mistake">Giving up a tower to a stronger alliance</td><td data-l="Cost">You hand them the buff for the whole locked half-hour — the half-hour that decides the Palace.</td><td data-l="Fix">Call Castle Team in to help take it. Do not concede the round.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Nobody assigned to farming</td><td data-l="Cost">No crystal pool means no skills, and skills decide the last hour.</td><td data-l="Fix">Eight minimum, twelve to sixteen preferred. Give it to low-power accounts.</td><td class="who" data-l="Owner">R4/R5</td></tr>
+          <tr><td data-l="Mistake">Logging off after the battle without healing</td><td data-l="Cost">Every injured soldier above your real infirmary cap dies.</td><td data-l="Fix">Heal down first. Set an alarm.</td><td class="who" data-l="Owner">Each player</td></tr>
+          <tr><td data-l="Mistake">Retreating from the map mid-battle</td><td data-l="Cost">You cannot re-enter, and re-entry after a defeat drops you at random anyway.</td><td data-l="Fix">Nobody leaves the battlefield without a call.</td><td class="who" data-l="Owner">Each player</td></tr>
+        </tbody>
+      </table>
+      </div>
+        </div>
+      </details>
     </section>
 
     <!-- ================= 17 ================= -->
     <section id="s17">
       <div class="sec-head"><span class="sec-num">17</span><h2>Screenshots &amp; sources</h2></div>
+      <p class="lede"><strong>Every number in this manual traces back to one of the sources below. Check them before you brief your roster.</strong></p>
       <p>Most diagrams in this manual are drawn from scratch rather than captured from the game — in-game art, reward tables and UI screens are Century Games' copyrighted material. Where an original screenshot is reproduced above (the battlefield art, the Aerie bonus text, the Crystal Skills panel, the Champion's Eve missions) it's used here for reference and briefing purposes, attributed to Century Games. If you want the rest of the official screens (reward tables, the official map plate, banquet and pack contents) for your alliance briefing, they are published here:</p>
       <ul>
-        <li><a href="https://kingshotwiki.com/events/flamedragon-tyrant/#more">kingshotwiki.com — Flamedragon Tyrant, screenshot gallery</a> — the official wiki, re-checked against this manual (page last revised 30 Jul 2026). Seventeen full-size captures: the official <span class="mono">FDP_Map</span> plate and the FDT strategy map, the <strong>crystal skill table with exact pyrocrystal costs and cooldowns</strong>, occupation and personal-point reward tiers, Tyrant title rewards, battle packs, Searing Path, Dragon Caravan, Champion's Eve chests and the banquet tables. <strong>Pull the skill-cost figures from that image and replace the estimate in §09–10 with real numbers before you brief your roster.</strong></li>
+        <li><a href="https://kingshotwiki.com/events/flamedragon-tyrant/#more">kingshotwiki.com — Flamedragon Tyrant, screenshot gallery</a> — the official wiki, re-checked against this manual (page last revised 30 Jul 2026). Seventeen full-size captures: the official <span class="mono">FDP_Map</span> plate and the FDT strategy map, the <strong>crystal skill table with exact pyrocrystal costs and cooldowns</strong>, occupation and personal-point reward tiers, Tyrant title rewards, battle packs, Searing Path, Dragon Caravan, Champion's Eve chests and the banquet tables. <strong>The costs and cooldowns in <a href="#s10">§10</a> were read off this panel — they are real figures, not estimates.</strong> Use the gallery for the reward tables and the official map plate, which are not reproduced here.</li>
         <li><a href="https://centurygames.helpshift.com/hc/en/140-kingshot/section/1609-flamedragon-tyrant/">Century Games help center — Flamedragon Tyrant</a> — the authoritative rules FAQ. Phase times, crystal refresh rules, infirmary behavior, captain-transfer mechanics.</li>
         <li><a href="https://www.kingshot.wiki/events/flamedragon-tyrant">kingshot.wiki — Flamedragon Tyrant</a> — community wiki with the phase breakdown and tips.</li>
         <li><a href="https://www.kingshotguide.org/guide/kingshot-flamedragon-tyrant-guide">kingshotguide.org</a> and <a href="https://clashiverse.com/kingshot-flamedragon-tyrant-guide-rewards-tips/">clashiverse.com</a> — community strategy write-ups covering aerie buffs, crystal yields and skill costs.</li>
         <li><a href="https://www.youtube.com/watch?v=Y4EyNsDaj6c">Strat Game Sloth — Ultimate Flamedragon Tyrant Guide</a> (video) — source for the eligibility gates, the prediction wager loop and trivia picks, Dragonbreath Fury's city-clearance effect, and the observation that winning Tyrant hold times are typically under an hour.</li>
       </ul>
 
-      <div class="warn">
-        <span class="tag">Figures to verify on the day</span>
-        Community-sourced numbers — crystal skill costs, node yields, escort rewards, exact round counts — vary between event versions and Zone tiers. The mechanics in this manual are stable; the numbers are an estimate. Check the in-game panels during the Eve of Battle phase and correct your briefing before you publish it to the roster.
-      </div>
+      <p><strong>Figures to verify on the day.</strong> Community-sourced numbers — node yields, escort rewards, exact round counts — vary between event versions and Zone tiers. The mechanics in this manual are stable. Check the in-game panels during the Eve of Battle phase and correct your briefing before you publish it to the roster.</p>
     </section>
 
     </main>
@@ -1625,5 +1699,40 @@
   </footer>
 
 </div>
+
+<button class="toc-fab" id="tocFab" type="button" aria-label="Jump to contents">☰ Contents</button>
+
+<script>
+(function () {
+  var bar = document.getElementById('progress');
+  var doc = document.documentElement;
+  var ticking = false;
+
+  function draw() {
+    var max = doc.scrollHeight - window.innerHeight;
+    var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    bar.style.width = pct.toFixed(2) + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(draw); }
+  }, { passive: true });
+  draw();
+
+  // floating contents — opens the existing mobile TOC and scrolls to it
+  var fab = document.getElementById('tocFab');
+  var toc = document.querySelector('details.toc-mobile');
+  if (fab && toc) {
+    fab.addEventListener('click', function () {
+      toc.open = true;
+      toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    // close the TOC again once a section is picked
+    toc.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { toc.open = false; }
+    });
+  }
+})();
+</script>
 </body>
 </html>

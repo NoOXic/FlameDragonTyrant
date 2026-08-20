@@ -167,6 +167,7 @@ h4{font-size:15px;letter-spacing:.08em;margin:22px 0 6px;color:var(--gold-soft)}
 
 /* ---------- tables ---------- */
 .tw{overflow-x:auto;margin:20px 0;border:1px solid var(--line);background:var(--char)}
+.scroll-hint{display:none}
 table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
 th,td{text-align:left;padding:11px 13px;border-bottom:1px solid var(--line);vertical-align:top}
 thead th{background:var(--void-2);color:var(--gold-soft);font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
@@ -197,6 +198,9 @@ ul.tick li:before{content:"◆";position:absolute;left:4px;color:var(--gold);fon
 
 /* ---------- manual layout: sticky sidebar toc ---------- */
 .manual-layout{display:grid;grid-template-columns:230px 1fr;gap:44px;align-items:start}
+/* grid items default to min-width:auto, which stops the column shrinking below
+   its widest child (560px tables, 900px SVGs) and scrolls the whole page sideways */
+.manual-layout > *{min-width:0}
 @media(max-width:900px){.manual-layout{grid-template-columns:1fr}}
 .side-toc{position:sticky;top:20px;max-height:calc(100vh - 40px);overflow-y:auto;padding-right:6px}
 @media(max-width:900px){.side-toc{position:static;max-height:none}}
@@ -243,6 +247,119 @@ tr.row-hl td:first-child{color:var(--gold-soft);font-weight:600}
 
 /* ---------- owner / role tags in tables ---------- */
 .who{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim)}
+
+/* ---------- start-here reading path ---------- */
+.start-here{
+  margin:26px 0 6px;padding:20px 22px;
+  border:1px solid var(--line-strong);background:var(--char);
+}
+.start-here h4{font-size:13px;letter-spacing:.16em;color:var(--gold-soft);margin-bottom:14px}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.path{
+  display:block;text-decoration:none;color:var(--ash);
+  border:1px solid var(--line);background:var(--void-2);padding:13px 15px;
+}
+.path:hover{border-color:var(--ember);color:var(--ash)}
+.path .t{
+  display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ember);margin-bottom:5px;
+}
+.path .d{display:block;font-size:14px;line-height:1.45;color:var(--ash-dim)}
+.path strong{color:var(--ash);font-weight:600}
+
+/* ---------- collapsible depth ---------- */
+details.more{
+  margin:20px 0;border:1px solid var(--line);background:var(--void-2);
+}
+details.more > summary{
+  cursor:pointer;list-style:none;padding:13px 16px;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);
+  display:flex;gap:10px;align-items:baseline;
+}
+details.more > summary::-webkit-details-marker{display:none}
+details.more > summary:before{content:"+";color:var(--ember);font-weight:700;flex:none}
+details.more[open] > summary:before{content:"–"}
+details.more > summary:hover{color:var(--ash)}
+details.more > summary .why{
+  text-transform:none;letter-spacing:0;color:var(--ash-dim);
+  font-family:"IBM Plex Sans",sans-serif;font-size:13px;
+}
+details.more > .inner{padding:2px 16px 16px}
+details.more > .inner > :first-child{margin-top:0}
+
+/* ---------- crystal skill screenshot gallery ---------- */
+.shots{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:14px;margin:6px 0 4px;
+}
+.shot{margin:0}
+.shot img{
+  display:block;width:100%;height:auto;
+  border:1px solid var(--line-strong);background:var(--void);
+}
+.shot figcaption{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold-soft);margin-top:7px;
+}
+.shot .cost{color:var(--ash-dim);letter-spacing:.06em}
+
+/* ---------- reading progress + floating contents ---------- */
+.progress{
+  position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
+  background:linear-gradient(90deg,var(--ember),var(--gold));
+}
+.toc-fab{
+  position:fixed;right:16px;bottom:16px;z-index:60;display:none;
+  border:1px solid var(--line-strong);background:var(--char);color:var(--gold-soft);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;padding:11px 14px;cursor:pointer;
+}
+.toc-fab:hover{color:var(--ash);border-color:var(--ember)}
+@media(max-width:900px){.toc-fab{display:block}}
+@media print{.progress,.toc-fab{display:none}}
+
+/* ---------- mobile: lighter background, larger body, stacked tables ---------- */
+@media(max-width:900px){
+  body{
+    font-size:17px;
+    background:
+      radial-gradient(ellipse 900px 500px at 18% 0%, rgba(255,106,42,.08), transparent 60%),
+      radial-gradient(ellipse 800px 600px at 50% 100%, rgba(196,51,26,.08), transparent 60%),
+      var(--void);
+  }
+}
+@media(max-width:700px){
+  .tw:has(table.stack){border:none;background:none;overflow:visible}
+  table.stack,table.stack thead,table.stack tbody,
+  table.stack th,table.stack td,table.stack tr{display:block}
+  table.stack thead{position:absolute;left:-9999px}
+  table.stack{min-width:0;font-size:15px}
+  table.stack tr{
+    border:1px solid var(--line);background:var(--char);
+    margin:0 0 10px;padding:10px 13px;
+  }
+  table.stack td{
+    border:none;padding:6px 0;display:block;
+    overflow-wrap:anywhere;
+  }
+  table.stack td + td{border-top:1px solid var(--line)}
+  table.stack td:before{
+    content:attr(data-l);display:block;
+    font-family:"IBM Plex Mono",monospace;font-size:10px;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold-dim);margin-bottom:3px;
+  }
+  table.stack td:empty{display:none}
+  table.stack td[data-l=""]:before{display:none}
+  table.narrow{min-width:0}
+  /* swipe hint for the two genuinely wide tables */
+  .scroll-hint{
+    display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dim);
+    margin:18px 0 -12px;
+  }
+}
 
 /* ---------- glossary ---------- */
 .glossary dt{font-family:"IBM Plex Mono",monospace;color:var(--gold-soft);font-weight:600;margin-top:14px}
